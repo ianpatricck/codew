@@ -4,23 +4,22 @@
 
 <li>require('codeworker/codeworker.php');<li>
 
-Specify your connection to the database and data in the 'codeworker.php' file.
-You can use the methods of the MySQL class or the functions of the 'func.php' file.
+<p>Specify your connection to the database and data in the 'codeworker.php' file.
+You can use the methods of the MySQL class or the functions of the 'func.php' file.</p>
 
 <li>$mysql->CREATE_USERS();</li>
 
-Create user table for testing, with identification, name, email and password.
+<p>Create user table for testing, with identification, name, email and password.</p>
 
 <li>$mysql->DROP(':table');</li>
 
-Delete a table from the database.
+<p>Delete a table from the database.</p>
 
 <li>$mysql->SQL(':query');</li>
 
-Insert SQL commands.
+<p>Insert SQL commands.</p>
 
 <hr>
 
-Use select(':table', ':column', ':value', ':value to compare');
-
-To facilitate the SQL query.
+<p>Use select(':table', ':column', ':value', ':value to compare');
+To facilitate the SQL query.</p>
