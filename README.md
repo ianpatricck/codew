@@ -2,7 +2,7 @@
 <h3>Component to reduce your typing in scripts.</h3>
 <hr>
 
-<li>require('codeworker/codeworker.php');<li>
+<li>require('codeworker/codeworker.php');</li>
 
 <p>Specify your connection to the database and data in the 'codeworker.php' file.
 You can use the methods of the MySQL class or the functions of the 'func.php' file.</p>
@@ -21,5 +21,5 @@ You can use the methods of the MySQL class or the functions of the 'func.php' fi
 
 <hr>
 
-<p>Use select(':table', ':column', ':value', ':value to compare');
-To facilitate the SQL query.</p>
+Use <b>select(':table', ':column', ':value', ':value to compare');</b>
+To facilitate the SQL query.
