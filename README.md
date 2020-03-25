@@ -4,8 +4,8 @@
 
 <li><b>require('codeworker/codeworker.php');</b></li>
 <br>
-<p>Specify your connection to the database and data in the 'codeworker.php' file.</p>
-<p>You can use the methods of the MySQL class or the functions of the 'func.php' file.</p>
+<p>Specify your connection to the database and data in the 'codeworker.php' file.<br>
+You can use the methods of the MySQL class or the functions of the 'func.php' file.</p>
 
 <li><b>$mysql->CREATE_USERS();</b></li>
 <br>
