@@ -21,5 +21,5 @@ You can use the methods of the MySQL class or the functions of the 'func.php' fi
 
 <hr>
 
-Use <b>select(':table', ':column', ':value', ':value to compare');</b>
+Use <b>select(':table', ':column', ':value', ':value to compare');</b><br>
 To facilitate the SQL query.
