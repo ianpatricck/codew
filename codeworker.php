@@ -1,13 +1,14 @@
 <?php
 
 require('class/database.class.php');
-require('class/form.class.php');
 
-// Define connection;
+$stmt = new Connection('localhost', 'root', '');
+// $stmt->createDB_codeworker();    // ---> Create default database;
 
-$mysql = new MySQL('localhost', 'codeworker', 'root', '');
-$form = new Form();
 
-require('func/func.php');
+// Define connection if exists database:
+// $mysql = new MySQL('localhost', 'codeworker', 'root', '');
+
+require('func/database.func.php');
 
 ?>

@@ -4,22 +4,33 @@
 
 <li><b>require('codeworker/codeworker.php');</b></li>
 <br>
-<p>Specify your connection to the database and data in the 'codeworker.php' file.<br>
-You can use the methods of the MySQL class or the functions of the 'func.php' file.</p>
 
-<li><b>$mysql->CREATE_USERS();</b></li>
+<h4>Some database functions</h4>
+
+// Insert data
 <br>
-<p>Create user table for testing, with identification, name, email and password.</p>
-
-<li><b>$mysql->DROP(':table');</b></li>
+<b>insert(':table', [
+'id' => 1,
+'name' => 'admin',
+'email' = 'admin@email.com',
+'password' => 'admin'
+]);</b>
 <br>
-<p>Delete a table from the database.</p>
-
-<li><b>$mysql->SQL(':query');</b></li>
+// Select data
 <br>
-<p>Insert SQL commands.</p>
+<b>select(':table', ':column', ':columnCompare', ':valueCompare');</b>
+<br>
+// Delete data
+<br>
+<b>delete(':table', ':columnCompare', ':valueCompare');</b>
+<br>
+<br>
 
+<b>dropDB(':database');</b>
+<b>dropTP(':table');</b>
 <hr>
 
-Use <b>select(':table', ':column', ':value', ':value to compare');</b><br>
-To facilitate the SQL query.
+<h4>Database class methods</h4>
+
+$mysql->sqli(':query')      // It returns no value.
+$mysql->sqlr(':query')      // Returns a value.
