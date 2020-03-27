@@ -7,17 +7,17 @@
 
 <h4>Some database functions</h4>
 
-// Insert data
+--> Insert data
 <br>
 <b>insert(':table', ['id' => 1, 'name' => 'admin', 'email' => 'admin@email.com', 'password' => 'admin']);</b>
 <br>
 <br>
-// Select data
+--> Select data
 <br>
 <b>select(':table', ':column', ':columnCompare', ':valueCompare');</b>
 <br>
 <br>
-// Delete data
+--> Delete data
 <br>
 <b>delete(':table', ':columnCompare', ':valueCompare');</b>
 <br>
