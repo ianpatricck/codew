@@ -30,5 +30,5 @@
 
 <h4>Database class methods</h4>
 
-$mysql->sqli(':query')      // It returns no value.
-$mysql->sqlr(':query')      // Returns a value.
+<b>$mysql->sqli(':query')</b>      // It returns no value.<br>
+<b>$mysql->sqlr(':query')</b>      // Returns a value.
