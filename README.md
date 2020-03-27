@@ -9,24 +9,22 @@
 
 // Insert data
 <br>
-<b>insert(':table', [
-'id' => 1,
-'name' => 'admin',
-'email' = 'admin@email.com',
-'password' => 'admin'
-]);</b>
+<b>insert(':table', ['id' => 1, 'name' => 'admin', 'email' => 'admin@email.com', 'password' => 'admin']);</b>
+<br>
 <br>
 // Select data
 <br>
 <b>select(':table', ':column', ':columnCompare', ':valueCompare');</b>
+<br>
 <br>
 // Delete data
 <br>
 <b>delete(':table', ':columnCompare', ':valueCompare');</b>
 <br>
 <br>
+<br>
 
-<b>dropDB(':database');</b>
+<b>dropDB(':database');</b><br>
 <b>dropTP(':table');</b>
 <hr>
 
