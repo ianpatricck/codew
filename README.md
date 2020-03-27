@@ -22,7 +22,6 @@
 <b>delete(':table', ':columnCompare', ':valueCompare');</b>
 <br>
 <br>
-<br>
 <hr>
 <b>dropDB(':database');</b><br>
 <b>dropTP(':table');</b>
@@ -30,5 +29,5 @@
 
 <h4>Database class methods</h4>
 
-<b>$mysql->sqli(':query')</b>--->> It returns no value.<br>
-<b>$mysql->sqlr(':query')</b>--->> Returns a value.
+<b>$mysql->sqli(':query')</b> --->> It returns no value.<br>
+<b>$mysql->sqlr(':query')</b> --->> Returns a value.
