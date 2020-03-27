@@ -9,7 +9,7 @@
 
 --> Insert data
 <br>
-<b><?php insert(':table', ['id' => 1, 'name' => 'admin', 'email' => 'admin@email.com', 'password' => 'admin']);?></b>
+<b>insert(':table', ['id' => 1, 'name' => 'admin', 'email' => 'admin@email.com', 'password' => 'admin']);</b>
 <br>
 <br>
 --> Select data
