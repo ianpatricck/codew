@@ -13,7 +13,8 @@ insert(':table', [
   'id' => :id, 
   'name' => ':name', 
   'email' => ':email', 
-  'password' => ':password']);
+  'password' => ':password'
+]);
 
 ````
 * Select data
