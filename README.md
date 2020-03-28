@@ -1,33 +1,22 @@
 # Codeworker
-<h3>Component to reduce your typing in scripts.</h3>
+### Component to reduce your typing in scripts.
+
+require('codeworker/codeworker.php');
+
+#### Some database functions
+
+1.Insert data
+	insert(':table', ['id' => 1, 'name' => 'admin', 'email' => 'admin@email.com', 'password' => 'admin']);
+2.Select data
+	select(':table', ':column', ':columnCompare', ':valueCompare');
+3.Delete data
+	delete(':table', ':columnCompare', ':valueCompare');
+<hr>
+dropDB(':database');
+dropTP(':table');
 <hr>
 
-<li><b>require('codeworker/codeworker.php');</b></li>
-<br>
+#### Database class methods
 
-<h4>Some database functions</h4>
-
---> Insert data
-<br>
-<b>insert(':table', ['id' => 1, 'name' => 'admin', 'email' => 'admin@email.com', 'password' => 'admin']);</b>
-<br>
-<br>
---> Select data
-<br>
-<b>select(':table', ':column', ':columnCompare', ':valueCompare');</b>
-<br>
-<br>
---> Delete data
-<br>
-<b>delete(':table', ':columnCompare', ':valueCompare');</b>
-<br>
-<br>
-<hr>
-<b>dropDB(':database');</b><br>
-<b>dropTP(':table');</b>
-<hr>
-
-<h4>Database class methods</h4>
-
-<b>$mysql->sqli(':query');</b> --->> It returns no value.<br>
-<b>$mysql->sqlr(':query');</b> --->> Returns a value.
+$mysql->sqli(':query'); --->> It returns no value.
+$mysql->sqlr(':query'); --->> Returns a value.
