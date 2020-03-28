@@ -24,14 +24,8 @@ select(':table', ':column', ':columnCompare', ':valueCompare');
 ```php
 delete(':table', ':columnCompare', ':valueCompare');
 ````
----
-
-```php
-dropDB(':database');
-dropTP(':table');
-````
-
----
+> dropDB(':database');
+> dropTP(':table');
 
 #### Database class methods
 
