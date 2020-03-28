@@ -1,7 +1,9 @@
 # Codeworker
 ### Component to reduce your typing in scripts.
 
+```php 
 require('codeworker/codeworker.php');
+````
 
 #### Some database functions
 
@@ -24,8 +26,10 @@ delete(':table', ':columnCompare', ':valueCompare');
 ````
 ---
 
-> dropDB(':database');
-> dropTP(':table');
+```php
+dropDB(':database');
+dropTP(':table');
+````
 
 ---
 
