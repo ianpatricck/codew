@@ -39,8 +39,16 @@ $mysql->sqlr(':query'); // Returns a value.
 
 ```php
 $name = Form::text($_POST['name']);
+````
+```php
 $email = Form::email($_POST['email']);
+````
+```php
 $pass = Form::text(md5($_POST['password']));
+````
+```php
 $value = Form::int($_POST['value']);
+````
+```php
 $money = Form::float($_POST['money']);
 ````
