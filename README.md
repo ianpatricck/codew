@@ -1,38 +1,46 @@
 # Codeworker
 ### Component to reduce your typing in scripts.
 
-```php 
+```php
 require('codeworker/codeworker.php');
 ````
 
 #### Some database functions
 
-* Insert data 
+* Insert data
 ```php
-insert(':table', [
-  'id' => :id, 
-  'name' => ':name', 
-  'email' => ':email', 
-  'password' => ':password'
+$mysql->insert(':table', [
+    'id' => :id,
+    'name' => ':name',
+    'email' => ':email',
+    'password' => ':password'
 ]);
 
 ````
 * Select data
 ```php
-select(':table', ':column', ':columnCompare', ':valueCompare');
+$mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
 ````
 * Delete data
 ```php
-delete(':table', ':columnCompare', ':valueCompare');
+$mysql->delete(':table', ':columnCompare', ':valueCompare');
 ````
 ```php
-dropDB(':database');
-dropTP(':table');
+$mysql->dropDB(':database');
+$mysql->dropTP(':table');
 ```
-
-#### Database class methods
 
 ```php
 $mysql->sqli(':query'); // It returns no value.
 $mysql->sqlr(':query'); // Returns a value.
+````
+
+#### Form class
+
+```php
+$name = Form::text($_POST['name']);
+$email = Form::email($_POST['email']);
+$pass = Form::text(md5($_POST['password']));
+$value = Form::int($_POST['value']);
+$money = Form::float($_POST['money']);
 ````
