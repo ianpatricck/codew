@@ -32,7 +32,7 @@ $mysql->dropTP(':table');
 
 ```php
 $mysql->sqli(':query'); // It returns no value.
-$mysql->sqlr(':query'); // Returns a value.
+$value = $mysql->sqlr(':query'); // Returns a value.
 ````
 
 #### Form class
