@@ -51,5 +51,5 @@ $pass = Form::text(md5($_POST['password']));
 $value = Form::int($_POST['value']);
 ````
 ```php
-$money = Form::float($_POST['money']);
+$money = Form::float($_POST['value']);
 ````
