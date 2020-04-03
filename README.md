@@ -28,7 +28,7 @@ $mysql->delete(':table', ':columnCompare', ':valueCompare');
 ---
 ```php
 $mysql->dropDB(':database');
-$mysql->dropTP(':table');
+$mysql->dropTB(':table');
 ```
 
 ```php
