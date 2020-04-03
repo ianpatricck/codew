@@ -25,6 +25,7 @@ $mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
 ```php
 $mysql->delete(':table', ':columnCompare', ':valueCompare');
 ````
+---
 ```php
 $mysql->dropDB(':database');
 $mysql->dropTP(':table');
