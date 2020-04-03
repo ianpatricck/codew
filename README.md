@@ -7,7 +7,7 @@ require('codeworker/codeworker.php');
 
 #### Some database functions
 
-* Insert data
+> Insert data
 ```php
 $mysql->insert(':table', [
     'id' => :id,
@@ -17,11 +17,11 @@ $mysql->insert(':table', [
 ]);
 
 ````
-* Select data
+> Select data
 ```php
 $mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
 ````
-* Delete data
+> Delete data
 ```php
 $mysql->delete(':table', ':columnCompare', ':valueCompare');
 ````
