@@ -66,18 +66,6 @@ class MySQL
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function dropDB($database)
-    {
-        $stmt = $this->connection->prepare("DROP DATABASE $database");
-        $stmt->execute();
-    }
-
-    public function dropTB($table)
-    {
-        $stmt = $this->connection->prepare("DROP TABLE $table");
-        $stmt->execute();
-    }
-
     public function insert($table, $columns = [])
     {
         foreach ($columns as $key => $value) {
@@ -102,6 +90,17 @@ class MySQL
 
             $result = $value[$column];
             echo $result;
+        }
+    }
+
+    public function update($table, $columns = [], $column, $compare)
+    {
+        foreach ($columns as $key => $value) {
+            $keys = $key;
+            $values =  $value;
+
+            $stmt = $this->connection->prepare("UPDATE $table SET $keys = '$values' WHERE $column = '$compare';");
+            $stmt->execute();
         }
     }
 

@@ -4,20 +4,14 @@ class Form
 {
     static public function text($input)
     {
-        $text = filter_var($input, FILTER_SANITIZE_SPECIAL_CHARS);
+        $text = filter_var($input, FILTER_SANITIZE_STRING);
         return $text;
     }
 
     static public function email($input)
     {
-        $text = filter_var($input, FILTER_SANITIZE_SPECIAL_CHARS);
-        $email = filter_var($text, FILTER_VALIDATE_EMAIL);
-
-        if($text == $email) {
-            return $email;
-        } else {
-            return 0;
-        }
+        $email = filter_var($input, FILTER_VALIDATE_EMAIL);
+        return $email;
     }
 
     static public function int($input)

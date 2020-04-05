@@ -7,7 +7,6 @@ require('codeworker/codeworker.php');
 
 #### Some database functions
 
-* Insert data
 ```php
 $mysql->insert(':table', [
     'id' => :id,
@@ -15,20 +14,25 @@ $mysql->insert(':table', [
     'email' => ':email',
     'password' => ':password'
 ]);
-
 ````
-* Select data
+
 ```php
 $mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
 ````
-* Delete data
+
+```php
+$mysql->update(':table', [
+    'id' => :id,
+    'name' => ':name',
+    'email' => ':email',
+    'password' => ':password'
+], ':column', 'columnCompare');
+````
+
 ```php
 $mysql->delete(':table', ':columnCompare', ':valueCompare');
 ````
-```php
-$mysql->dropDB(':database');
-$mysql->dropTP(':table');
-```
+---
 
 ```php
 $mysql->sqli(':query'); // It returns no value.
@@ -50,5 +54,5 @@ $pass = Form::text(md5($_POST['password']));
 $value = Form::int($_POST['value']);
 ````
 ```php
-$money = Form::float($_POST['money']);
+$money = Form::float($_POST['value']);
 ````
