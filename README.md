@@ -21,9 +21,6 @@ $mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
 ````
 
 ```php
-$mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
-````
-```php
 $mysql->update(':table', [
     'id' => :id,
     'name' => ':name',
