@@ -21,19 +21,21 @@ $mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
 ````
 
 ```php
+$mysql->select(':table', ':column', ':columnCompare', ':valueCompare');
+````
+```php
 $mysql->update(':table', [
     'id' => :id,
     'name' => ':name',
     'email' => ':email',
     'password' => ':password'
-], ':column', 'columnCompare');
+], ':column', ':columnCompare');
 ````
 
 ```php
 $mysql->delete(':table', ':columnCompare', ':valueCompare');
 ````
 ---
-
 ```php
 $mysql->sqli(':query'); // It returns no value.
 $value = $mysql->sqlr(':query'); // Returns a value.
@@ -46,9 +48,6 @@ $name = Form::text($_POST['name']);
 ````
 ```php
 $email = Form::email($_POST['email']);
-````
-```php
-$pass = Form::text(md5($_POST['password']));
 ````
 ```php
 $value = Form::int($_POST['value']);
