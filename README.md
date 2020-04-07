@@ -34,8 +34,14 @@ $mysql->delete(':table', ':columnCompare', ':valueCompare');
 ````
 ---
 ```php
-$mysql->sqli(':query'); // It returns no value.
-$value = $mysql->sqlr(':query'); // Returns a value.
+$mysql->sqli(':query');
+
+// -->  It returns no value.
+
+$value = $mysql->sqlr(':query');
+
+// -->  Returns a value.
+
 ````
 
 #### Form class
@@ -43,12 +49,23 @@ $value = $mysql->sqlr(':query'); // Returns a value.
 ```php
 $name = Form::text($_POST['name']);
 ````
+
 ```php
 $email = Form::email($_POST['email']);
 ````
+
 ```php
 $value = Form::int($_POST['value']);
 ````
+
 ```php
 $money = Form::float($_POST['value']);
+````
+
+```php
+$upload = Form::upload(':input_name', [
+    'png', 'jpg', 'git', 'pdf', 'exe', 'dll'
+], 'dest_folder/', $size_bytes);
+
+// -->  Returns the name of the random entry
 ````

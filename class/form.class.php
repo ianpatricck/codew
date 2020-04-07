@@ -35,6 +35,25 @@ class Form
             return 0;
         }
     }
+
+    static public function upload($input_name, $extensions = [], $destiny, $min_bytes)
+    {
+        $extension = pathinfo($_FILES[$input_name]['name'], PATHINFO_EXTENSION);
+        $filename = $input_name.'.'.$extension;
+        $format = substr($filename, -3);
+
+        if(in_array($extension, $extensions) && $extension == $format) {
+            $temp = $_FILES[$input_name]['tmp_name'];
+            $new_name = uniqid().'.'.$extension;
+
+            if(filesize($temp) < $min_bytes) {
+                move_uploaded_file($temp, $destiny.$new_name);
+                return $new_name;
+            }
+        } else {
+            return 0;
+        }
+    }
 }
 
 ?>
