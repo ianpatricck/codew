@@ -64,7 +64,7 @@ $money = Form::float($_POST['value']);
 
 ```php
 $upload = Form::upload(':input_name', [
-    'png', 'jpg', 'git', 'pdf', 'exe', 'dll'
+    'png', 'jpg', 'git', 'pdf', 'exe', 'dll', 'txt'
 ], 'dest_folder/', $size_bytes);
 
 // -->  Returns the name of the random entry
