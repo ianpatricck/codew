@@ -1,6 +1,6 @@
 <?php
 
 require('codeworker.php');
-require('content/welcome.php');
+require('view/welcome.php');
 
 ?>
