@@ -1,16 +1,54 @@
 @font-face {font-family: colombia; src: url('../fonts/colombia.woff');}
 @font-face {font-family: pelita; src: url('../fonts/pelita.woff');}
+@font-face {font-family: linbiolinum; src: url('../fonts/linbiolinum.woff');}
 
 body {background-color: #ebe9e9;}
 h1 {font-size: 40pt; font-family: colombia; color: #959fa5;}
-p {font-size: 15pt; font-family: pelita;}
+h2 {font-family: pelita;}
+a {font-size: 15pt; font-family: pelita; color: #115fc9; text-decoration: none;}
+a:hover {text-decoration: underline;}
 hr {border: 2px solid #959fa5;}
 
-.content-center
-{
+.content-center {
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    width: 700px;
+    background-color: #505f6d;
+    border-radius: 25px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.p {
+    font-family: linbiolinum;
+    padding-left: 15px;
+    color: white;
+}
+
+.p2 {
+    font-family: linbiolinum;
+    padding-left: 15px;
+    color: white;
+}
+
+.hr-transparent {
+    border: 5px solid #ebe9e9;
+}
+
+.b {
+    color: #1e3241;
 }
