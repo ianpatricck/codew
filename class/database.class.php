@@ -6,8 +6,7 @@ class Connection
 
     public function __construct($host, $user, $pass)
     {
-        try
-        {
+        try {
             $this->connection = new PDO("mysql:host=$host", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -23,8 +22,7 @@ class MySQL
 
     public function __construct($host, $db_name, $user, $pass)
     {
-        try
-        {
+        try {
             $this->connection = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -50,7 +48,6 @@ class MySQL
     public function insert($table, $columns = [])
     {
         foreach ($columns as $key => $value) {
-
             $keys[] = $key;
             $values[] =  $value;
         }
@@ -68,7 +65,6 @@ class MySQL
         $stmt->execute();
 
         foreach ($stmt as $value) {
-
             $result = $value[$column];
             echo $result;
         }
