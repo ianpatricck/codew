@@ -13,11 +13,9 @@
         "php": "^7.4.0",
     },
 
-    "minimum-stability": "dev-master",
-
     "autoload": {
         "psr-4": {
-            "Codeworker\\codeworker\\": "classes"
+            "Codeworker\\Codeworker\\": "classes"
         }
     }
 }

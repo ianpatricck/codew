@@ -5,7 +5,7 @@
 *   =================
 */
 
-namespace Codeworker\codeworker;
+namespace Codeworker\Codeworker;
 
 class URL {
 

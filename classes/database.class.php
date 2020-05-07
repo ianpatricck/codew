@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeworker\codeworker;
+namespace Codeworker\Codeworker;
 
 class Connection
 {
