@@ -11,10 +11,9 @@
 
     "require": {
         "php": "^7.4.0",
-        "ianpatrick/codeworker": "dev-master"
     },
 
-    "minimum-stability": "dev",
+    "minimum-stability": "dev-master",
 
     "autoload": {
         "psr-4": {
