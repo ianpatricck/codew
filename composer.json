@@ -1,0 +1,18 @@
+{
+    "name": "ianpatrick/codeworker",
+    "description": "Component to reduce your typing in scripts",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ian Patrick",
+            "email": "contatoianpatrick@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php": "^7.4.0"
+    },
+
+    "minimum-stability": "dev"
+}
