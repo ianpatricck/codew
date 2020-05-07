@@ -1,7 +1,6 @@
 {
     "name": "ianpatrick/codeworker",
     "description": "Component to reduce your typing in scripts",
-    "type": "project",
     "license": "MIT",
     "authors": [
         {
