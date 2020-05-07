@@ -12,11 +12,5 @@
 
     "require": {
         "php": "^7.4.0"
-    },
-
-    "autoload": {
-        "psr-4": {
-            "ianpatrick\\codeworker\\": "src"
-        }
     }
 }
