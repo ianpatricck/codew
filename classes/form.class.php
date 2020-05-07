@@ -1,5 +1,7 @@
 <?php
 
+namespace Codeworker\codeworker;
+
 class Form
 {
     static public function text($input)

@@ -5,6 +5,8 @@
 *   =================
 */
 
+namespace Codeworker\codeworker;
+
 class URL {
 
     static public function call($views = [])
