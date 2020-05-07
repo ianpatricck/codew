@@ -35,4 +35,23 @@ $upload = Form::upload(':input_name', ['png', 'jpg', 'gif', 'pdf', 'txt'], 'dest
 
 */
 
+# URL class functions
+
+/*
+
+To use the views in the codeworker you first need to define the index and directory
+of the views and their application in the config/const.php file.
+
+
+Sintaxe:
+
+$views = URL::call([
+    'default_view_file' => 'default_file_name',
+    'other_view_file' => 'file_name'
+]);
+
+URL::index($views);
+
+*/
+
 ?>

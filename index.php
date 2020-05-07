@@ -1,6 +1,11 @@
 <?php
 
 require('codeworker.php');
-require('view/welcome.php');
+
+$views = URL::call([
+    'welcome' => 'welcome'
+]);
+
+URL::index($views);
 
 ?>

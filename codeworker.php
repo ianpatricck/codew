@@ -1,12 +1,12 @@
 <?php
 
-require('class/database.class.php');
-require('class/form.class.php');
+require('classes/url.class.php');
+require('classes/database.class.php');
+require('classes/form.class.php');
 
-# $stmt = new Connection('localhost', 'root', '');
+# =============================================================
 
-// Define connection if exists database:
-
-# $mysql = new MySQL('host', 'dbname', 'root', '');
+require('config/const.php');
+require('config/connection.php');
 
 ?>

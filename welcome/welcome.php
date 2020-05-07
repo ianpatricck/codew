@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/view/static/css/stylesheet.css">
+        <link rel="stylesheet" href="<?php dirname(__FILE__); ?>/welcome/static/css/stylesheet.css">
         <title>Codeworker</title>
     </head>
     <body>
