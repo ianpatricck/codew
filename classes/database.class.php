@@ -1,7 +1,5 @@
 <?php
 
-namespace Codeworker\Codeworker;
-
 class Connection
 {
     protected $connection;
