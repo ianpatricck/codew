@@ -1,4 +1,7 @@
 # Codeworker
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ianpatricck/codeworker)
+
 ### Component to reduce your typing in scripts.
 
 
