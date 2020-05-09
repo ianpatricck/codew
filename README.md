@@ -13,7 +13,7 @@
 }
 ````
 or
-```composer require codeworker/codeworker dev-master````
+```composer require codeworker/codeworker dev-master```
 
 ```php
 require __DIR__ . "./vendor/codeworker/codeworker/codeworker.php";
