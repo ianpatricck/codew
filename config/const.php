@@ -1,6 +1,6 @@
 <?php
 
-const VIEWS_FLD = 'welcome/';
-const INDEX_VIEW = 'welcome';
+const VIEWS_FLD = 'welcome/';       # Folder view location
+const INDEX_VIEW = 'welcome';       # File default for views
 
 ?>
