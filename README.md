@@ -8,11 +8,11 @@
 ```json
 {
     "require": {
-        "codeworker/codeworker": "dev-master"
+        "codeworker/codeworker": "1.0.0"
     }
 }
 ````
-or ```composer require codeworker/codeworker dev-master```
+or ```composer require codeworker/codeworker```
 
 ```php
 require __DIR__ . "./vendor/codeworker/codeworker/codeworker.php";
