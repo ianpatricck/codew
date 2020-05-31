@@ -2,6 +2,7 @@
 
 require 'native/Null_DB.php';
 require 'native/MySQL.php';
+require 'native/Form.php';
 
 ####################################
 

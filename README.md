@@ -54,9 +54,6 @@ URL::index($views);
 
 #### Insert SQL query
 ```php
-use app\native\Null_DB;
-use app\native\MySQL;
-
 $stmt = new Null_DB('localhost', 'root', '');           # Initialize MySQL with no database created
 $stmt = new MySQL('localhost', 'devst', 'root', '');    # Initialize normal MySQL class
 
