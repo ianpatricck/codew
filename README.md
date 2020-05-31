@@ -5,14 +5,7 @@
 
 ## Install
 
-```json
-{
-    "require": {
-        "codeworker/codeworker": "1.0.0"
-    }
-}
-````
-or ```composer require codeworker/codeworker```
+```composer require codeworker/codeworker```
 
 ```php
 require './vendor/autoload.php';
@@ -28,6 +21,7 @@ This is a feature to automate some functions in the development.
 
 require 'native/Null_DB.php';
 require 'native/MySQL.php';
+require 'native/Form.php';
 
 ####################################
 
