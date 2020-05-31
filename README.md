@@ -52,7 +52,7 @@ $views = URL::call([
 URL::index($views);
 ```
 
-#### Insert sql query
+#### Insert SQL query
 ```php
 use app\native\Null_DB;
 use app\native\MySQL;
