@@ -1,12 +1,11 @@
 <?php
 
-/*
-*   URL QUERY STRING
-*   =================
-*/
+namespace app\native;
 
-class URL {
+require 'app/Config.php';
 
+class URL
+{
     static public function call($views = [])
     {
         foreach ($views as $key => $value) {

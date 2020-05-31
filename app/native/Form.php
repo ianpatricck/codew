@@ -1,5 +1,7 @@
 <?php
 
+namespace app\native;
+
 class Form
 {
     static public function text($input)
