@@ -1,5 +1,5 @@
 # Codeworker
-### Component to reduce your typing in scripts.
+### Project to improve your productivity at the time of development..
 
 ---
 
