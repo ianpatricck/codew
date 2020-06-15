@@ -2,7 +2,7 @@
 
 require './vendor/autoload.php';
 
-use app\native\URL;
+use App\Native\URL;
 
 $views = URL::call([
     'welcome' => 'welcome'

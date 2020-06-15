@@ -1,6 +1,6 @@
 <?php
 
-namespace app\native;
+namespace App\Native;
 
 class Form
 {

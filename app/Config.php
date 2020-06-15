@@ -1,14 +1,19 @@
 <?php
 
-require 'native/Null_DB.php';
-require 'native/MySQL.php';
-require 'native/Form.php';
+# ------------------------------------------------------------- #
 
-####################################
+require 'Native/Null_DB.php';
+require 'Native/MySQL.php';
+require 'Native/Form.php';
 
-const VIEWS_FLD = 'welcome/';       # Folder view location
-const INDEX_VIEW = 'welcome';       # File default for views
+# ------------------------------------------------------------- #
 
-####################################
+// Folder view location   
+const VIEWS_FLD = 'views/';
+
+// File default for views
+const INDEX_VIEW = 'welcome';
+
+# ------------------------------------------------------------- #
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\native;
+namespace App\Native;
 
 require 'app/Config.php';
 
@@ -28,7 +28,6 @@ class URL
             require_once VIEWS_FLD.$_GET[$views].$views.'.php';
         }
     }
-
 }
 
 ?>
