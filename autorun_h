@@ -1,0 +1,8 @@
+
+This is the file for executing application commands, with 
+which the developer can automate the functionality.
+
+> autorun                       | Running the server on port 80
+> autorun [port]                | Running the server on the specified port
+
+-------
