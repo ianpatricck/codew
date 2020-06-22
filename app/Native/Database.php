@@ -93,6 +93,8 @@ class MySQL extends Database
 
 class PgSQL extends Database 
 {
+    protected $connection;
+    
     public function __construct($host, $db_name, $user, $pass)
     {
         try {
