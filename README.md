@@ -1,4 +1,4 @@
-# Codeworker
+# codeworker
 ### Project to improve your productivity at the time of development.
 
 ---
@@ -10,7 +10,7 @@
 ```json
 {
     "require": {
-        "codeworker/codeworker": "1.0.1"
+        "codeworker/codeworker": "^1.0"
     }
 }
 ```
