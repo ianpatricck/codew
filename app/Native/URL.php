@@ -2,7 +2,7 @@
 
 namespace App\Native;
 
-require 'app/Config.php';
+require dirname(__FILE__) . '/../require.php';
 
 class URL
 {

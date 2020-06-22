@@ -1,9 +1,0 @@
-
-This is the file for executing application commands, with 
-which the developer can automate the functionality.
-
-> php autorun                       | Running the server on port 80
-> php autorun [port]                | Running the server on the specified port
-> php autorun -h                    | open this file.
-
--------

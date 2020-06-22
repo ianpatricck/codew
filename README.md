@@ -7,6 +7,14 @@
 
 ```composer require codeworker/codeworker```
 
+```json
+{
+    "require": {
+        "codeworker/codeworker": "1.0.1"
+    }
+}
+```
+
 ```php
 require './vendor/autoload.php';
 ```
@@ -17,7 +25,7 @@ This is a feature to automate some functions in the development.
 ### Native namespace
 
 ```php
-# app/Config.php
+# app/require.php
 
 // ------------------------------------------------------------- //
 
@@ -27,7 +35,7 @@ require 'Native/Form.php';
 // ------------------------------------------------------------- //
 
 const INDEX_FOLDER = 'views/';          # Folder view location
-const INDEX_VIEW = 'welcome';           # File default for views
+const INDEX_VIEW = 'init';              # File default for views
 
 // ------------------------------------------------------------- //
 
