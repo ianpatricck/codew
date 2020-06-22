@@ -23,9 +23,9 @@ class URL
     static public function index($views)
     {
         if(!isset($_GET[$views])) {
-            require_once VIEWS_FLD.INDEX_VIEW.'.php';
+            require_once INDEX_FOLDER.INDEX_VIEW.'.php';
         } else {
-            require_once VIEWS_FLD.$_GET[$views].$views.'.php';
+            require_once INDEX_FOLDER.$_GET[$views].$views.'.php';
         }
     }
 }

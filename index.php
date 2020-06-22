@@ -12,7 +12,7 @@ $views = URL::call([
     'welcome' => 'welcome'
 ]);
 
-# Index default page 
+# Index URL's
 
 URL::index($views);
 

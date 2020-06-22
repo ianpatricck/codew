@@ -26,13 +26,8 @@ require 'Native/Form.php';
 
 // ------------------------------------------------------------- //
 
-# Folder view location
-
-const VIEWS_FLD = 'views/';
-
-# File default for views
-
-const INDEX_VIEW = 'welcome';
+const INDEX_FOLDER = 'views/';          # Folder view location
+const INDEX_VIEW = 'welcome';           # File default for views
 
 // ------------------------------------------------------------- //
 
