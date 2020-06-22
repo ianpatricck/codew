@@ -1,20 +1,23 @@
 <?php
 
-class MySQL
+class Null_DB
 {
     protected $connection;
 
-    public function __construct($host, $db_name, $user, $pass)
+    public function __construct($host, $user, $pass)
     {
         try {
-            $this->connection = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass);
+            $this->connection = new PDO("mysql:host=$host", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         } catch (PDOException $error) {
             throw new PDOException($error);
         }
     }
+}
 
+class Database 
+{
     public function sqli($query)
     {
         $stmt = $this->connection->prepare($query);
@@ -69,6 +72,36 @@ class MySQL
     {
         $stmt = $this->connection->prepare("DELETE FROM $table WHERE $column = '$data'");
         $stmt->execute();
+    }
+}
+
+class MySQL extends Database
+{
+    protected $connection;
+
+    public function __construct($host, $db_name, $user, $pass)
+    {
+        try {
+            $this->connection = new PDO("mysql:host=$host;dbname=$db_name", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        } catch (PDOException $error) {
+            throw new PDOException($error);
+        }
+    }
+}
+
+class PgSQL extends Database 
+{
+    public function __construct($host, $db_name, $user, $pass)
+    {
+        try {
+            $this->connection = new PDO("pgsql:host=$host; dbname=$db_name;", $user, $pass,  array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        } catch (PDOException $error) {
+            throw new PDOException($error);
+        }
     }
 }
 

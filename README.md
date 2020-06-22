@@ -21,8 +21,7 @@ This is a feature to automate some functions in the development.
 
 // ------------------------------------------------------------- //
 
-require 'Native/Null_DB.php';
-require 'Native/MySQL.php';
+require 'Native/Database.php';
 require 'Native/Form.php';
 
 // ------------------------------------------------------------- //
@@ -64,8 +63,11 @@ URL::index($views);
 ```php
 $stmt = new Null_DB('localhost', 'root', '');           # Initialize MySQL with no database created
 $stmt = new MySQL('localhost', 'devst', 'root', '');    # Initialize normal MySQL class
+$stmt = new PgSQL('localhost', 'devst', 'root', '');    # Initialize normal PgSQL class
+```
 
-$stmt->sqli(':query');
+```php
+$stmt->sqli(':query');                                  # Insert SQL query
 $value = $stmt->sqlr(':query');                         # Insert SQL query and returns a value
 ```
 
