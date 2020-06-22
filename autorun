@@ -14,7 +14,7 @@ if(isset($argv[1]) and is_numeric($argv[1])) {
 }
 
 if(isset($argv[1]) and $argv[1] == '-h') {
-    $help_file = file('autorun_h');
+    $help_file = file('components/help');
 
     foreach ($help_file as $key => $value) {
         echo $value;
