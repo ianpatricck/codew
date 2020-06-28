@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Codeworker\Cl;
+namespace App\Cl_codeworker;
 
 class URL
 {
