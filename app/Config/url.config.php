@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Codeworker_Conf_URL;
-
 // ------------------------------------------------------------- //
    
 const INDEX_FOLDER = 'views/';          # Folder view location
