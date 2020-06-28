@@ -16,22 +16,6 @@ This is a feature to automate some functions in the development.
 ---
 ### Native namespace
 
-```php
-
-// ------------------------------------------------------------- //
-
-require 'Native/Database.php';
-require 'Native/Form.php';
-
-// ------------------------------------------------------------- //
-
-const INDEX_FOLDER = 'views/';          # Folder view location
-const INDEX_VIEW = 'init';              # File default for views
-
-// ------------------------------------------------------------- //
-
-```
-
 - URL class
 
 ```html
