@@ -29,8 +29,8 @@ This is a feature to automate some functions in the development.
 
 // ------------------------------------------------------------- //
 
-require 'Native/Database.php';
-require 'Native/Form.php';
+require 'Class/Database.php';
+require 'Class/Form.php';
 
 // ------------------------------------------------------------- //
 

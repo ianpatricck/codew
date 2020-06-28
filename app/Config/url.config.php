@@ -1,9 +1,6 @@
 <?php
 
-// ------------------------------------------------------------- //
-
-require 'Class/Database.php';
-require 'Class/Form.php';
+namespace App\Codeworker\Config\URl;
 
 // ------------------------------------------------------------- //
    

@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Codeworker;
-
-require dirname(__FILE__) . '/../require.php';
+namespace App\Codeworker\Cl;
 
 class URL
 {
