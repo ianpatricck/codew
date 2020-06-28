@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes;
+namespace App\Native;
 
 require dirname(__FILE__) . '../../Config/url.config.php';
 
