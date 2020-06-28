@@ -2,8 +2,8 @@
 
 // ------------------------------------------------------------- //
 
-require 'Native/Database.php';
-require 'Native/Form.php';
+require 'Class/Database.php';
+require 'Class/Form.php';
 
 // ------------------------------------------------------------- //
    

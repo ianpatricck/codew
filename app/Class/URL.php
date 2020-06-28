@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Native;
+namespace App\Codeworker;
 
 require dirname(__FILE__) . '/../require.php';
 
