@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Codeworker\Config\URl;
+namespace App\Codeworker\Config\URL_Config;
 
 // ------------------------------------------------------------- //
    

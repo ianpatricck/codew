@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Codeworker\Config\DB;
+namespace App\Codeworker\Config\DB_Config;
 
 const HOST = 'localhost';
 const DB_NAME = 'devst';
