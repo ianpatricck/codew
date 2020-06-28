@@ -1,6 +1,7 @@
 {
     "name": "codeworker/codeworker",
-    "description": "Component to reduce your typing in scripts",
+    "description": "Project to improve your productivity at the time of development.",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
@@ -8,7 +9,7 @@
             "email": "contatoianpatrick@gmail.com"
         }
     ],
-
+    
     "require": {
         "php": "^7.0"
     },
