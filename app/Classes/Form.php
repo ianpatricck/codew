@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Codeworker;
+namespace App\Classes;
 
 class Form
 {

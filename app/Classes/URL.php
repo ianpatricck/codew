@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Codeworker;
+namespace App\Classes;
+
+require dirname(__FILE__) . '../../Config/url.config.php';
 
 class URL
 {
