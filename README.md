@@ -5,18 +5,10 @@
 
 ## Installation
 
-```composer require codeworker/codeworker```
-
-```json
-{
-    "require": {
-        "codeworker/codeworker": "^1.0"
-    }
-}
-```
+```composer create-project codeworker/codeworker myproject```
 
 ```php
-require './vendor/autoload.php';
+require 'app/app.php';
 ```
 
 This is a feature to automate some functions in the development.
@@ -25,7 +17,6 @@ This is a feature to automate some functions in the development.
 ### Native namespace
 
 ```php
-# app/require.php
 
 // ------------------------------------------------------------- //
 
@@ -49,7 +40,7 @@ const INDEX_VIEW = 'init';              # File default for views
 
 ```php
 
-require './vendor/autoload.php';
+require 'app/app.php';
 
 use App\Native\URL;
 
@@ -64,9 +55,9 @@ URL::index($views);
 - Insert SQL query
 
 ```php
-$stmt = new Null_DB('localhost', 'root', '');           # Initialize MySQL with no database created
-$stmt = new MySQL('localhost', 'devst', 'root', '');    # Initialize normal MySQL class
-$stmt = new PgSQL('localhost', 'devst', 'root', '');    # Initialize normal PgSQL class
+$stmt = new Null_DB();                                  # Initialize MySQL with no database created
+$stmt = new MySQL();                                    # Initialize normal MySQL class
+$stmt = new PgSQL();                                    # Initialize normal PgSQL class
 ```
 
 ```php
