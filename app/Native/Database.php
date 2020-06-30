@@ -11,7 +11,6 @@ class Null_DB
         try {
             $this->connection = new PDO("mysql:host=$host", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         } catch (PDOException $error) {
             throw new PDOException($error);
         }
@@ -59,7 +58,7 @@ class Database
         }
     }
 
-    public function update($table, $columns = [], $column, $compare)
+    public function update($table, $column, $compare, $columns = [])
     {
         foreach ($columns as $key => $value) {
             $keys = $key;
@@ -86,7 +85,6 @@ class MySQL extends Database
         try {
             $this->connection = new PDO('mysql:host='.HOST.';dbname='.DB_NAME, USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         } catch (PDOException $error) {
             throw new PDOException($error);
         }
@@ -102,7 +100,6 @@ class PgSQL extends Database
         try {
             $this->connection = new PDO('pgsql:host='.HOST.';dbname='.DB_NAME, USERNAME, PASSWORD);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         } catch (PDOException $error) {
             throw new PDOException($error);
         }

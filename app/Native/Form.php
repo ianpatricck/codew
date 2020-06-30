@@ -4,51 +4,51 @@ namespace App\Native;
 
 class Form
 {
-    static public function text($input)
+    public static function text($input)
     {
         $text = filter_var($input, FILTER_SANITIZE_STRING);
         return $text;
     }
 
-    static public function email($input)
+    public static function email($input)
     {
         $email = filter_var($input, FILTER_VALIDATE_EMAIL);
         return $email;
     }
 
-    static public function int($input)
+    public static function int($input)
     {
         $int = filter_var($input, FILTER_VALIDATE_INT);
 
-        if($int) {
+        if ($int) {
             return $int;
         } else {
             return 0;
         }
     }
 
-    static public function float($input)
+    public static function float($input)
     {
         $float = filter_var($input, FILTER_VALIDATE_FLOAT);
 
-        if($float) {
+        if ($float) {
             return $float;
         } else {
             return 0;
         }
     }
 
-    static public function upload($input_name, $extensions = [], $destiny, $min_bytes)
+    public static function upload($input_name, $destiny, $min_bytes, $extensions = [])
     {
         $extension = pathinfo($_FILES[$input_name]['name'], PATHINFO_EXTENSION);
         $filename = $input_name.'.'.$extension;
         $format = substr($filename, -3);
 
-        if(in_array($extension, $extensions) && $extension == $format) {
+        if (in_array($extension, $extensions) && $extension == $format) {
             $temp = $_FILES[$input_name]['tmp_name'];
             $new_name = uniqid().'.'.$extension;
 
-            if(filesize($temp) < $min_bytes) {
+            if (filesize($temp) < $min_bytes) {
                 move_uploaded_file($temp, $destiny.$new_name);
                 return $new_name;
             }

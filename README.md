@@ -55,7 +55,7 @@ $value = $stmt->sqlr(':query');                         # Insert SQL query and r
 
 $stmt->insert(':table', ['id' => :id, 'name' => ':name']);
 $stmt->select(':table', ':column', ':columnCompare', ':valueCompare');
-$stmt->update(':table', ['id' => :id,'name' => ':name'], ':column', ':columnCompare');
+$stmt->update(':table', ':column', ':columnCompare', ['id' => :id,'name' => ':name']);
 $stmt->delete(':table', ':columnCompare', ':valueCompare');
 ```
 
@@ -71,7 +71,10 @@ $email = Form::email($_POST['email']);                  # Validate e-mail
 $value = Form::int($_POST['value']);                    # Validate integers
 $money = Form::float($_POST['value']);                  # Validate floats
 
-$upload = Form::upload(':input_name', [
-    'png', 'jpg', 'gif', 'pdf', 'txt'
-], 'destiny_folder/', $size_bytes);                     # Returns the name of the random entry
+$upload = Form::upload(
+    ':input_name', 
+    'destiny_folder/', 
+    $size_bytes, 
+    ['png', 'jpg', 'gif', 'pdf', 'txt']
+);                                                      # Returns the name of the random entry
 ```
