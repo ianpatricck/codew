@@ -1,6 +1,6 @@
 <?php
 
-require dirname(__FILE__) . '/../Config/db.config.php';
+require __DIR__ . '/../Config/db.config.php';
 
 class Null_DB
 {
