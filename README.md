@@ -7,10 +7,6 @@
 
 ```composer create-project codeworker/codeworker myproject```
 
-```php
-require 'app/app.php';
-```
-
 This is a feature to automate some functions in the development.
 
 ---
@@ -23,8 +19,7 @@ This is a feature to automate some functions in the development.
 ```
 
 ```php
-
-require 'app/app.php';
+require __DIR__ . '/app/app.php';
 
 use App\Native\URL;
 
