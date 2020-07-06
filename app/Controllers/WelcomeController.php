@@ -5,9 +5,11 @@
 // $mysql = new MySQL();
 // $pgsql = new PgSQL();
 
-function testController() {
+function welcome() {
     // global $mysql;
     // global $pgsql;
+
+    echo 'Welcome to codeworker';
 }
 
 ?>

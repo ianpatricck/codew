@@ -37,7 +37,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to codeworker</h1>
+    <h1><?php welcome(); ?></h1>
 
     <script>
         function typeWriter(element) {
