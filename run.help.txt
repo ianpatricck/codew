@@ -1,0 +1,10 @@
+
+=> codeworker run
+
+>> php run                                  | Initialize PHP (port 80).
+>> php run <number>                         | Initialize PHP on the specified port.
+
+---
+
+>> php run controller:file <name>           | Make controller file.
+>> php run controller:function <name>       | Make controller function.
