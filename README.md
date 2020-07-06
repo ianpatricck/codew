@@ -34,7 +34,6 @@ URL::index($views);
 - Insert SQL query
 
 ```php
-$stmt = new Null_DB();                                  # Initialize MySQL with no database created
 $stmt = new MySQL();                                    # Initialize normal MySQL class
 $stmt = new PgSQL();                                    # Initialize normal PgSQL class
 ```
