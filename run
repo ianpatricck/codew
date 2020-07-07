@@ -1,19 +1,19 @@
 #!/usr/bin/env php
 <?php
 
-if ($argv[1] && $argv[1] == '-h') {
-    $helpf = fopen('run.help.txt', 'r');
-    $text = fread($helpf, filesize('run.help.txt'));
-    
-    echo $text;
-
-} elseif (!isset($argv[1])) {
+if (!isset($argv[1])) {
     echo "Starting codeworker PHP server ...\n";
     echo exec('php -S localhost:80');
 
 } elseif ($argv[1] && is_numeric($argv[1])) {
     echo "Starting codeworker PHP server ...\n";
     echo exec('php -S localhost:' . $argv[1]);
+
+} elseif ($argv[1] && $argv[1] == '-h') {
+    $helpf = fopen('run.help.txt', 'r');
+    $text = fread($helpf, filesize('run.help.txt'));
+    
+    echo $text;
 }
 
 /* 
