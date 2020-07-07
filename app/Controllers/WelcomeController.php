@@ -5,7 +5,8 @@
 // $mysql = new MySQL();
 // $pgsql = new PgSQL();
 
-function welcome() {
+function welcome() 
+{
     // global $mysql;
     // global $pgsql;
 

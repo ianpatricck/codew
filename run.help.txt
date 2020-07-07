@@ -7,4 +7,3 @@
 ---
 
 >> php run controller:file <name>           | Make controller file.
->> php run controller:function <name>       | Make controller function.

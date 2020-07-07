@@ -22,7 +22,34 @@ if ($argv[1] && $argv[1] == '-h') {
 * ------------------------------------------ 
 */
 
-function controller()
+function controller($action = [])
 {
-    //
+    foreach ($action as $key => $value) {
+        if ($key == 'makeDefault') {
+            $fcontroller = fopen('app/Controllers/'.$value.'.php', 'w');
+            $content = 
+"<?php
+
+    # Developing
+
+    // \$mysql = new MySQL();
+    // \$pgsql = new PgSQL();
+
+    function show()
+    {
+        // global \$mysql;
+        // global \$pgsql;
+    }
+
+?>";
+
+            fwrite($fcontroller, $content);
+            fclose($fcontroller);
+        }
+    }
+}
+
+if ($argv[1] && $argv[1] == 'controller:file') {
+    controller(['makeDefault' => $argv[2]]);
+    echo 'Controller created successfully.';
 }
