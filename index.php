@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . '/app/app.php';
+require __DIR__ . '/app.php';
 
-use App\Native\URL;
+use App\Codew\URL;
 
 $views = URL::call([
     'init' => 'init'

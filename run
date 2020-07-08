@@ -32,13 +32,9 @@ function controller($action = [])
 
     # Developing
 
-    // \$mysql = new MySQL();
-    // \$pgsql = new PgSQL();
-
     function show()
     {
-        // global \$mysql;
-        // global \$pgsql;
+        global \$db;
     }
 
 ?>";
