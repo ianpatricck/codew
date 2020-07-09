@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>codeworker</title>
+    <title>@ codeworker</title>
     <link rel="stylesheet" href="resources/css/main.css">
 </head>
 <body>
@@ -131,7 +131,12 @@ $email = Form::email($_POST['email']);                                  # Valida
 $value = Form::int($_POST['value']);                                        # Validate integers
 $money = Form::float($_POST['value']);                                  # Validate floats
 
-$upload = Form::upload(':input_name', 'destiny_folder/', $size_bytes, ['png', 'jpg', 'gif', 'pdf', 'txt']                             # Returns the name of the random entry);</a></pre>
+$upload = Form::upload(':input_name', 
+'destiny_folder/', 
+$size_bytes, ['png', 'jpg', 'gif', 'pdf', 'txt']
+);
+
+# Returns the name of the random entry</a></pre>
             </div>
         </div>
 
@@ -139,7 +144,12 @@ $upload = Form::upload(':input_name', 'destiny_folder/', $size_bytes, ['png', 'j
             <h3><i>=></i> Controllers</h3>
 
             <div class="info">
-                ...
+                <p>To view your data on your pages, a relationship between controllers 
+                and models is required, so we can obtain data from our 
+                database through the files in <a class="b">app/Controllers/</a>.<br>
+                To create them we use the command <a class="b">php run controller:file</a> 
+                at the root of the project, to get more information about <br>
+                the run file run the command <a class="a">php run -h</a> at the root of the project.</p>
             </div>
         </div>
     </div>
