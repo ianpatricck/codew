@@ -114,8 +114,34 @@ if (isset($_POST['submit'])) {
                 variable <a class="b">$text</a> and then we use the <a class="b">insert</a> method of 
                 class <a class="b">DB</a> to make the insertion of a name where the id is equal to <a class="b">1</b>.</p>
             </div>
+            <div class="info">
+                <p>Here are more methods that can be used from the Form and DB classes:</p>
+            </div>
+            <div class="card">
+<pre><a>$db->insert(':table', ['id' => :id, 'name' => ':name']);
+$db->select(':table', ':column', ':columnCompare', ':valueCompare');
+$db->update(':table', ':column', ':columnCompare', ['id' => :id,'name' => ':name']);
+$db->delete(':table', ':columnCompare', ':valueCompare');</a></pre>
+            </div>
+            <div class="card" style="margin-top: 15px;">
+<pre><a>use App\Native\Form;
+
+$name = Form::text($_POST['name']);                                     # Sanitize text
+$email = Form::email($_POST['email']);                                  # Validate e-mail
+$value = Form::int($_POST['value']);                                        # Validate integers
+$money = Form::float($_POST['value']);                                  # Validate floats
+
+$upload = Form::upload(':input_name', 'destiny_folder/', $size_bytes, ['png', 'jpg', 'gif', 'pdf', 'txt']                             # Returns the name of the random entry);</a></pre>
+            </div>
         </div>
 
+        <div class="content-min">
+            <h3><i>=></i> Controllers</h3>
+
+            <div class="info">
+                ...
+            </div>
+        </div>
     </div>
 
     <script>
