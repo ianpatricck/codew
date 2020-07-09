@@ -58,6 +58,64 @@ URL::index($views);</a></pre>
             </div>
         </div>
 
+        <div class="content-min">
+            <h3><i>=></i> Database</h3>
+
+            <div class="info">
+                <p>The file in which you can configure the settings in your 
+                database whether PostgreSQL or MySQL is located at:</p>
+            </div>
+            <div class="info">
+                <h4><i>[</i> app / Config / db.config.php <i>]</i></h4>
+            </div>
+            <div class="card">
+<pre><a>const HOST = 'localhost';
+const DB_NAME = 'codeworker';
+const USERNAME = 'root';
+const PASSWORD = '';</a></pre>
+            </div>
+            <div class="info">
+                <p>In the <a class="b">app.php</a> file located at the root of the project, 
+                you can define the database option using the variable <a class="b">$db</a>.</p>
+            </div>
+            <div class="info">
+                <p>To manipulate SQL in your project it is recommended to work on the except.php file 
+                which is also located at the root of the project.<br>
+                In it is made all the exceptions of form submission and data manipulation that go 
+                straight to your database. We will also know some shortcuts that facilitate the typing of 
+                queries within the project.</p>
+            </div>
+            <div class="info">
+                <h4><i>[</i> resources / urls / form.php <i>]</i></h4>
+            </div>
+            <div class="card">
+<pre><a>&lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; name=&quot;submit&quot;&gt;
+&lt;/form&gt;</a></pre>
+            </div>
+            <div class="info">
+                <h4><i>[</i> except.php <i>]</i></h4>
+            </div>
+            <div class="card">
+<pre><a>use App\Codew\Form;
+
+if (isset($_POST['submit'])) {
+    global $db;
+
+    $name = Form::text($_POST['name']);
+
+    $db->insert('users', ['id' => 1, 'name' => $name]);
+}</a></pre>
+            </div>
+            <div class="info">
+                <p>Above we have an example of insertion of data very simple to be understood 
+                in which the verification validates the data type in the 
+                variable <a class="b">$text</a> and then we use the <a class="b">insert</a> method of 
+                class <a class="b">DB</a> to make the insertion of a name where the id is equal to <a class="b">1</b>.</p>
+            </div>
+        </div>
+
     </div>
 
     <script>
