@@ -1,5 +1,7 @@
 <?php 
 
+require __DIR__ . '/vendor/autoload.php';
+
 require __DIR__ . '/app/Classes/URL.php';
 require __DIR__ . '/app/Classes/DB.php';
 require __DIR__ . '/app/Classes/Form.php';

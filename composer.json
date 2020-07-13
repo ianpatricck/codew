@@ -11,7 +11,8 @@
     ],
     
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "erusev/parsedown": "^1.7"
     },
 
     "autoload": {

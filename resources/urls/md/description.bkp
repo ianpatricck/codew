@@ -1,0 +1,134 @@
+# Description
+
+=> URL
+            
+This is how you can work with URL redirects on your pages.
+            
+            
+<a href="?redirect">I will redirect to the page redirect.php</a>
+            
+ You can change the settings for URLS calls in the url.config.php file located in the settings folder.
+            
+            
+app / Config / url.config.php
+            
+const INDEX_FOLDER = 'resources/urls/';
+const INDEX_VIEW = 'init';
+            
+            
+The constant INDEX_FOLDER refers to the folder where your URL files will be viewed. 
+The INDEX_VIEW constant refers to the default file or "index", if URLs are not found, 
+it will also serve as your application's home page.
+            
+            
+index.php
+            
+require __DIR__ . '/app.php';
+
+use App\Codew\URL;
+
+$views = URL::call([
+    'init' => 'init'
+]);
+
+URL::index($views);
+
+            
+            
+You can also call more pages in the associative matrix of the call method, 
+in addition to passing parameters to your URL. the array key in the URL refers 
+to the name of the URL passed in, while the value is the 
+name of the file in the URLs folder.
+            
+        
+=> Database
+
+The file in which you can configure the settings in your 
+database whether PostgreSQL or MySQL is located at:
+            
+            
+app / Config / db.config.php
+            
+const HOST = 'localhost';
+const DB_NAME = 'codeworker';
+const USERNAME = 'root';
+const PASSWORD = '';
+            
+            
+In the app.php file located at the root of the project, 
+you can define the database option using the variable $db.
+            
+            
+To manipulate SQL in your project it is recommended to work on the except.php file 
+which is also located at the root of the project.<br>
+In it is made all the exceptions of form submission and data manipulation that go 
+straight to your database. We will also know some shortcuts that facilitate the typing of 
+queries within the project.
+            
+            
+resources / urls / form.php
+            
+            
+<form action="" method="POST">;
+    <input type="text" name="name"/>;
+    <input type="submit" value="Submit" name="submit"/>;
+</form>;
+            
+            
+except.php
+            
+            
+use App\Codew\Form;
+
+if (isset($_POST['submit'])) {
+    global $db;
+
+    $name = Form::text($_POST['name']);
+
+    $db->insert('users', ['id' => 1, 'name' => $name]);
+}
+            
+            
+Above we have an example of insertion of data very simple to be understood 
+in which the verification validates the data type in the 
+variable $text and then we use the insert method of 
+class DB to make the insertion of a name where the id is equal to 1.
+            
+            
+Here are more methods that can be used from the Form and DB classes:
+            
+            
+$db->insert(':table', ['id' => :id, 'name' => ':name']);
+$db->select(':table', ':column', ':columnCompare', ':valueCompare');
+$db->update(':table', ':column', ':columnCompare', ['id' => :id,'name' => ':name']);
+$db->delete(':table', ':columnCompare', ':valueCompare');
+
+use App\Native\Form;
+
+$name = Form::text($_POST['name']);                                     # Sanitize text
+$email = Form::email($_POST['email']);                                  # Validate e-mail
+$value = Form::int($_POST['value']);                                    # Validate integers
+$money = Form::float($_POST['value']);                                  # Validate floats
+
+$upload = Form::upload(
+':input_name', 
+'destiny_folder/', 
+$size_bytes, 
+['png', 'jpg', 'gif', 'pdf', 'txt']
+);
+
+# Returns the name of the random entry
+            
+
+=> Controllers
+
+            
+To view your data on your pages, a relationship between controllers 
+and models is required, so we can obtain data from our 
+database through the files in app/Controllers/.
+To create them we use the command php run controller:file 
+at the root of the project, to get more information about 
+the run file run the command php run -h at the root of the project.
+            
+        
+    

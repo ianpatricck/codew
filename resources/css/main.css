@@ -18,38 +18,6 @@ h1::after {
     animation: flashes 1s infinite;
 }
 
-i {
-    color: darkred;
-}
-
-p {
-    font-family: monospace;
-}
-
-a {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.content {
-    margin-top: 10%;
-    margin: 11%;
-}
-
-.content-min {
-    margin-top: 5%;
-}
-
-.info {
-    margin: 25px;
-}
-
-.card {
-    background-color: gainsboro;
-    padding: 1%;
-    margin-left: 25px;
-    border-radius: 5px;
-}
-
 @keyframes flashes {
     0%, 100% {
         opacity: 1;
