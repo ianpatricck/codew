@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php $parsedown = new Parsedown(); ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +7,20 @@
     <link rel="stylesheet" href="resources/css/main.css">
 </head>
 <body>
+
+    <?php $parsedown = new Parsedown(); ?>
+
     <h1><?php welcome(); ?></h1>
+
+    <?php 
+    
+    $text = file_get_contents(dirname(__FILE__) . '/md/description.md');
+
+    ?>
+
+    <div class="container">
+    <?php echo $parsedown->text($text); ?>
+    </div>
 
     <script>
         function typeWriter(element) {

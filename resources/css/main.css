@@ -27,3 +27,7 @@ h1::after {
         opacity: 0;
     }
 }
+
+.container {
+    margin: 5%;
+}
