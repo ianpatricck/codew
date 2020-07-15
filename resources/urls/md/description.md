@@ -12,7 +12,7 @@ _This is how you can work with URL redirects on your pages_
 <br>
 
 ```html
-{{  <a href='?redirect'>I will redirect to the page redirect.php</a>  }}
+<a href='?redirect'>I will redirect to the page redirect.php</a>
 ```
 <br>
 

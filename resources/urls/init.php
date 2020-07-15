@@ -8,8 +8,6 @@
 </head>
 <body>
 
-    <?php $parsedown = new Parsedown(); ?>
-
     <h1><?php welcome(); ?></h1>
 
     <?php 
