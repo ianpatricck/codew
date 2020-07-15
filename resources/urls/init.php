@@ -8,16 +8,10 @@
 </head>
 <body>
 
-    <h1><?php welcome(); ?></h1>
-
-    <?php 
-    
-    $text = file_get_contents(dirname(__FILE__) . '/md/description.md');
-
-    ?>
+    <h1><?php welcome_msg(); ?></h1>
 
     <div class="container">
-    <?php echo $parsedown->text($text); ?>
+    <?php parsedown(dirname(__FILE__). '/md/description.md'); ?>
     </div>
 
     <script>
