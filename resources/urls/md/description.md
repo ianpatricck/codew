@@ -103,8 +103,7 @@ const PASSWORD = '';
 
 <br>
 
-_In the app.php file located at the root of the project, 
-you can define the database option using the variable $db._
+_In the Instances.php file located in the app, you can define the database option using the $db variable._
 
 <br>
 <br>
