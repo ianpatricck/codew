@@ -7,6 +7,7 @@ require __DIR__ . '/app/Classes/DB.php';
 require __DIR__ . '/app/Classes/Form.php';
 
 require __DIR__ . '/app/Instances.php';
+require __DIR__ . '/app/Router.php';
 
 // ----------------------------------------- //
 

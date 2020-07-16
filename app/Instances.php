@@ -1,12 +1,12 @@
 <?php
 
 // => INSTANCES
+// -------------------
 
-$db = new DB();
+$parsedown      =     new Parsedown();
+$db             =     new DB();
 
 # $db->mysql();
 # $db->pgsql();
-
-$parsedown = new Parsedown();
 
 ?>
