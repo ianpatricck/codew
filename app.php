@@ -11,7 +11,7 @@ require __DIR__ . '/app/Router.php';
 
 // ----------------------------------------- //
 
-require __DIR__ . '/except.php';
+require __DIR__ . '/public/except.php';
 
 foreach(glob('app/Controllers/*.php') as $controller) {
     require $controller;
