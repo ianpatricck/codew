@@ -4,9 +4,8 @@
 // -------------------
 
 $parsedown      =     new Parsedown();
-$db             =     new DB();
 
-# $db->mysql();
-# $db->pgsql();
+# DB::mysql();
+# DB::pgsql();
 
 ?>

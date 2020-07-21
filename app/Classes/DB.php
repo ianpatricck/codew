@@ -1,12 +1,14 @@
 <?php
 
+namespace App\Codew;
+
 require __DIR__ . '/../Config/db.config.php';
 
 class DB
 {
     protected $connection;
 
-    public function mysql()
+    public static function mysql()
     {
         try {
             $this->connection = new PDO('mysql:host='.HOST.';dbname='.DB_NAME, USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -16,7 +18,7 @@ class DB
         }
     }
 
-    public function pgsql()
+    public static function pgsql()
     {
         try {
             $connection = new PDO('pgsql:host='.HOST.';dbname='.DB_NAME, USERNAME, PASSWORD);
@@ -26,13 +28,13 @@ class DB
         }
     }
 
-    public function sqli($query)
+    public static function sqli($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
     }
 
-    public function sqlr($query)
+    public static function sqlr($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
@@ -40,7 +42,7 @@ class DB
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function insert($table, $columns = [])
+    public static function insert($table, $columns = [])
     {
         foreach ($columns as $key => $value) {
             $keys[] = $key;
@@ -54,7 +56,7 @@ class DB
         $stmt->execute();
     }
 
-    public function select($table, $column, $data, $compare)
+    public static function select($table, $column, $data, $compare)
     {
         $stmt = $this->connection->prepare("SELECT $column FROM $table WHERE $data = '$compare'");
         $stmt->execute();
@@ -65,7 +67,7 @@ class DB
         }
     }
 
-    public function update($table, $column, $compare, $columns = [])
+    public static function update($table, $column, $compare, $columns = [])
     {
         foreach ($columns as $key => $value) {
             $keys = $key;
@@ -76,7 +78,7 @@ class DB
         }
     }
 
-    public function delete($table, $column, $data)
+    public static function delete($table, $column, $data)
     {
         $stmt = $this->connection->prepare("DELETE FROM $table WHERE $column = '$data'");
         $stmt->execute();

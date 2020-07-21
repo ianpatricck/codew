@@ -1,7 +1,5 @@
 <?php
 
-use App\Codew\URL;
-
 function route($route, $param)
 {
     # In development ...
