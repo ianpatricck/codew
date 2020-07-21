@@ -2,7 +2,7 @@
 
 namespace App\Codew;
 
-require __DIR__ . '/../Config/url.config.php';
+require __DIR__ . '/../../config/url.config.php';
 
 class URL
 {
