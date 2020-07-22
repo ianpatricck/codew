@@ -8,11 +8,7 @@
 </head>
 <body>
 
-    <h1><?php welcome_msg(); ?></h1>
-
-    <div class="container">
-    <?php parsedown(dirname(__FILE__). '/md/description.md'); ?>
-    </div>
+    <!--- Welcome to codeworker -->
 
     <script>
         function typeWriter(element) {
