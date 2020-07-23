@@ -2,10 +2,10 @@
 
 class WelcomeController
 {
-    public function welcome($md)
+    public function welcome_view()
     {
         $msg = 'Welcome to codeworker';
-        return view('init', [$msg]);
+        return render('init', [$msg]);
     }
 }
 
