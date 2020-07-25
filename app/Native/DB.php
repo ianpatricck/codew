@@ -4,6 +4,8 @@ namespace App\Codew;
 
 require __DIR__ . '/../../config/db.config.php';
 
+use PDO;
+
 class DB
 {
     protected $connection;
