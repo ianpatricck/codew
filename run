@@ -3,14 +3,14 @@
 
 if (!isset($argv[1])) {
     echo "Starting codeworker PHP server ...\n";
-    echo exec('php -S localhost:80');
+    echo exec('public/php -S localhost:80');
 
 } elseif ($argv[1] && is_numeric($argv[1])) {
     echo "Starting codeworker PHP server ...\n";
-    echo exec('php -S localhost:' . $argv[1]);
+    echo exec('public/php -S localhost:' . $argv[1]);
 
 } elseif ($argv[1] && $argv[1] == '-h') {
-    $helpf = fopen('run.help.txt', 'r');
+    $helpf = fopen('resources/cli/run.help.txt', 'r');
     $text = fread($helpf, filesize('run.help.txt'));
     
     echo $text;
@@ -27,17 +27,7 @@ function controller($action = [])
     foreach ($action as $key => $value) {
         if ($key == 'makeDefault') {
             $fcontroller = fopen('app/Controllers/'.$value.'.php', 'w');
-            $content = 
-"<?php
-
-    # Developing
-
-    function show()
-    {
-        global \$db;
-    }
-
-?>";
+            $content = file_get_contents('resources/cli/controller.txt');
 
             fwrite($fcontroller, $content);
             fclose($fcontroller);
