@@ -1,6 +1,6 @@
 <?php
 
-function route($type, $param)
+function route($verb, $controller, $method)
 {
     # In development ...
 

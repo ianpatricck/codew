@@ -1,5 +1,5 @@
 <?php
 
-route('get', 'WelcomeController@welcome_view');
+route('get', 'WelcomeController', 'welcome_view');
 
 ?>

@@ -15,6 +15,9 @@ use App\Codew\Form;
 require __DIR__ . '/app/Instances.php';
 require __DIR__ . '/app/Router.php';
 
+require __DIR__ . '/public/interpreter.php';
+require __DIR__ . '/public/routes.php';
+
 foreach(glob('app/Controllers/*.php') as $controller) {
     require $controller;
 }
