@@ -6,5 +6,3 @@ $parsedown      =     new Parsedown();
 
 # DB::mysql();
 # DB::pgsql();
-
-?>

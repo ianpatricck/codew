@@ -86,5 +86,3 @@ class DB
         $stmt->execute();
     }
 }
-
-?>

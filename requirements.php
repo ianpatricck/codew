@@ -16,5 +16,3 @@ require __DIR__ . '/interpreters/NativeFunctions.php';
 foreach(glob('app/Controllers/*.php') as $controller) {
     require $controller;
 }
-
-?>

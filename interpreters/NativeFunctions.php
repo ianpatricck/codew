@@ -4,5 +4,3 @@ function render($view, $data = [])
 {
     // ..
 }
-
-?>
