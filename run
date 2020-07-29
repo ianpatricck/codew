@@ -3,11 +3,11 @@
 
 if (!isset($argv[1])) {
     echo "Starting codeworker PHP server ...\n";
-    echo exec('public/php -S localhost:80');
+    echo exec('php -S localhost:80');
 
 } elseif ($argv[1] && is_numeric($argv[1])) {
     echo "Starting codeworker PHP server ...\n";
-    echo exec('public/php -S localhost:' . $argv[1]);
+    echo exec('php -S localhost:' . $argv[1]);
 
 } elseif ($argv[1] && $argv[1] == '-h') {
     $helpf = fopen('resources/cli/run.help.txt', 'r');

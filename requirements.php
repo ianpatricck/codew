@@ -5,18 +5,13 @@ require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/app/Native/URL.php';
 require __DIR__ . '/app/Native/DB.php';
 require __DIR__ . '/app/Native/Form.php';
+require __DIR__ . '/app/Native/Controller.php';
 
 // ----------------------------------------- //
 
-use App\Codew\DB;
-use App\Codew\URL;
-use App\Codew\Form;
-
 require __DIR__ . '/app/Instances.php';
-require __DIR__ . '/app/Router.php';
 
 require __DIR__ . '/public/interpreter.php';
-require __DIR__ . '/public/routes.php';
 
 foreach(glob('app/Controllers/*.php') as $controller) {
     require $controller;

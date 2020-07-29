@@ -1,6 +1,6 @@
 <?php
 
-const INDEX_FOLDER = 'resources/urls/';
+const INDEX_FOLDER = 'resources/views/';
 const INDEX_VIEW = 'init';
 
 ?>

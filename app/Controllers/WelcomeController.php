@@ -1,11 +1,13 @@
 <?php
 
-class WelcomeController
+use App\Codew\Controller;
+
+class WelcomeController extends Controller
 {
-    public function welcome_view()
+    public function view()
     {
         $msg = 'Welcome to codeworker';
-        return render('init', [$msg]);
+        return render([$msg]);
     }
 }
 
