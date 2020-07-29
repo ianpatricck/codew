@@ -11,7 +11,7 @@ require __DIR__ . '/app/Native/Controller.php';
 
 require __DIR__ . '/app/Instances.php';
 
-require __DIR__ . '/public/interpreter.php';
+require __DIR__ . '/interpreters/NativeFunctions.php';
 
 foreach(glob('app/Controllers/*.php') as $controller) {
     require $controller;
