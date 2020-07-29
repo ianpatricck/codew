@@ -2,7 +2,7 @@
 
 function render($view, $data = [])
 {
-    
+    // ..
 }
 
 ?>
