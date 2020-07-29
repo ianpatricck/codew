@@ -6,7 +6,8 @@ use App\Codew\URL;
 use App\Codew\Controller;
 
 $views = URL::call([
-    'init' => 'init'
+    'init' => 'init',
+    'docs' => 'docs'
 ]);
 
 URL::index($views);

@@ -10,5 +10,3 @@ class WelcomeController extends Controller
         return render([$msg]);
     }
 }
-
-?>
