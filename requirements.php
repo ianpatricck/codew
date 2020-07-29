@@ -2,10 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-require __DIR__ . '/app/Native/URL.php';
-require __DIR__ . '/app/Native/DB.php';
-require __DIR__ . '/app/Native/Form.php';
-require __DIR__ . '/app/Native/Controller.php';
+foreach(glob('app/Native/*.php') as $class) {
+    require $class;
+}
 
 // ----------------------------------------- //
 
