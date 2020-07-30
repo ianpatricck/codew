@@ -41,7 +41,7 @@ class DB
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     public static function insert($table, $columns = [])
