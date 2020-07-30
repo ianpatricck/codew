@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Codew;
+namespace App\Native;
 
 require __DIR__ . '/../../config/db.config.php';
 

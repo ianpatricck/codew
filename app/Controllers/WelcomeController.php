@@ -1,6 +1,6 @@
 <?php
 
-use App\Codew\Controller;
+use App\Native\Controller;
 
 class WelcomeController extends Controller
 {

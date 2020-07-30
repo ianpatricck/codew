@@ -2,8 +2,8 @@
 
 require __DIR__ . '/requirements.php';
 
-use App\Codew\URL;
-use App\Codew\Controller;
+use App\Native\URL;
+use App\Native\Controller;
 
 $views = URL::call([
     'init' => 'init',
