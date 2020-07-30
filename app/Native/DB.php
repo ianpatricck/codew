@@ -8,7 +8,7 @@ use PDO;
 
 class DB
 {
-    protected $connection;
+    private $connection;
 
     public static function mysql()
     {
