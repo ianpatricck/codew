@@ -31,6 +31,12 @@ class DB
         }
     }
 
+/* 
+* ------------------------------------------
+* ---------------------- :: Simple queries
+* ------------------------------------------ 
+*/
+
     public static function sql_insert($query)
     {
         $stmt = $this->connection->prepare($query);
