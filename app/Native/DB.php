@@ -5,6 +5,7 @@ namespace App\Native;
 require __DIR__ . '/../../config/db.config.php';
 
 use PDO;
+use PDOException;
 
 class DB
 {
