@@ -2,7 +2,7 @@
 
 namespace App\Native;
 
-class Controller 
+class Controller
 {
     public static function inject($view, $controller, $method)
     {

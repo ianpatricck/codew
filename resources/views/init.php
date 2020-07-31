@@ -10,6 +10,6 @@
 
     <!--- Welcome to codeworker -->
 
-    <script src="resources/js/script.js"></script>
+    <script src="<?php staticFile('js/script.js'); ?>"></script>
 </body>
 </html>
