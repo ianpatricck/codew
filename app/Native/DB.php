@@ -37,13 +37,13 @@ class DB
 * ------------------------------------------ 
 */
 
-    public static function sql_insert($query)
+    public static function InsertQuery($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
     }
 
-    public static function sql_return($query)
+    public static function returnQuery($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
