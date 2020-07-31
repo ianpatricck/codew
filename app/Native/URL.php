@@ -2,7 +2,7 @@
 
 namespace App\Native;
 
-require_once __DIR__ . '/../../config/url.config.php';
+require_once __DIR__ . '/../../config/define.php';
 
 class URL
 {
