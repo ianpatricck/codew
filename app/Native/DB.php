@@ -2,7 +2,7 @@
 
 namespace App\Native;
 
-require __DIR__ . '/../../config/db.config.php';
+require_once __DIR__ . '/../../config/db.config.php';
 
 use PDO;
 use PDOException;
