@@ -48,48 +48,14 @@ class DB
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
 
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public static function returnQueryAll($query)
+    {
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute();
+
         return $stmt->fetchAll(PDO::FETCH_OBJ);
-    }
-
-    public static function insert($table, $columns = [])
-    {
-        foreach ($columns as $key => $value) {
-            $keys[] = $key;
-            $values[] =  $value;
-        }
-
-        $colkeys = "`".implode("`, `", $keys)."`";
-        $colvalues = "'".implode("', '", $values)."'";
-
-        $stmt = $this->connection->prepare("INSERT INTO $table($colkeys) VALUES($colvalues);");
-        $stmt->execute();
-    }
-
-    public static function select($table, $column, $data, $compare)
-    {
-        $stmt = $this->connection->prepare("SELECT $column FROM $table WHERE $data = '$compare'");
-        $stmt->execute();
-
-        foreach ($stmt as $value) {
-            $result = $value[$column];
-            echo $result;
-        }
-    }
-
-    public static function update($table, $column, $compare, $columns = [])
-    {
-        foreach ($columns as $key => $value) {
-            $keys = $key;
-            $values =  $value;
-
-            $stmt = $this->connection->prepare("UPDATE $table SET $keys = '$values' WHERE $column = '$compare';");
-            $stmt->execute();
-        }
-    }
-
-    public static function delete($table, $column, $data)
-    {
-        $stmt = $this->connection->prepare("DELETE FROM $table WHERE $column = '$data'");
-        $stmt->execute();
     }
 }
