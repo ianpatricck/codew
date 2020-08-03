@@ -1,41 +1,31 @@
 #!/usr/bin/env php
 <?php
 
-if (!isset($argv[1])) {
-    echo "starting codeworker PHP server ...\n";
-    echo exec('php -S localhost:80');
+require_once __DIR__ . '/interpreters/cli/controller.cli.php';
+require_once __DIR__ . '/interpreters/cli/server/args.php';
 
-} elseif ($argv[1] && is_numeric($argv[1])) {
-    echo "starting codeworker PHP server ...\n";
-    echo exec('php -S localhost:' . $argv[1]);
 
-} elseif ($argv[1] && $argv[1] == '-h') {
-    $helpf = fopen('interpreters/cli/run.help.txt', 'r');
-    $text = fread($helpf, filesize('run.help.txt'));
-    
-    echo $text;
+/* 
+* ------------------------------------------
+* ----------------------------- :: Server
+* ------------------------------------------ 
+*/
+
+if ($argv[1] && $argv[1] == '-h') {
+    help($argv[1]);
+}
+
+if ($argv[1] && $argv[1] == 'server') {
+    start();
 }
 
 /* 
 * ------------------------------------------
-* ----------------------------- :: RUN
+* ----------------------------- :: Controllers
 * ------------------------------------------ 
 */
 
-function controller($action = [])
-{
-    foreach ($action as $key => $value) {
-        if ($key == 'makeDefault') {
-            $fcontroller = fopen('app/Controllers/'.$value.'.php', 'w');
-            $content = file_get_contents('interpreters/cli/controller.txt');
 
-            fwrite($fcontroller, $content);
-            fclose($fcontroller);
-        }
-    }
-}
-
-if ($argv[1] && $argv[1] == 'controller:file') {
-    controller(['makeDefault' => $argv[2]]);
-    echo 'Controller created successfully.';
+if ($argv[1] && $argv[1] == 'controller:make') {
+    makeController($argv[2]);
 }
