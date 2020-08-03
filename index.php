@@ -6,10 +6,10 @@ use App\Native\URL;
 use App\Native\Controller;
 
 $views = URL::call([
-    'init' => 'init',
+    'home' => 'home',
     'docs' => 'docs'
 ]);
 
 URL::index($views);
 
-Controller::inject('init', 'WelcomeController', 'welcome');
+Controller::inject('home', 'WelcomeController', 'welcome');

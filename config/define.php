@@ -10,4 +10,4 @@ define('PASSWORD', '');
 // => URL config
 
 define('INDEX_FOLDER', 'resources/views/');
-define('INDEX_VIEW', 'init');
+define('INDEX_VIEW', 'home');

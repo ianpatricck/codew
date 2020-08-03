@@ -1,6 +1,6 @@
 <?php
 
-function render($view, $data = [])
+function send($data = [])
 {
     // ..
 }

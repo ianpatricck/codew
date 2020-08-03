@@ -9,6 +9,6 @@ class WelcomeController extends Controller
     public function welcome()
     {
         $msg = 'Welcome to codeworker';
-        return render([$msg]);
+        return send([$msg]);
     }
 }
