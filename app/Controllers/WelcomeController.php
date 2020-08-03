@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Native\Controller;
-
-class WelcomeController extends Controller
+class WelcomeController
 {
     public function welcome()
     {

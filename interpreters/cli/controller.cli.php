@@ -5,14 +5,12 @@ function makeController($name)
     $content = "<?php
 
 namespace App\Controllers;
-    
-use App\Native\Controller;
-    
-class $name extends Controller
+
+class $name
 {
     // ..
 }
-    
+
 ";
 
     $file_controller = fopen('app/Controllers/'.$name.'.php', 'w');
