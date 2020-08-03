@@ -12,4 +12,4 @@ $views = URL::call([
 
 URL::index($views);
 
-Controller::inject('home', 'WelcomeController', 'welcome');
+Route::controller('home', 'WelcomeController', 'welcome');
