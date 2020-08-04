@@ -7,6 +7,6 @@ class WelcomeController
     public function welcome()
     {
         $msg = 'Welcome to codeworker';
-        return send([$msg]);
+        return send(['msg' => $msg]);
     }
 }
