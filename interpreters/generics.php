@@ -1,6 +1,6 @@
 <?php
 
-function send($data = [])
+function push($data = [])
 {
     foreach ($data as $key => $value) {
         echo $key . '=>' . $value . '<br>';
