@@ -3,7 +3,7 @@
 require __DIR__ . '/requirements.php';
 
 use App\Native\URL;
-use App\Native\Controller;
+use App\Native\Route;
 
 $views = URL::call([
     'home' => 'home',
