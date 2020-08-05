@@ -5,7 +5,7 @@ function help($argv)
     $filepath = 'interpreters/cli/run.help.txt';
     $file = fopen($filepath, 'r');
     $content = fread($file, filesize($filepath));
-        
+
     echo $content;
 }
 
