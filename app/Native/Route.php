@@ -8,12 +8,20 @@ class Route
     {
         $file_controller = file_get_contents('app/Controllers/' . $name . '.php');
 
-        $file_controller_temp = fopen('interpreters/cache/controllers/'. $name .'.cache', 'w');
+        $file_controller_cache = fopen('interpreters/cache/controllers/'. $name .'.cache', 'w');
 
-        fwrite($file_controller_temp, $file_controller);
-        fclose($file_controller_temp);
+        fwrite($file_controller_cache, $file_controller);
+        fclose($file_controller_cache);
 
-        $file_controller_cache = file_get_contents('interpreters/cache/controllers/'. $name .'.cache');
-        echo $file_controller_cache;
+        $file_controller_new = file('interpreters/cache/controllers/'. $name .'.cache');
+        
+        foreach ($file_controller_new as $line) {
+            $line = '';
+        }
+
+        foreach ($file_controller_new as $line) {
+            $content = "<pre>". $line ."</pre>";
+            echo $content;
+        }
     }
 }
