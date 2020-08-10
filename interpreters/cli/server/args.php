@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../../config/define.php';
+
 function help($argv)
 {
     $filepath = 'interpreters/cli/run.help.txt';
@@ -9,7 +11,7 @@ function help($argv)
     echo $content;
 }
 
-function start($argv = 80)
+function start($argv = PORT)
 {
     echo "starting codeworker PHP server ...\n";
     echo exec('php -S localhost:' . $argv);
