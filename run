@@ -1,8 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__ . '/interpreters/cli/controller.cli.php';
-require_once __DIR__ . '/interpreters/cli/server/args.php';
+require_once __DIR__ . '/interpreters/cli.php';
 
 
 /* 
@@ -11,11 +10,11 @@ require_once __DIR__ . '/interpreters/cli/server/args.php';
 * ------------------------------------------ 
 */
 
-if (!$argv[1]) {
-    help('-h');
+if (!isset($argv[1])) {
+    echo "\n[-] No args\n";
 }
 
-elseif ($argv[1] && $argv[1] == 'server') {
+elseif ($argv[1] == 'server') {
     start();
 }
 
@@ -26,6 +25,6 @@ elseif ($argv[1] && $argv[1] == 'server') {
 */
 
 
-elseif ($argv[1] && $argv[1] == 'controller:make') {
-    makeController($argv[2]);
+elseif ($argv[1] == 'create:controller') {
+    createController($argv[2]);
 }

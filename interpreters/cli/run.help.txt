@@ -1,8 +1,0 @@
-
-=> codeworker run
-
->> php run server                           | Initialize PHP (port 80).
-
----
-
->> php run controller:file <name>           | Make controller file.
