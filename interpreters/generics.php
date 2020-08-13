@@ -1,9 +1,9 @@
 <?php
 
-function push($data = [])
+function push($page, $data = [])
 {
     foreach ($data as $key => $value) {
-        echo $key . '=>' . $value . '<br>';
+        echo $key . ' => ' . $value . '<br>';
     }
 }
 

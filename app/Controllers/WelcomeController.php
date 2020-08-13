@@ -4,9 +4,9 @@ namespace App\Controllers;
 
 class WelcomeController
 {
-    public function welcome()
+    public static function welcome()
     {
         $msg = 'Welcome to codeworker';
-        return push(['msg' => $msg]);
+        return push('home', ['msg' => $msg]);
     }
 }

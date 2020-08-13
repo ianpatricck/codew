@@ -14,7 +14,3 @@ require_once __DIR__ . '/interpreters/generics.php';
 foreach(glob('app/Controllers/*.php') as $controller) {
     require __DIR__ . '/' . $controller;
 }
-
-foreach(glob('interpreters/temp/*.php') as $tempFile) {
-    require __DIR__ . '/' . $tempFile;
-}

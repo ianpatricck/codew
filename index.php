@@ -3,7 +3,9 @@
 require __DIR__ . '/codew.php';
 
 use App\Native\URL;
-use App\Native\Route;
+use App\Controllers\WelcomeController;
+
+/* ------------------- */
 
 $views = URL::call([
     'home' => 'home',
@@ -12,4 +14,6 @@ $views = URL::call([
 
 URL::index($views);
 
-Route::controller('home', 'WelcomeController', 'welcome');
+/* ------------------- */
+
+WelcomeController::welcome();
