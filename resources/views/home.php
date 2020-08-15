@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!--- Welcome to codeworker -->
+    <h1><?php echo $data['msg']; ?></h1>
 
     <script src="<?php staticFile('js/script.js'); ?>"></script>
 </body>

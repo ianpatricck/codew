@@ -2,9 +2,7 @@
 
 function push($page, $data = [])
 {
-    foreach ($data as $key => $value) {
-        echo $key . ' => ' . $value . '<br>';
-    }
+    require_once __DIR__ . '/../resources/views/' . $page . '.php';
 }
 
 function staticFile($filepath)
