@@ -1,5 +1,10 @@
 <?php
 
+function indexDefine($index)
+{
+    // ..
+}
+
 function push($page, $data = [])
 {
     if (isset($_GET[$page])) {
