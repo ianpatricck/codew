@@ -7,6 +7,3 @@ use App\Controllers\WelcomeController;
 /* ------------------- */
 
 WelcomeController::welcomeView();
-
-/* ------------------- */
-
