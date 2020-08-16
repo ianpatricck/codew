@@ -4,10 +4,11 @@ namespace App\Controllers;
 
 class WelcomeController
 {
-    public static function welcomeView()
+    public static function views()
     {
         $msg = 'Welcome to codeworker';
 
-        return push('home', ['msg' => $msg]);
+        push('home', ['msg' => $msg]);
+        push('docs');
     }
 }

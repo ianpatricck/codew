@@ -2,7 +2,10 @@
 
 function push($page, $data = [])
 {
-    require_once __DIR__ . '/../resources/views/' . $page . '.php';
+    if (isset($_GET[$page])) {
+        $_GET[$page] = $page;
+        require_once __DIR__ . '/../resources/views/' . $page . '.php';
+    }
 }
 
 function staticFile($filepath)

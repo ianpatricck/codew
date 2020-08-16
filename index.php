@@ -6,4 +6,4 @@ use App\Controllers\WelcomeController;
 
 /* ------------------- */
 
-WelcomeController::welcomeView();
+WelcomeController::views();
