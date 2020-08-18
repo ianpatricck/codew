@@ -3,7 +3,6 @@
 
 require_once __DIR__ . '/interpreters/cli.php';
 
-
 /* 
 * ------------------------------------------
 * ----------------------------- :: Server
@@ -23,7 +22,6 @@ elseif ($argv[1] == 'server') {
 * ----------------------------- :: Controllers
 * ------------------------------------------ 
 */
-
 
 elseif ($argv[1] == 'create:controller') {
     createController($argv[2]);
