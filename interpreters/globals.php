@@ -3,9 +3,9 @@
 function push($page, $data = [])
 {
     if ($_SERVER['REQUEST_URI'] == '/') {
-        require_once __DIR__ . '/../view/' . INDEX_PAGE . '.php';
+        require_once __DIR__ . '/../view/' . INDEX_PAGE . '.view.php';
     } else if ($_SERVER['REQUEST_URI'] == '/' . $page) {
-        require_once __DIR__ . '/../view/' . $page . '.php';
+        require_once __DIR__ . '/../view/' . $page . '.view.php';
     }
 }
 
