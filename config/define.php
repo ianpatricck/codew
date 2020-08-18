@@ -4,7 +4,7 @@
 
 define('PORT', 80);
 
-define('INDEX_PAGE', 'home');
+define('INDEX_PAGE', 'login');
 
 // => Database config
 
