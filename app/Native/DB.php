@@ -2,8 +2,6 @@
 
 namespace App\Native;
 
-require_once __DIR__ . '/../../config/define.php';
-
 use PDO;
 use PDOException;
 
