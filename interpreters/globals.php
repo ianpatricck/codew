@@ -9,6 +9,11 @@ function push($page, $data = [])
     }
 }
 
+function redirect()
+{
+    // ..
+}
+
 function staticFile($filepath)
 {
     echo '../public/' . $filepath;

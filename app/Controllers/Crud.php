@@ -11,7 +11,7 @@ class Crud
         push('dashboard');
     }
 
-    public static function register()
+    public static function register($req)
     {
         // ..
     } 

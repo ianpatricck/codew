@@ -8,3 +8,4 @@ use App\Controllers\Crud;
 /* ------------------- */
 
 Crud::view();
+Crud::register('/register');

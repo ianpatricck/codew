@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
+        <div class="inline-text">
+            <p class="title">codeworker ::</p> &nbsp;
+            <h2>Login</h2>
+        </div>
         <form action="" method="POST">
             <input type="text" name="email" placeholder="E-mail">
             <input type="password" name="password" placeholder="Password">

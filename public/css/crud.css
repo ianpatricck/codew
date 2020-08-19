@@ -20,6 +20,17 @@ h2 {
     margin-top: 20vh;
 }
 
+.inline-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    font-size: 17pt;
+    color: darkgray;
+    font-weight: bold;
+}
+
 form {
     display: flex;
     flex-direction: column;

@@ -10,8 +10,11 @@
 <body>
 
     <div class="container">
-        <h2>Register</h2>
-        <form action="" method="POST">
+        <div class="inline-text">
+            <p class="title">codeworker ::</p> &nbsp;
+            <h2>Register</h2>
+        </div>
+        <form action="/register" method="POST">
             <input type="text" name="name" placeholder="Name">
             <input type="text" name="email" placeholder="E-mail">
             <input type="password" name="password" placeholder="Password">
