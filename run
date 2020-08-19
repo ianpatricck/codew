@@ -3,11 +3,7 @@
 
 require_once __DIR__ . '/interpreters/cli.php';
 
-/* 
-* ------------------------------------------
-* ----------------------------- :: Server
-* ------------------------------------------ 
-*/
+// => Server
 
 if (!isset($argv[1])) {
     echo "\n[-] No args\n";
@@ -17,11 +13,7 @@ elseif ($argv[1] == 'server') {
     start();
 }
 
-/* 
-* ------------------------------------------
-* ----------------------------- :: Controllers
-* ------------------------------------------ 
-*/
+// => Controllers
 
 elseif ($argv[1] == 'create:controller') {
     createController($argv[2]);

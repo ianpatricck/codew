@@ -2,11 +2,7 @@
 
 require_once __DIR__ . '/../config/define.php';
 
-/* 
-* ------------------------------------------
-* ----------------------------- :: Server
-* ------------------------------------------ 
-*/
+// => Server
 
 function start($port = PORT)
 {
@@ -14,12 +10,7 @@ function start($port = PORT)
     echo exec('php -S localhost:' . $port);
 }
 
-/* 
-* ------------------------------------------
-* ----------------------------- :: Controllers
-* ------------------------------------------ 
-*/
-
+// => Controllers
 
 function createController($name)
 {

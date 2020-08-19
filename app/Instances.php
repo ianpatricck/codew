@@ -2,4 +2,8 @@
 
 // => INSTANCES
 
-$parsedown      =     new Parsedown();
+/*
+ * This is where all instances of external 
+ * packages are located.
+ * 
+ */
