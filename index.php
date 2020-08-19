@@ -7,4 +7,4 @@ use App\Controllers\Crud;
 
 /* ------------------- */
 
-Crud::loginView();
+Crud::views();

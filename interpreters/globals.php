@@ -9,11 +9,6 @@ function push($page, $data = [])
     }
 }
 
-function url($filename, $value = '')
-{
-    // ..
-}
-
 function staticFile($filepath)
 {
     echo '../public/' . $filepath;
