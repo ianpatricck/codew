@@ -6,7 +6,7 @@
 }
 
 h2 {
-    color: lightgrey;
+    color: gray;
     font-size: 25pt;
 }
 
@@ -24,6 +24,9 @@ form {
     display: flex;
     flex-direction: column;
     margin: 1%;
+    padding: 1%;
+
+    border-bottom: 1px solid lightgray;
 }
 
 input {
@@ -49,6 +52,15 @@ button {
     box-shadow: 0px 0px 2px gray;
     background-color: forestgreen;
     color: white;
+}
+
+a {
+    text-decoration: none;
+    color: dimgray;
+}
+
+a:hover {
+    color: gray;
 }
 
 button:hover {

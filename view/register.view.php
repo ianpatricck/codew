@@ -19,6 +19,8 @@
 
             <button type="submit">Register</button>
         </form>
+
+        <a href="/">Login</a>
     </div>
 </body>
 </html>
