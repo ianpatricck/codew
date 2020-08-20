@@ -6,7 +6,7 @@ require_once __DIR__ . '/interpreters/cli.php';
 // => Server
 
 if (!isset($argv[1])) {
-    echo "\n[-] No args\n";
+    echo "\n[-] No input args\n";
 }
 
 elseif ($argv[1] == 'server') {
