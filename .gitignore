@@ -3,5 +3,5 @@
 /crud/
 /app/Controllers/Crud.php
 /public/css/crud.css
-/views/crud/*
+/view/crud/*
 crud.sql
