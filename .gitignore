@@ -1,3 +1,7 @@
 /vendor/
 /node_modules/
-test.sql
+/crud/
+/app/Controllers/Crud.php
+/css/crud.css
+/views/crud/
+crud.sql
