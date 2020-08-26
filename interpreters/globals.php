@@ -1,6 +1,6 @@
 <?php
 
-function push($page, $data = [])
+function view($page, $data = [])
 {
     if ($_SERVER['REQUEST_URI'] == '/') {
         require_once __DIR__ . '/../view/' . INDEX_PAGE . '.view.php';
@@ -9,9 +9,16 @@ function push($page, $data = [])
     }
 }
 
-function redirect()
+function request($page)
 {
     // ..
+}
+
+function sendForm($param)
+{
+    if ($_SERVER['REQUEST_URI'] == '/' . $param) {
+        echo 'oi';
+    }
 }
 
 function staticFile($filepath)

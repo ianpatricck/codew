@@ -9,5 +9,5 @@ use App\Controllers\Crud;
 
 WelcomeController::viewer();
 
-Crud::view();
-Crud::register('register');
+Crud::viewer();
+Crud::register();

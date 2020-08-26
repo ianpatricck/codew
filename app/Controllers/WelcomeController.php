@@ -8,7 +8,7 @@ class WelcomeController
     {
         $msg = 'Welcome to codeworker';
 
-        push('/', ['msg' => $msg]);
-        push('docs');
+        view('/', ['msg' => $msg]);
+        view('docs');
     }
 }
