@@ -9,18 +9,6 @@ function view($page, $data = [])
     }
 }
 
-function request($page)
-{
-    // ..
-}
-
-function sendForm($param)
-{
-    if ($_SERVER['REQUEST_URI'] == '/' . $param) {
-        echo 'oi';
-    }
-}
-
 function staticFile($filepath)
 {
     echo '../public/' . $filepath;
