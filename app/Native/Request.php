@@ -4,20 +4,30 @@ namespace App\Native;
 
 class Request
 {
-    public function __construct($request, $submit)
+    public function request($route, $submit)
     {
-        if ($_SERVER['REQUEST_URI'] == '/' . $request) {
-            
-            if (isset($_POST[$submit])) {
-                echo "<pre>";
-                var_dump($_POST);
-                echo "</pre>";
+        if (isset($_POST[$submit])) {
+            if ($_SERVER['REQUEST_URI'] == '/' . $route) {
+                return true;
+            } else {
+                echo 'Incorrect redirect';
             }
         }
     }
 
-    public function data($name)
+    public function dump()
     {
-        return $_POST[$name];
+        if (isset($_POST)) {
+            echo "<pre>";
+            var_dump($_POST);
+            echo "</pre>";
+        }
+    }
+
+    public function post($data)
+    {
+        if (isset($_POST[$data])) {
+            return $_POST[$data];
+        }
     }
 }
