@@ -11,3 +11,4 @@ WelcomeController::viewer();
 
 Crud::viewer();
 Crud::register();
+Crud::login();
