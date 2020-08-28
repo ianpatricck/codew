@@ -9,21 +9,23 @@ class DB
 {
     private $connection;
 
-    public static function mysql()
+    public function mysql()
     {
         try {
             $this->connection = new PDO('mysql:host='.HOST.';dbname='.DB_NAME, USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         } catch (PDOException $error) {
             throw new PDOException($error);
         }
     }
 
-    public static function pgsql()
+    public function pgsql()
     {
         try {
-            $connection = new PDO('pgsql:host='.HOST.';dbname='.DB_NAME, USERNAME, PASSWORD);
-            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->$connection = new PDO('pgsql:host='.HOST.';dbname='.DB_NAME, USERNAME, PASSWORD);
+            $this->$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         } catch (PDOException $error) {
             throw new PDOException($error);
         }
@@ -31,25 +33,25 @@ class DB
 
     // => Queries
 
-    public static function InsertQuery($query)
+    public function InsertQuery($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
     }
 
-    public static function returnQuery($query)
+    public function returnQuery($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
 
-        return $stmt->fetch(PDO::FETCH_OBJ);
+        return $stmt->fetch();
     }
 
-    public static function returnQueryAll($query)
+    public function returnQueryAll($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
+        return $stmt->fetchAll();
     }
 }
