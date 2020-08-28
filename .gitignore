@@ -5,4 +5,4 @@
 /view/login.view.php
 /view/register.view.php
 /view/dashboard.view.php
-crud.sql
+/config/crud.sql
