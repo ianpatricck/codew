@@ -17,11 +17,21 @@ class Request
 
     public function dump()
     {
-        if (isset($_POST)) {
-            echo "<pre>";
-            var_dump($_POST);
-            echo "</pre>";
+        echo "
+        
+        <div style='
+            margin: 50px; 
+            border: 1px solid black; 
+            padding: 5px; 
+            border-radius: 2px; 
+            background-color: #290000; 
+            color: white;
+            width: 40%;'>";
+
+        foreach ($_POST as $value) {
+            echo '<a style="margin: 10px;"> | ' . $value . '</a><br>';
         }
+        echo "</div>";
     }
 
     public function post($data)
