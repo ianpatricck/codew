@@ -9,9 +9,9 @@ function view($page, $data = [])
     }
 }
 
-function redirect()
+function redirect($page)
 {
-    // ..
+    header('Location: /' . $page);
 }
 
 function staticFile($filepath)
