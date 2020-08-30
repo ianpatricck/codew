@@ -40,4 +40,11 @@ class Request
             return $_POST[$data];
         }
     }
+
+    public function get($route)
+    {
+        if ($_SERVER['REQUEST_URI'] == '/' . $route) {
+            return true;
+        }
+    }
 }
