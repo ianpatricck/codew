@@ -1,8 +1,8 @@
 /vendor/
 /node_modules/
-/app/Controllers/Crud.php
-/public/css/crud.css
+/app/Controllers/Complex.php
+/public/css/complex.css
 /view/login.view.php
 /view/register.view.php
 /view/dashboard.view.php
-/config/crud.sql
+/config/complex.sql
