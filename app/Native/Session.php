@@ -4,15 +4,10 @@ namespace App\Native;
 
 class Session
 {
-    public static function obj($obj)
+    public static function prepare($obj)
     {
         foreach ($obj as $value) {
-            // ..
+            return $value;
         }
-    }
-
-    public static function data($obj, $data)
-    {
-        // ..
     }
 }
