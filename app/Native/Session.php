@@ -10,4 +10,13 @@ class Session
             return $value;
         }
     }
+
+    public static function back($redirect)
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+
+        redirect($redirect);
+    }
 }
