@@ -14,7 +14,7 @@ function redirect($page)
     header('Location: /' . $page);
 }
 
-function staticFile($filepath)
+function statics($filepath)
 {
     echo '../public/' . $filepath;
 }

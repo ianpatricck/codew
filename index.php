@@ -13,3 +13,4 @@ Complex::viewer();
 Complex::register();
 Complex::login();
 Complex::logout();
+Complex::show();
