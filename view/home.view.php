@@ -9,6 +9,6 @@
 <body>
     <h1><?php echo $data['msg']; ?></h1>
 
-    <script src="<?php staticFile('js/script.js'); ?>"></script>
+    <script src="<?php statics('js/script.js'); ?>"></script>
 </body>
 </html>
