@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codeworker</title>
-    <link rel="stylesheet" href="<?php statics('css/main.css'); ?>">
+    <link rel="stylesheet" href="<?php statics('css/style.css'); ?>">
 </head>
 <body>
     <h1><?php echo $data['msg']; ?></h1>
