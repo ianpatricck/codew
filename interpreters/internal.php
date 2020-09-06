@@ -9,7 +9,9 @@ function reqArray($requires)
     }
 }
 
-function reqAll($data)
+function reqGlob($data)
 {
-    
+    foreach(glob($data . '*.php') as $controller) {
+        require __DIR__ . '//../' . $controller;
+    }
 }
