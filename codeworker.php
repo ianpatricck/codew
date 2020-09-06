@@ -21,5 +21,5 @@ $requires = [
 
 ];
 
-reqArray($requires);
+reqTwoArray($requires);
 reqGlob('app/Controllers/');

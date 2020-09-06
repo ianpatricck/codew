@@ -1,6 +1,6 @@
 <?php
 
-function reqArray($requires)
+function reqTwoArray($requires)
 {
     foreach ($requires as $path => $files) {
         foreach ($files as $file) {
