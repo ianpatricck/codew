@@ -7,8 +7,6 @@ use App\Controllers\Complex;
 
 WelcomeController::viewer();
 
-/* ------------------- */
-
 Complex::viewer();
 Complex::register();
 Complex::login();
