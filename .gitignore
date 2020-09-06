@@ -2,7 +2,6 @@
 /node_modules/
 /app/Controllers/Complex.php
 /public/css/complex.css
-/public/js/complex.js
 /view/login.view.php
 /view/register.view.php
 /view/dashboard.view.php
