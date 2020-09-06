@@ -18,3 +18,8 @@ function statics($filepath)
 {
     echo '../public/' . $filepath;
 }
+
+function getId($id)
+{
+    // ..
+}
