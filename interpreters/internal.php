@@ -1,13 +1,15 @@
 <?php
 
-function reqData($require)
-{
-    echo $require;
-}
-
 function reqArray($requires)
 {
-    foreach ($requires as $key => $value) {
-        echo $key . ' => ' . $value . '</br>';
+    foreach ($requires as $path => $files) {
+        foreach ($files as $file) {
+            require __DIR__ . '//../' . $path . '/' . $file . '.php';
+        }
     }
+}
+
+function reqAll($data)
+{
+    
 }

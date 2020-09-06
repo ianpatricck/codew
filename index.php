@@ -2,7 +2,6 @@
 
 require __DIR__ . '/codeworker.php';
 
-/*
 use App\Controllers\WelcomeController;
 use App\Controllers\Complex;
 
@@ -14,4 +13,3 @@ Complex::register();
 Complex::login();
 Complex::logout();
 Complex::show();
-*/

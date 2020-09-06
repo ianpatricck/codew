@@ -25,13 +25,25 @@ foreach(glob('app/Controllers/*.php') as $controller) {
 
 $requires = [
 
-    'config' => ['define', 'instances'],
-    'native' => ['DB', 'Form', 'Request', 'Session'],
+    'config' => [
+        'define', 
+        'instances'
+    ],
+    
+    'app/Native' => [
+        'DB', 
+        'Form', 
+        'Request', 
+        'Session'
+    ],
 
-    'interpreters' => 'globals',
+    'interpreters' => ['globals'],
+
 ];
 
-reqArray($requires['config']);
-reqArray($requires['native']);
-reqData($requires['interpreters']);
+reqArray($requires);
+
+foreach(glob('app/Controllers/*.php') as $controller) {
+    require __DIR__ . '/' . $controller;
+}
 
