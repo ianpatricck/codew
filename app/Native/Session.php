@@ -11,7 +11,7 @@ class Session
         }
     }
 
-    public static function back($redirect)
+    public static function clear($redirect)
     {
         session_start();
         session_unset();

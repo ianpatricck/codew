@@ -12,3 +12,4 @@ Complex::register();
 Complex::login();
 Complex::logout();
 Complex::show();
+Complex::delete();
