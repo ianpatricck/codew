@@ -41,9 +41,11 @@ class Request
         }
     }
 
-    public function get($route)
+    public function get($route, $param = '')
     {
         if ($_SERVER['REQUEST_URI'] == '/' . $route) {
+            return true;
+        } else if($_SERVER['REQUEST_URI'] == '/' . $route . '/' . $param) {
             return true;
         }
     }
