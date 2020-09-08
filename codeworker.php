@@ -1,7 +1,7 @@
 <?php 
 
 require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/interpreters/internal.php';
+require __DIR__ . '/build/internal.php';
 
 $requires = [
 
@@ -17,7 +17,7 @@ $requires = [
         'Session'
     ],
 
-    'interpreters' => ['globals'],
+    'build' => ['globals'],
 
 ];
 
