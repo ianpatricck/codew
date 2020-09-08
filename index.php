@@ -13,3 +13,4 @@ Complex::login();
 Complex::logout();
 Complex::show();
 Complex::delete();
+Complex::update();
