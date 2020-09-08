@@ -49,4 +49,17 @@ class Request
             return true;
         }
     }
+
+    public function param($action)
+    {
+        $value = $_SERVER['REQUEST_URI'];
+
+        $array_URL = explode('/', $value);
+
+        foreach ($array_URL as $key => $value) {}
+
+        if (in_array($action, $array_URL)) {
+            return $value;
+        }
+    }
 }
