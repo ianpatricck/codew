@@ -14,7 +14,7 @@ function redirect($page)
     header('Location: /' . $page);
 }
 
-function statics($filepath)
+function assets($filepath)
 {
-    echo '../public/' . $filepath;
+    echo '../assets/' . $filepath;
 }
