@@ -1,6 +1,6 @@
 <?php
 
-function reqTwoArray($requires)
+function requireTwoArray($requires)
 {
     foreach ($requires as $path => $files) {
         foreach ($files as $file) {
@@ -9,7 +9,7 @@ function reqTwoArray($requires)
     }
 }
 
-function reqGlob($data)
+function requireGlob($data)
 {
     foreach(glob($data . '*.php') as $controller) {
         require __DIR__ . '//../' . $controller;
