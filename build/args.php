@@ -6,7 +6,7 @@ require_once __DIR__ . '/../config/define.php';
 
 function start($port = PORT)
 {
-    echo "Starting Codeworker PHP server ...\n";
+    echo "Starting codew PHP server ...\n";
     echo exec('php -S localhost:' . $port);
 }
 
