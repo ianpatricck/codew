@@ -9,6 +9,11 @@ function view($page, $data = [])
     }
 }
 
+function push($view, $param)
+{
+    // ..
+}
+
 function redirect($page)
 {
     header('Location: /' . $page);
