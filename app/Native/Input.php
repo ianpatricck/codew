@@ -2,7 +2,7 @@
 
 namespace App\Native;
 
-class Form
+class Input
 {
     public static function text($input)
     {
@@ -23,7 +23,7 @@ class Form
         if ($int) {
             return $int;
         } else {
-            return 0;
+            return false;
         }
     }
 
@@ -34,7 +34,7 @@ class Form
         if ($float) {
             return $float;
         } else {
-            return 0;
+            return false;
         }
     }
 
@@ -53,7 +53,7 @@ class Form
                 return $new_name;
             }
         } else {
-            return 0;
+            return false;
         }
     }
 }
