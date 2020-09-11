@@ -2,30 +2,36 @@
 
 require_once __DIR__ . '/../config/define.php';
 
-function start($port = PORT)
+function noArgv($argv)
 {
-    echo "Starting codew PHP server ...\n";
-    echo exec('php -S localhost:' . $port);
+    if (!isset($argv)) {
+        echo "\n[-] No input args\n";
+    }
 }
 
-function createController($name)
+function start($argv, $port = PORT)
 {
-    $content = "
-    <?php
-
-    namespace App\Controllers;
-
-    class $name
-    {
-        // ..
+    if ($argv == 'server') {
+        echo "Starting codew PHP server ...\n";
+        echo exec('php -S localhost:' . $port);
     }
+}
 
-    ";
+function createController($argv1, $name)
+{
+    if ($argv1 == 'create:controller') {
+        if (!$name) {
+            echo "\n[-] Failed to create controller\n";
+        } else {
 
-    $file_controller = fopen('app/Controllers/'.$name.'.php', 'w');
-
-    fwrite($file_controller, $content);
-    fclose($file_controller);
-
-    echo "\n[+] Controller created successfully\n";
+            $content = "<?php\n\nnamespace App\Controllers;\n\nclass $name\n{\n\t// ..\n}";
+        
+            $file_controller = fopen('app/Controllers/'.$name.'.php', 'w');
+        
+            fwrite($file_controller, $content);
+            fclose($file_controller);
+        
+            echo "\n[+] Controller created successfully\n";
+        }
+    }
 }

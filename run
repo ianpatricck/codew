@@ -3,18 +3,12 @@
 
 require_once __DIR__ . '/build/cli.php';
 
-// => Server
+@ $argv1 = $argv[1];
+@ $argv2 = $argv[2];
 
-if (!isset($argv[1])) {
-    echo "\n[-] No input args\n";
-}
+noArgv($argv1);
+start($argv1);
 
-elseif ($argv[1] == 'server') {
-    start();
-}
+// ----------------
 
-// => Controllers
-
-elseif ($argv[1] == 'create:controller') {
-    createController($argv[2]);
-}
+createController($argv1, $argv2);
