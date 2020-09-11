@@ -12,7 +12,7 @@ $requires = [
     
     'app/Native' => [
         'DB', 
-        'Form', 
+        'Input', 
         'Request', 
         'Session'
     ],

@@ -129,66 +129,55 @@ a.tb {
 table {
     display: grid;
     justify-content: center;
-    grid-gap: 5px;
     margin-top: 15px;
-}
-
-thead, tbody {
-    display: grid;
-    justify-content: center;
-    padding: 2%;
-    width: 100%;
-
-    border-radius: 2px;
-}
-
-thead {
-    background-color: #e67301;
-}
-
-tbody {
-    background-color: #b9b9b8;
 }
 
 th {
     width: 20vh;
     color: lightgray;
     text-align: center;
+    background-color: #e67301;
+    padding: 1%;
+    border-radius: 5px;
 }
 
 td {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 20vh;
+    width: 30vh;
     text-align: center;
     font-size: 10pt;
+    background-color: #d1d4cf;
+    border-radius: 5px;
 }
 
-td.update, td.delete {
-    text-align: left;
-    width: 10vh;
+td.link {
+    padding: 2%;
 }
 
-.update>a {
+a.update {
     color: #3e5a98;
     box-shadow: 0px 0px 2px #3e5a98;
 }
 
-.delete>a {
+a.delete {
     color: #ae514e;
     box-shadow: 0px 0px 2px #ae514e;
 }
 
-.update>a, .delete>a {
-    padding: 5px;
+a.update, a.delete {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    margin: 10px;
     border-radius: 5px;
 }
 
-.update>a:hover {
+a.update:hover {
     color: darkblue;
     box-shadow: 0px 0px 1px darkblue;
 }
 
-.delete>a:hover {
+a.delete:hover {
     color: darkred;
     box-shadow: 0px 0px 1px darkred;
 }
