@@ -17,7 +17,7 @@ $requires = [
         'Session'
     ],
 
-    'build' => ['globals'],
+    'build' => ['global'],
 
 ];
 

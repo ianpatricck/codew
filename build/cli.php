@@ -2,28 +2,25 @@
 
 require_once __DIR__ . '/../config/define.php';
 
-// => Server
-
 function start($port = PORT)
 {
     echo "Starting codew PHP server ...\n";
     echo exec('php -S localhost:' . $port);
 }
 
-// => Controllers
-
 function createController($name)
 {
-    $content = "<?php
+    $content = "
+    <?php
 
-namespace App\Controllers;
+    namespace App\Controllers;
 
-class $name
-{
-    // ..
-}
+    class $name
+    {
+        // ..
+    }
 
-";
+    ";
 
     $file_controller = fopen('app/Controllers/'.$name.'.php', 'w');
 

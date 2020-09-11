@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__ . '/build/args.php';
+require_once __DIR__ . '/build/cli.php';
 
 // => Server
 
