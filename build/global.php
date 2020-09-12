@@ -9,7 +9,7 @@ function view($page, $data = [])
     }
 }
 
-function push($view, $param)
+function push($view, $param, $data = '')
 {
     if ($_SERVER['REQUEST_URI'] == '/' . $view . '/') {
         echo false;
