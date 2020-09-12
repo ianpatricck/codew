@@ -5,10 +5,7 @@ require __DIR__ . '/build/internal.php';
 
 $requires = [
 
-    'config' => [
-        'define', 
-        'instances'
-    ],
+    'config' => ['define'],
     
     'app/Native' => [
         'DB', 
