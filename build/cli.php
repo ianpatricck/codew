@@ -35,3 +35,12 @@ function createController($argv1, $name)
         }
     }
 }
+
+function complex($argv1)
+{
+    if ($argv1 == 'complex') {
+        echo $argv1;
+
+        // Coding ..
+    }
+}

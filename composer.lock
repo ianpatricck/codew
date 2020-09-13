@@ -4,12 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abf1a1f8c6697ba941776f7113f73215",
-    "packages": [],
+    "content-hash": "784d5ebd2bff0aab5cf5f8ca285bd976",
+    "packages": [
+        {
+            "name": "codew/complex",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ianpatricck/complex.git",
+                "reference": "4bdcbf4ee6c94dd6a6163d3d4c92e57b9196deb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ianpatricck/complex/zipball/4bdcbf4ee6c94dd6a6163d3d4c92e57b9196deb3",
+                "reference": "4bdcbf4ee6c94dd6a6163d3d4c92e57b9196deb3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0.0"
+            },
+            "type": "component",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ian Patrick",
+                    "email": "contatoianpatrick@gmail.com"
+                }
+            ],
+            "description": "Complement for Codew",
+            "time": "2020-09-13T13:39:57+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "codew/complex": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
