@@ -17,9 +17,9 @@ function start($argv, $port = PORT)
     }
 }
 
-function createController($argv1, $name)
+function createController($argv, $name)
 {
-    if ($argv1 == 'create:controller') {
+    if ($argv == 'create:controller') {
         if (!$name) {
             echo "\n[-] Failed to create controller\n";
         } else {
@@ -36,10 +36,9 @@ function createController($argv1, $name)
     }
 }
 
-function complex($argv1)
+function complex($argv)
 {
-    if ($argv1 == 'complex') {
-        echo $argv1;
+    if ($argv == 'complex') {
 
         // Coding ..
     }
