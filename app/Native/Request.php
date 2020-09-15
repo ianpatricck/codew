@@ -26,7 +26,7 @@ class Request
     {
         if ($_SERVER['REQUEST_URI'] == '/' . $route) {
             return true;
-        } else if($_SERVER['REQUEST_URI'] == '/' . $route . '/' . $param) {
+        } elseif($_SERVER['REQUEST_URI'] == '/' . $route . '/' . $param) {
             return true;
         }
     }

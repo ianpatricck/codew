@@ -13,7 +13,7 @@ function push($view, $param, $data = '')
 {
     if ($_SERVER['REQUEST_URI'] == '/' . $view . '/') {
         echo false;
-    } else if ($_SERVER['REQUEST_URI'] == '/' . $view . '/' . $param) {
+    } elseif ($_SERVER['REQUEST_URI'] == '/' . $view . '/' . $param) {
         $value = $_SERVER['REQUEST_URI'];
         
         $array_URL = explode('/', $value);

@@ -88,7 +88,44 @@ function removeComplex($argv)
     }
 }
 
-function databaseComplex($argv)
+function createComplexDB($argv)
 {
-    // ..
+    if ($argv == 'create:mysql:complex') {
+        $conn = new PDO('mysql:host='.HOST, USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+        
+        $complex_sql = file_get_contents('config/complex.sql');
+
+        $stmt = $conn->prepare($complex_sql);
+        $stmt->execute();
+
+        echo "\nCodew database created\n";
+    } elseif ($argv == 'create:pgsql:complex') {
+        $conn = new PDO('pgsql:host='.HOST, USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+        
+        $complex_sql = file_get_contents('config/complex.sql');
+
+        $stmt = $conn->prepare($complex_sql);
+        $stmt->execute();
+
+        echo "\nCodew database created\n";
+    }
+}
+
+function removeComplexDB($argv)
+{
+    if ($argv == 'remove:mysql:complex') {
+        $conn = new PDO('mysql:host='.HOST.';dbname=codew', USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+
+        $stmt = $conn->prepare('DROP DATABASE codew');
+        $stmt->execute();
+    
+        echo "\nCodew database removed\n";
+    } elseif ($argv == 'remove:pgsql:complex') {
+        $conn = new PDO('pgsql:host='.HOST.';dbname=codew', USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+
+        $stmt = $conn->prepare('DROP DATABASE codew');
+        $stmt->execute();
+        
+        echo "\nCodew database removed\n";
+    }
 }
