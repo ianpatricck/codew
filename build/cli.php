@@ -64,3 +64,31 @@ function createComplex($argv)
 
     }
 }
+
+function removeComplex($argv)
+{
+    if ($argv == 'remove:complex') {
+        $index_content = "<?php\n\nrequire __DIR__ . '/codew.php';\n\nuse App\Controllers\WelcomeController;\n\nWelcomeController::viewer();\n";
+
+        $index = fopen('index.php', 'w');
+        
+        fwrite($index, $index_content);
+        fclose($index);
+        
+        @ unlink('view/dashboard.view.php');
+        @ unlink('view/register.view.php');
+        @ unlink('view/login.view.php');
+        @ unlink('view/update.view.php');
+        @ unlink('app/Controllers/Complex.php');
+        @ unlink('assets/css/complex.css');
+        @ unlink('config/complex.sql');
+
+        echo "\nComplex successfully removed\n";
+
+    }
+}
+
+function complexDB($argv)
+{
+    // ..
+}

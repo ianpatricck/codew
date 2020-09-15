@@ -16,3 +16,5 @@ createController($argv1, $argv2);
 // ----------------
 
 createComplex($argv1);
+removeComplex($argv1);
+complexDB($argv1);
