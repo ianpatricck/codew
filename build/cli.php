@@ -88,7 +88,7 @@ function removeComplex($argv)
     }
 }
 
-function complexDB($argv)
+function databaseComplex($argv)
 {
     // ..
 }
