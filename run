@@ -15,4 +15,4 @@ createController($argv1, $argv2);
 
 // ----------------
 
-complex($argv1);
+createComplex($argv1);
