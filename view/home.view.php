@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codew</title>
-    <link rel="stylesheet" href="<?php assets('css/style.css'); ?>">
+    <link rel="stylesheet" href="<?= assets('css/style.css'); ?>">
 </head>
 <body>
-    <h1><?php echo $data['msg']; ?></h1>
+    <h1><?= $data['msg']; ?></h1>
 
-    <script src="<?php assets('js/script.js'); ?>"></script>
+    <script src="<?= assets('js/script.js'); ?>"></script>
 </body>
 </html>
