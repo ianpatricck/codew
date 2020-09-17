@@ -3,7 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/build/internal.php';
 
-$requires = [
+$codewRequires = [
 
     'config' => ['define'],
     
@@ -18,5 +18,5 @@ $requires = [
 
 ];
 
-requireTwoArray($requires);
+requireTwoArray($codewRequires);
 requireGlob('app/Controllers/');

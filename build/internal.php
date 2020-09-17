@@ -1,5 +1,12 @@
 <?php
 
+function requireArray($requires)
+{
+    foreach ($requires as $path => $files) {
+        require __DIR__ . '//../' . $path . '/' . $file . '.php';
+    }
+}
+
 function requireTwoArray($requires)
 {
     foreach ($requires as $path => $files) {
