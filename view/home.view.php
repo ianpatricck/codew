@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="<?= assets('css/style.css'); ?>">
 </head>
 <body>
-    <h1><?= $data['msg']; ?></h1>
 
+    <h1><?= $data['msg']; ?></h1>
+    
     <script src="<?= assets('js/script.js'); ?>"></script>
 </body>
 </html>
