@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="<?= assets('css/style.css'); ?>">
 </head>
 <body>
-    <h1>Documentation</h1>
-
+    
     <script src="<?= assets('js/script.js'); ?>"></script>
 </body>
 </html>

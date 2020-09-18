@@ -1,7 +1,7 @@
-function typeWriter(element) {
-    const textArray = element.innerHTML.split('')
+function h1Effect(element) {
+    const h1Array = element.innerHTML.split('')
     element.innerHTML = ''
-    textArray.forEach((char, i) => {
+    h1Array.forEach((char, i) => {
         setTimeout(() => {
             element.innerHTML += char
         }, 75 * i)
@@ -10,4 +10,4 @@ function typeWriter(element) {
 
 const title = document.querySelector('h1')
 
-typeWriter(title)
+h1Effect(title)
