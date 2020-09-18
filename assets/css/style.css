@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial;
+    list-style: none;
 }
 
 h1 {
@@ -30,4 +31,28 @@ h1::after {
 
 /* ========= Docs */
 
+li {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
 
+li:hover {
+    background-color: whitesmoke;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    position: absolute;
+    justify-content: left;
+    margin-top: 10vh;
+    padding: 1%;
+    box-shadow: 0px 0px 0px, 5px 0px 5px lightgray;
+}
+
+.docs-link {
+    text-decoration: none;
+    color: #476586;
+}
