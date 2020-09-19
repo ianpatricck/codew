@@ -58,7 +58,7 @@ function createComplex($argv)
         copy($css, 'assets/css/complex.css');
         copy($sql, 'config/complex.sql');
 
-        echo "\nComplex successfully created\n";
+        echo "\n[+] Complex successfully created\n";
 
     }
 }
@@ -77,11 +77,12 @@ function removeComplex($argv)
         @ unlink('view/register.view.php');
         @ unlink('view/login.view.php');
         @ unlink('view/update.view.php');
-        @ unlink('app/Controllers/Complex.php');
+        @ unlink('app/Controllers/User.php');
+        @ unlink('app/Controllers/Viewer.php');
         @ unlink('assets/css/complex.css');
         @ unlink('config/complex.sql');
 
-        echo "\nComplex successfully removed\n";
+        echo "\n[-] Complex successfully removed\n";
 
     }
 }
@@ -98,11 +99,13 @@ function createComplexDB($argv)
         $stmt = $conn->prepare($complex_sql);
         $stmt->execute();
         
-        $controllerMySQL    =       $complex . 'ControllerMySQL.php';
+        $UserControllerMySQL = $complex . 'mysql/UserController.php';
+        $ViewerControllerMySQL = $complex . 'mysql/ViewerController.php';
 
-        copy($controllerMySQL, 'app/Controllers/Complex.php');
+        copy($UserControllerMySQL, 'app/Controllers/User.php');
+        copy($ViewerControllerMySQL, 'app/Controllers/Viewer.php');
         
-        echo "\nCodew database created\n";
+        echo "\n[+] Codew database created\n";
     } elseif ($argv == 'create:pgsql:complex') {
         $conn = new PDO('pgsql:host='.HOST, USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         
@@ -111,11 +114,13 @@ function createComplexDB($argv)
         $stmt = $conn->prepare($complex_sql);
         $stmt->execute();
 
-        $controllerPgSQL    =       $complex . 'ControllerPgSQL.php';
+        $UserControllerPgSQL = $complex . 'pgsql/UserController.php';
+        $ViewerControllerPgSQL = $complex . 'pgsql/ViewerController.php';
 
-        copy($controllerPgSQL, 'app/Controllers/Complex.php');
+        copy($UserControllerPgSQL, 'app/Controllers/User.php');
+        copy($ViewerControllerPgSQL, 'app/Controllers/Viewer.php');
 
-        echo "\nCodew database created\n";
+        echo "\n[+] Codew database created\n";
     }
 }
 
@@ -127,13 +132,13 @@ function removeComplexDB($argv)
         $stmt = $conn->prepare('DROP DATABASE codew');
         $stmt->execute();
     
-        echo "\nCodew database removed\n";
+        echo "\n[-] Codew database removed\n";
     } elseif ($argv == 'remove:pgsql:complex') {
         $conn = new PDO('pgsql:host='.HOST.';dbname=codew', USERNAME, PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
         $stmt = $conn->prepare('DROP DATABASE codew');
         $stmt->execute();
         
-        echo "\nCodew database removed\n";
+        echo "\n[-] Codew database removed\n";
     }
 }

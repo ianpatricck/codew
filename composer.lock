@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ianpatricck/complex.git",
-                "reference": "5786ab354116551f0229ef29c178aa4d768d2e23"
+                "reference": "aba7ff19924705952c49e9cc2cc5eac0f84a05b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ianpatricck/complex/zipball/5786ab354116551f0229ef29c178aa4d768d2e23",
-                "reference": "5786ab354116551f0229ef29c178aa4d768d2e23",
+                "url": "https://api.github.com/repos/ianpatricck/complex/zipball/aba7ff19924705952c49e9cc2cc5eac0f84a05b6",
+                "reference": "aba7ff19924705952c49e9cc2cc5eac0f84a05b6",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
                 }
             ],
             "description": "Complement for Codew",
-            "time": "2020-09-16T18:39:59+00:00"
+            "time": "2020-09-19T16:20:02+00:00"
         }
     ],
     "packages-dev": [],
