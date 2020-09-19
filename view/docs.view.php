@@ -9,6 +9,7 @@
 <body>
     <div class="right-side">
         <ul>
+            <a class="docs-link" href="#"><li>Introduction</li></a>
             <a class="docs-link" href="#"><li>Config</li></a>
             <a class="docs-link" href="#"><li>App</li></a>
             <a class="docs-link" href="#"><li>CLI</li></a>

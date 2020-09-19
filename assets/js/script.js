@@ -11,3 +11,9 @@ function h1Effect(element) {
 const title = document.querySelector('h1')
 
 h1Effect(title)
+
+// ================================
+
+function show(section) {
+    // ..
+}
