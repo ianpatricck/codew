@@ -27,7 +27,18 @@
         <div class="center">
 
             <div class="introduction">
-                <h2 class="title"><i class="title">#</i> Knowing the Codew</h2>
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Knowing the Codew</h2>                
+                </div>
+                
+                <div class="card bg-blue">
+                    Codew is a project in constant development to help organize and write code.
+                </div>
+
+                <div class="description" style="margin-top: 20px;">
+                    With this feature, the developer can perform tasks quickly and with better use <br>in the source
+                    code, being free to create all his business rules in his own way and define his own standards.
+                </div>
             </div>
             
         </div>

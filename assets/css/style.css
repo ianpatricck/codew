@@ -1,3 +1,6 @@
+.bg-orange {background-color: rgb(228, 203, 180);}
+.bg-blue {background-color: rgb(188, 211, 233);}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -73,6 +76,18 @@ i.title {
     padding: 2%;
     display: flex;
     justify-content: center;
+}
+
+.card {
+    width: 90vh;
+    padding: 2%;
+    margin-top: 15px;
+    box-shadow: -5px 0px 0px rgb(59, 88, 116);
+}
+
+.description {
+    color: rgb(71, 70, 70);
+    text-align: justify;
 }
 
 @media screen and (max-width: 990px) {
