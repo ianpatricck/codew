@@ -79,7 +79,6 @@ i.title {
 }
 
 .card {
-    width: 90vh;
     padding: 2%;
     margin-top: 15px;
     box-shadow: -5px 0px 0px rgb(59, 88, 116);
@@ -87,12 +86,19 @@ i.title {
 
 .description {
     color: rgb(71, 70, 70);
+    width: 100vh;
+    text-indent: 15px;
     text-align: justify;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1110px) {
     .right-side {
         position: relative;
         margin-bottom: 5%;
+    }
+
+    .card, .description {
+        font-size: 10pt;
+        width: auto;
     }
 }
