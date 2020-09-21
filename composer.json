@@ -12,7 +12,7 @@
     
     "require": {
         "php": "^7.0.0",
-        "codew/complex": "dev-master"
+        "codew/complex": "1.0.*"
     },
 
     "autoload": {
