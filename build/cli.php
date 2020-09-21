@@ -26,7 +26,7 @@ function createController($argv, $name)
 
             $content = "<?php\n\nnamespace App\Controllers;\n\nclass $name\n{\n\t// ..\n}";
         
-            $file_controller = fopen('app/Controllers/'.$name.'.php', 'w');
+            $file_controller = fopen('app/controllers/'.$name.'.php', 'w');
         
             fwrite($file_controller, $content);
             fclose($file_controller);
@@ -77,8 +77,8 @@ function removeComplex($argv)
         @ unlink('view/register.view.php');
         @ unlink('view/login.view.php');
         @ unlink('view/update.view.php');
-        @ unlink('app/Controllers/User.php');
-        @ unlink('app/Controllers/Viewer.php');
+        @ unlink('app/controllers/User.php');
+        @ unlink('app/controllers/Viewer.php');
         @ unlink('assets/css/complex.css');
         @ unlink('config/complex.sql');
 
@@ -102,8 +102,8 @@ function createComplexDB($argv)
         $UserControllerMySQL = $complex . 'mysql/UserController.php';
         $ViewerControllerMySQL = $complex . 'mysql/ViewerController.php';
 
-        copy($UserControllerMySQL, 'app/Controllers/User.php');
-        copy($ViewerControllerMySQL, 'app/Controllers/Viewer.php');
+        copy($UserControllerMySQL, 'app/controllers/User.php');
+        copy($ViewerControllerMySQL, 'app/controllers/Viewer.php');
         
         echo "\n[+] Codew database created\n";
     } elseif ($argv == 'create:pgsql:complex') {
@@ -117,8 +117,8 @@ function createComplexDB($argv)
         $UserControllerPgSQL = $complex . 'pgsql/UserController.php';
         $ViewerControllerPgSQL = $complex . 'pgsql/ViewerController.php';
 
-        copy($UserControllerPgSQL, 'app/Controllers/User.php');
-        copy($ViewerControllerPgSQL, 'app/Controllers/Viewer.php');
+        copy($UserControllerPgSQL, 'app/controllers/User.php');
+        copy($ViewerControllerPgSQL, 'app/controllers/Viewer.php');
 
         echo "\n[+] Codew database created\n";
     }

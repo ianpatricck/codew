@@ -7,7 +7,7 @@ $codewRequires = [
 
     'config' => ['define'],
     
-    'app/Native' => [
+    'app/native' => [
         'DB', 
         'Input', 
         'Request', 
