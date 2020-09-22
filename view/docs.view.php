@@ -10,23 +10,23 @@
     <div class="content">
         <div class="right-side">
             <ul>
-                <a class="docs-link" href="#"><li>Introduction</li></a>
-                <a class="docs-link" href="#"><li>Config</li></a>
-                <a class="docs-link" href="#"><li>App</li></a>
-                <a class="docs-link" href="#"><li>CLI</li></a>
-                <a class="docs-link" href="#"><li>Internal functions</li></a>
-                <a class="docs-link" href="#"><li>URL</li></a>
-                <a class="docs-link" href="#"><li>Inputs</li></a>
-                <a class="docs-link" href="#"><li>Requests</li></a>
-                <a class="docs-link" href="#"><li>Sessions</li></a>
-                <a class="docs-link" href="#"><li>Database</li></a>
-                <a class="docs-link" href="#"><li>Complex</li></a>
+                <a class="docs-link" onclick="show('.introduction')"><li>Introduction</li></a>
+                <a class="docs-link" onclick="show('.config')"><li>Config</li></a>
+                <a class="docs-link" onclick="show('.app')"><li>App</li></a>
+                <a class="docs-link" onclick="show('.cli')"><li>CLI</li></a>
+                <a class="docs-link" onclick="show('.internal-functions')"><li>Internal functions</li></a>
+                <a class="docs-link" onclick="show('.url')"><li>URL</li></a>
+                <a class="docs-link" onclick="show('.inputs')"><li>Inputs</li></a>
+                <a class="docs-link" onclick="show('.requests')"><li>Requests</li></a>
+                <a class="docs-link" onclick="show('.sessions')"><li>Sessions</li></a>
+                <a class="docs-link" onclick="show('.database')"><li>Database</li></a>
+                <a class="docs-link" onclick="show('.complex')"><li>Complex</li></a>
             </ul>
         </div>
 
         <div class="center">
 
-            <div class="introduction">
+            <div class="dnone introduction">
                 <div class="center">
                     <h2 class="title"><i class="title">#</i> Knowing the Codew</h2>                
                 </div>
@@ -40,10 +40,15 @@
                     code, being free to create all his business rules in his own way and define his own standards.
                 </div>
             </div>
-            
+
+            <div class="dnone config">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Config</h2>                
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="<?= assets('js/script.js'); ?>"></script>
+    <script src="<?= assets('js/docs.js'); ?>"></script>
 </body>
 </html>

@@ -10,6 +10,6 @@
 
     <h1><?= $data['msg']; ?></h1>
     
-    <script src="<?= assets('js/script.js'); ?>"></script>
+    <script src="<?= assets('js/titleEffect.js'); ?>"></script>
 </body>
 </html>
