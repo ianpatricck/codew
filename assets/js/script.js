@@ -1,3 +1,5 @@
+const title = document.querySelector('h1')
+
 function h1Effect(element) {
     const h1Array = element.innerHTML.split('')
     element.innerHTML = ''
@@ -8,13 +10,6 @@ function h1Effect(element) {
     });
 }
 
-const title = document.querySelector('h1')
-
-h1Effect(title)
-
 // ================================
 
-
-function show(section) {
-    // ..
-}
+h1Effect(title)
