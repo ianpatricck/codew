@@ -1,6 +1,6 @@
 const title = document.querySelector('h1')
 
-function h1Effect(element) {
+function titleEffect(element) {
     const h1Array = element.innerHTML.split('')
     element.innerHTML = ''
     h1Array.forEach((char, i) => {
@@ -12,4 +12,4 @@ function h1Effect(element) {
 
 // ================================
 
-h1Effect(title)
+titleEffect(title)
