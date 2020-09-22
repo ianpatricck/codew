@@ -14,7 +14,7 @@
                 <a class="docs-link" onclick="show('.config')"><li>Config</li></a>
                 <a class="docs-link" onclick="show('.app')"><li>App</li></a>
                 <a class="docs-link" onclick="show('.cli')"><li>CLI</li></a>
-                <a class="docs-link" onclick="show('.internal-functions')"><li>Internal functions</li></a>
+                <a class="docs-link" onclick="show('.internalf')"><li>Internal functions</li></a>
                 <a class="docs-link" onclick="show('.url')"><li>URL</li></a>
                 <a class="docs-link" onclick="show('.inputs')"><li>Inputs</li></a>
                 <a class="docs-link" onclick="show('.requests')"><li>Requests</li></a>
@@ -26,7 +26,7 @@
 
         <div class="center">
 
-            <div class="dnone introduction">
+            <div class="introduction">
                 <div class="center">
                     <h2 class="title"><i class="title">#</i> Knowing the Codew</h2>                
                 </div>
@@ -41,9 +41,63 @@
                 </div>
             </div>
 
-            <div class="dnone config">
+            <div class="config">
                 <div class="center">
                     <h2 class="title"><i class="title">#</i> Config</h2>                
+                </div>
+            </div>
+
+            <div class="app">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> App</h2>                
+                </div>
+            </div>
+
+            <div class="cli">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> CLI</h2>                
+                </div>
+            </div>
+
+            <div class="internalf">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Internal functions</h2>                
+                </div>
+            </div>
+
+            <div class="url">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> URL</h2>                
+                </div>
+            </div>
+
+            <div class="inputs">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Inputs</h2>                
+                </div>
+            </div>
+
+            <div class="requests">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Requests</h2>                
+                </div>
+            </div>
+
+            <div class="sessions">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Sessions</h2>                
+                </div>
+            </div>
+
+            <div class="database">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Database</h2>                
+                </div>
+            </div>
+
+            <div class="complex">
+                <div class="center">
+                    <h2 class="title"><i class="title">#</i> Complex</h2>                
                 </div>
             </div>
         </div>

@@ -1,7 +1,28 @@
-function show(className) {
-    var div = document.querySelector(className)
+var divs = [
+    'introduction', 
+    'config', 
+    'app', 
+    'cli', 
+    'internalf', 
+    'url', 
+    'inputs', 
+    'requests', 
+    'sessions', 
+    'database', 
+    'complex'
+]
 
-    if (div.style.display === 'none') {
-        div.style.display = 'block'
-    }
+divs.forEach((element) => {
+    document.querySelector('.' + element).style.display = 'none'
+})
+
+document.querySelector('.introduction').style.display = 'block'
+
+function show(className) {
+    divs.forEach((element) => {
+        document.querySelector('.' + element).style.display = 'none'
+    })
+
+    document.querySelector(className).style.display = 'block'
 }
+

@@ -34,10 +34,6 @@ h1::after {
 
 /* ========= Docs */
 
-.dnone {
-    display: none;
-}
-
 .content {
     margin-top: 10vh;
 }
@@ -63,6 +59,10 @@ i.title {
 .docs-link {
     text-decoration: none;
     color: #476586;
+}
+
+.docs-link:hover {
+    cursor: pointer;
 }
 
 .right-side {
