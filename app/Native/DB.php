@@ -7,7 +7,7 @@ use PDOException;
 
 class DB extends Connection
 {
-    public function Insert($query)
+    public function insert($query)
     {
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
