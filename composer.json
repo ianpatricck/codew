@@ -5,13 +5,12 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Ian Patrick",
-            "email": "contatoianpatrick@gmail.com"
+            "name": "Ian Patrick"
         }
     ],
-    
+
     "require": {
-        "php": "^7.0.0"
+        "php": "^7.4.0"
     },
 
     "autoload": {
