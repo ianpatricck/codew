@@ -8,8 +8,7 @@ var divs = [
     'inputs', 
     'requests', 
     'sessions', 
-    'database', 
-    'complex'
+    'database'
 ]
 
 divs.forEach((element) => {
