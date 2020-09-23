@@ -40,7 +40,8 @@ class Request
         foreach ($array_URL as $key => $value) {}
 
         if (in_array($action, $array_URL)) {
-            return $value;
+            $newValue = filter_var($value, FILTER_SANITIZE_STRING);
+            return $newValue;
         }
     }
 }
