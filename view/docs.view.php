@@ -94,12 +94,6 @@
                     <h2 class="title"><i class="title">#</i> Database</h2>                
                 </div>
             </div>
-
-            <div class="complex">
-                <div class="center">
-                    <h2 class="title"><i class="title">#</i> Complex</h2>                
-                </div>
-            </div>
         </div>
     </div>
 

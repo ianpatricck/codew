@@ -12,10 +12,3 @@ start($argv1);
 // ----------------
 
 createController($argv1, $argv2);
-
-// ----------------
-
-createComplex($argv1);
-removeComplex($argv1);
-createComplexDB($argv1);
-removeComplexDB($argv1);
