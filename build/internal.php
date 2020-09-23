@@ -1,13 +1,18 @@
 <?php
 
-function requireArray($requires)
+function import($require)
+{
+    require __DIR__ . '/' . $require . '.php';
+}
+
+function importArray($requires)
 {
     foreach ($requires as $path => $files) {
         require __DIR__ . '//../' . $path . '/' . $file . '.php';
     }
 }
 
-function requireTwoArray($requires)
+function importTwoArray($requires)
 {
     foreach ($requires as $path => $files) {
         foreach ($files as $file) {
@@ -16,7 +21,7 @@ function requireTwoArray($requires)
     }
 }
 
-function requireGlob($data)
+function importGlob($data)
 {
     foreach(glob($data . '*.php') as $controller) {
         require __DIR__ . '//../' . $controller;

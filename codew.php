@@ -3,7 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/build/internal.php';
 
-$codewRequires = [
+$codew = [
 
     'config' => ['define'],
     
@@ -14,9 +14,9 @@ $codewRequires = [
         'Session'
     ],
 
-    'build' => ['global'],
+    'build' => ['global']
 
 ];
 
-requireTwoArray($codewRequires);
-requireGlob('app/Controllers/');
+importTwoArray($codew);
+importGlob('app/controllers/');
