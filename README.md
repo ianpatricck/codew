@@ -1,4 +1,4 @@
 # @ Codew
-### The way to accelerate your WEB development
+### The way to speed up my web development
 
 ---
