@@ -1,14 +1,14 @@
 var divs = [
     'introduction', 
     'config',
-    'app'
+    'cli'
 ]
 
 divs.forEach((element) => {
     document.querySelector('.' + element).style.display = 'none'
 })
 
-document.querySelector('.app').style.display = 'block'
+document.querySelector('.introduction').style.display = 'block'
 
 function show(className) {
     divs.forEach((element) => {

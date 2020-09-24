@@ -5,7 +5,7 @@
 .tag {color: rgb(54, 54, 211);}
 .string {color: rgb(163, 131, 99);}
 .comment {color: rgb(145, 145, 145);}
-.function {color: rgb(20, 170, 20);}
+.function {color: rgb(34, 126, 34);}
 
 * {
     box-sizing: border-box;
@@ -99,6 +99,10 @@ i.title {
     width: 100vh;
     text-indent: 15px;
     text-align: justify;
+}
+
+.fright {
+    float: right;
 }
 
 @media screen and (max-width: 1110px) {

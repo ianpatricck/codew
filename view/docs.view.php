@@ -13,7 +13,6 @@
 <ul>
 <a class="docs-link" onclick="show('.introduction')"><li>Introduction</li></a>
 <a class="docs-link" onclick="show('.config')"><li>Config</li></a>
-<a class="docs-link" onclick="show('.app')"><li>App</li></a>
 <a class="docs-link" onclick="show('.cli')"><li>CLI</li></a>
 <a class="docs-link" onclick="show('.internalf')"><li>Internal functions</li></a>
 <a class="docs-link" onclick="show('.url')"><li>URL</li></a>
@@ -71,10 +70,34 @@ where you can make changes to the database and application settings in general.
 </div>
 </div>
 
-<div class="app">
+<div class="cli">
 
 <div class="center">
-<h2 class="title"><i class="title">#</i> Application</h2>                
+<h2 class="title"><i class="title">#</i> Command Line</h2>           
+</div>
+
+<div class="description" style="margin-top: 5%;">
+There are parameters to be passed on the command line to speed up development, 
+from running the server to creating a controller. For the execution of this resource 
+we can use the <b>run</b> file as a path, located at the root of the project.
+</div>
+
+<div class="card" style="margin-top: 5%;"><b>php run [command]</b></div>
+
+<div class="description" style="margin-top: 5%;">
+Here is a list of useful commands:
+</div>
+
+<hr style="margin: 2%;">
+
+<div class="description" style="margin: 1%;">
+<b>php run server</b> 
+<a class="fright">to start the server</a>
+</div>
+
+<div class="description" style="margin: 1%;">
+<b>php run create:controller [controller name]</b>
+<a class="fright">to create a controller</a>
 </div>
 
 </div>
