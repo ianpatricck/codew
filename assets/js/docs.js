@@ -1,14 +1,7 @@
 var divs = [
     'introduction', 
-    'config', 
-    'app', 
-    'cli', 
-    'internalf', 
-    'url', 
-    'inputs', 
-    'requests', 
-    'sessions', 
-    'database'
+    'config',
+    'app'
 ]
 
 divs.forEach((element) => {
