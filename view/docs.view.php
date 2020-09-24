@@ -73,6 +73,10 @@ where you can make changes to the database and application settings in general.
 
 <div class="app">
 
+<div class="center">
+<h2 class="title"><i class="title">#</i> Application</h2>                
+</div>
+
 </div>
 
 </div>

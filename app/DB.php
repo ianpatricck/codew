@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Native;
+namespace App;
 
 use PDO;
 use PDOException;

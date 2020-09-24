@@ -24,9 +24,9 @@ function createController($argv, $name)
             echo "\n[-] Failed to create controller\n";
         } else {
 
-            $content = "<?php\n\nnamespace App\Controllers;\n\nclass $name\n{\n\t// ..\n}";
+            $content = "<?php\n\nnamespace Controllers;\n\nclass $name\n{\n\t// ..\n}";
         
-            $file_controller = fopen('app/controllers/'.$name.'.php', 'w');
+            $file_controller = fopen('controllers/'.$name.'.php', 'w');
         
             fwrite($file_controller, $content);
             fclose($file_controller);

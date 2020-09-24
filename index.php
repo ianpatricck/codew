@@ -2,6 +2,6 @@
 
 require __DIR__ . '/codew.php';
 
-use App\Controllers\WelcomeController;
+use Controllers\WelcomeController;
 
 WelcomeController::viewer();

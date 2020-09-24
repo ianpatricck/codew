@@ -7,7 +7,7 @@ $codew = [
 
     'config' => ['define'],
     
-    'app/native' => [
+    'app' => [
         'DB', 
         'Input', 
         'Request', 
@@ -19,4 +19,4 @@ $codew = [
 ];
 
 importTwoArray($codew);
-importGlob('app/controllers/');
+importGlob('controllers/');
