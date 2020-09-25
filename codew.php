@@ -10,8 +10,7 @@ $codew = [
     'app' => [
         'DB', 
         'Input', 
-        'Request', 
-        'Session'
+        'Request'
     ],
 
     'build' => ['global']

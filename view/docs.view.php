@@ -18,7 +18,6 @@
 <a class="docs-link" onclick="show('.url')"><li>URL</li></a>
 <a class="docs-link" onclick="show('.inputs')"><li>Inputs</li></a>
 <a class="docs-link" onclick="show('.requests')"><li>Requests</li></a>
-<a class="docs-link" onclick="show('.sessions')"><li>Sessions</li></a>
 <a class="docs-link" onclick="show('.database')"><li>Database</li></a>
 </ul>
 </div>
