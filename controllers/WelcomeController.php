@@ -8,7 +8,7 @@ class WelcomeController
     {
         $msg = 'Welcome to Codew';
 
-        view('/', ['msg' => $msg]);
+        view('/', ['welcome' => $msg]);
         view('docs');
     }
 }

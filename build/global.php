@@ -1,6 +1,6 @@
 <?php
 
-function view($page, $data = [])
+function view($page, $var = [])
 {
     if ($_SERVER['REQUEST_URI'] == '/') {
         require_once __DIR__ . '/../view/' . INDEX_PAGE . '.view.php';
@@ -9,7 +9,7 @@ function view($page, $data = [])
     }
 }
 
-function push($view, $param, $data = '')
+function push($view, $param, $var = '')
 {
     if ($_SERVER['REQUEST_URI'] == '/' . $view . '/') {
         echo false;

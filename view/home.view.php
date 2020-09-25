@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="<?= assets('css/style.css'); ?>">
 </head>
 <body>
-
-    <h1><?= $data['msg']; ?></h1>
-    
+    <h1><?= $var['welcome']; ?></h1>
     <script src="<?= assets('js/titleEffect.js'); ?>"></script>
 </body>
 </html>
