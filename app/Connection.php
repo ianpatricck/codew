@@ -7,7 +7,17 @@ use PDOException;
 
 abstract class Connection
 {
-    protected $connection;
+    private $connection;
+
+    public function __set($connection, $data)
+    {
+        $this->connection = $data;
+    }
+
+    public function __get($connection)
+    {
+        return $this->connection;
+    }
 
     public function __construct($database)
     {
