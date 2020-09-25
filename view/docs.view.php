@@ -34,9 +34,15 @@ Codew is a project in constant development to help organize and write code.
 </div>
 
 <div class="description" style="margin-top: 30px; margin-bottom: 20px;">
-With this feature, the developer can perform tasks quickly and with better use in the source
-code, being free to create all his business rules in his own way and define his own standards.
+This is a project created by me to supply my time in language development with clean and light code, feel 
+free to report errors in the application and errors in code writing.
 </div>
+
+<div class="description">
+With this feature, the developer can perform tasks quickly and with better use at the source
+code, being free to create all your business rules your way and set your own standards.
+</div>
+
 </div>
 
 <div class="config">
