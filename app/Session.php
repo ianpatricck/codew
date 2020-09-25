@@ -4,19 +4,12 @@ namespace App;
 
 class Session
 {
-    public static function prepare($obj)
-    {
-        foreach ($obj as $value) {
-            return $value;
-        }
-    }
-
-    public static function clear($redirect)
+    public function out($out)
     {
         session_start();
         session_unset();
         session_destroy();
-
-        redirect($redirect);
+    
+        redirect($out);
     }
 }

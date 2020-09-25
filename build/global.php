@@ -35,3 +35,12 @@ function assets($filepath)
 {
     echo '../assets/' . $filepath;
 }
+
+function sessionVerify($session_data)
+{
+    session_start();
+
+    if (!isset($_SESSION[$session_data])) {
+        redirect(INDEX_PAGE);
+    }
+}
