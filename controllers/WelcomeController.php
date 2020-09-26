@@ -9,6 +9,5 @@ class WelcomeController
         $msg = 'Welcome to Codew';
 
         view('/', ['welcome' => $msg]);
-        view('docs');
     }
 }

@@ -48,7 +48,5 @@ Here is a list of useful commands:
 
 ```
 $ php run server
-```
-```
 $ php run create:controller [controller name]
 ```
