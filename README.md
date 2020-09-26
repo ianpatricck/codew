@@ -3,6 +3,14 @@
 
 ---
 
+Install
+
+```
+composer create-project codew/codew myapp
+```
+
+---
+
 ## # Knowing the Codew
 
 Codew is a project in constant development to help organize and write code.
