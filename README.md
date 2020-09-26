@@ -37,7 +37,7 @@ define('PASSWORD', '');
 There are parameters to be passed on the command line to speed up development, from running the server to creating a controller. For the execution of this resource we can use the run file as a path, located at the root of the project.
 
 ```
-php run [command]
+$ php run [command]
 ```
 
 Here is a list of useful commands:
