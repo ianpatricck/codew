@@ -3,7 +3,7 @@
 
 ---
 
-Install
++ Install
 
 ```
 composer create-project codew/codew myapp
