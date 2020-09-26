@@ -1,7 +1,7 @@
 <?php 
 
 require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/build/internal.php';
+require __DIR__ . '/build/before.php';
 
 $codew = [
 
@@ -13,9 +13,9 @@ $codew = [
         'Request'
     ],
 
-    'build' => ['global']
+    'build' => ['after']
 
 ];
 
-importTwoArray($codew);
-importGlob('controllers/');
+import($codew, 'arr2');
+import('controllers/', 'glob');
