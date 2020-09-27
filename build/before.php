@@ -15,7 +15,7 @@ function import($require, $option = '')
             }
         }
     } else if ($option == 'glob') {
-        foreach(glob($require . '*.php') as $file) {
+        foreach(glob($require . '/*.php') as $file) {
             require __DIR__ . '//../' . $file;
         }
     }

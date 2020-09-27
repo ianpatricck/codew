@@ -6,7 +6,7 @@
 ## # Install
 
 ```
-composer create-project codew/codew myapp
+$ composer create-project codew/codew myapp
 ```
 
 ---
@@ -58,3 +58,65 @@ Here is a list of useful commands:
 $ php run server
 $ php run create:controller [controller name]
 ```
+
+## # Globals
+
+The native functions of the project are resources to be used almost always. The __$var__ variable is a design variable reserved for the ```view()``` and ```push()``` functions and should be avoided in certain cases.
+
+The ```view()``` function has the task of viewing a system page, obtaining the file from the viewing directory.
+
+```php
+view('about', ['msg' => $msg]);
+```
+
+The second parameter to be passed is some variable for viewing on the page.
+It can be done as follows:
+
+```php
+<?= $var['msg']; ?>
+```
+
+---
+
+Not unlike the preview function, ```push()``` also returns a page, but with a parameter in the URL as an identifier
+
+```php
+push('profile', 1, ['opt' => $opt]);
+```
+
+We also have the redirect function that works via PHP's ```header('Location')```.
+
+```php
+redirect('page');
+```
+
+We can also use the function that checks if a session exists within a view, which facilitates the development of a login system, for example.
+
+```php
+<!DOCTYPE html>
+<?= sessionVerify('logged'); ?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codew</title>
+</head>
+<body>
+    <!-- code -->
+</body>
+</html>
+```
+
+If the session does not exist, the user is returned to the home page set in the __INDEX_PAGE__ constant.
+
+---
+
+```php
+import('file');
+import(['file1', 'file2'], 'arr');
+import(['directory' => ['file']], 'arr2');
+import('directory', 'glob');
+```
+
+Formats to include files in an automated way.
+
+The 'glob' attribute is used to request all .php files located in the directory.

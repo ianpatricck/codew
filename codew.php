@@ -18,4 +18,4 @@ $codew = [
 ];
 
 import($codew, 'arr2');
-import('controllers/', 'glob');
+import('controllers', 'glob');
