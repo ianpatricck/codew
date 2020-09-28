@@ -3,7 +3,7 @@
 
 ---
 
-## # Install
+## _#_ Install
 
 ```
 $ composer create-project codew/codew myapp
@@ -11,7 +11,7 @@ $ composer create-project codew/codew myapp
 
 ---
 
-## # Knowing the Codew
+## _#_ Knowing the Codew
 
 Codew is a project in constant development to help organize and write code.
 
@@ -19,7 +19,7 @@ This is a project created by me to supply my time in language development with c
 
 With this feature, the developer can perform tasks quickly and with better use at the source code, being free to create all your business rules your way and set your own standards. 
 
-## # Config
+## _#_ Config
 
 The configuration file for the constants can be found in ```config/define.php``` where you can make changes to the database and application settings in general.
 
@@ -40,7 +40,7 @@ define('USERNAME', 'root');
 define('PASSWORD', '');
 ```
 
-## # CLI
+## _#_ CLI
 
 There are parameters to be passed on the command line to speed up development, from running the server to creating a controller. For the execution of this resource we can use the run file as a path, located at the root of the project.
 
@@ -59,7 +59,7 @@ $ php run server
 $ php run create:controller [controller name]
 ```
 
-## # Globals
+## _#_ Globals
 
 The native functions of the project are resources to be used almost always. The __$var__ variable is a design variable reserved for the ```view()``` and ```push()``` functions and should be avoided in certain cases.
 
@@ -78,7 +78,7 @@ It can be done as follows:
 
 ---
 
-Not unlike the preview function, ```push()``` also returns a page, but with a parameter in the URL as an identifier
+Not unlike the preview function, ```push()``` also returns a page, but with a parameter in the URL as an identifier.
 
 ```php
 push('profile', 1, ['opt' => $opt]);
@@ -121,7 +121,7 @@ Formats to include files in an automated way.
 
 The 'glob' attribute is used to request all .php files located in the directory.
 
-## # App
+## _#_ App
 
 The ```App``` directory stores all classes needed for general use.
 
@@ -144,7 +144,7 @@ The database class has the function of inserting SQL code using the ```insert()`
 $connection->insert("INSERT INTO users(name) VALUES('nickname')");
 ```
 
-To return data from the database
+To return data from the database.
 
 ```php
 <?php
@@ -156,7 +156,7 @@ $user = $connection->return("SELECT name FROM users WHERE name = ?", [$name]);
 echo $user->name;
 ```
 
-FetchAll()
+Get all data.
 
 ```php
 <?php
@@ -168,4 +168,10 @@ foreach($users as $user) {
 }
 ```
 
+### __Request__
 
+<br>
+
+```php
+$request = new Request();
+```

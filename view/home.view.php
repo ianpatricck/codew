@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1><?= $var['welcome']; ?></h1>
-    <script src="<?= assets('js/titleEffect.js'); ?>"></script>
+    <script src="<?= assets('js/script.js'); ?>"></script>
 </body>
 </html>
