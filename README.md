@@ -130,6 +130,10 @@ The ```App``` directory stores all classes needed for general use.
 The system supports only MySQL and PostgresQL databases.
 
 ```php
+<?php
+
+use App\DB;
+
 $connection = new DB('mysql');
 $connection = new DB('pgsql');
 ```
@@ -173,5 +177,9 @@ foreach($users as $user) {
 <br>
 
 ```php
+<?php
+
+use App\Request;
+
 $request = new Request();
 ```
