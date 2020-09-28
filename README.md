@@ -120,3 +120,52 @@ import('directory', 'glob');
 Formats to include files in an automated way.
 
 The 'glob' attribute is used to request all .php files located in the directory.
+
+## # App
+
+The ```App``` directory stores all classes needed for general use.
+
+### __Database__
+
+The system supports only MySQL and PostgresQL databases.
+
+```php
+$connection = new DB('mysql');
+$connection = new DB('pgsql');
+```
+
+---
+
+The database class has the function of inserting SQL code using the ```insert()``` method.
+
+```php
+<?php
+
+$connection->insert("INSERT INTO users(name) VALUES('nickname')");
+```
+
+To return data from the database
+
+```php
+<?php
+
+$name = 'nickname';
+
+$user = $connection->return("SELECT name FROM users WHERE name = ?", [$name]);
+
+echo $user->name;
+```
+
+FetchAll()
+
+```php
+<?php
+
+$users = $connection->returnAll("SELECT * FROM users");
+
+foreach($users as $user) {
+    echo $user->name
+}
+```
+
+
