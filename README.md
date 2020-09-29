@@ -50,13 +50,8 @@ $ php run [command]
 
 Here is a list of useful commands:
 
----
-
-<br>
-
 ```
-$ php run server
-$ php run create:controller [controller name]
+$ php run help
 ```
 
 ## _#_ Globals

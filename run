@@ -8,6 +8,7 @@ require_once __DIR__ . '/build/cli.php';
 
 noArgv($argv1);
 start($argv1);
+help($argv1);
 
 // ----------------
 

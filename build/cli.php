@@ -17,6 +17,16 @@ function start($argv, $port = PORT)
     }
 }
 
+function help($argv)
+{
+    if ($argv == 'help') {
+        echo "\n";
+        
+        echo "$ php run server \t\t\t\t to start server\n";
+        echo "$ php run create:controller <name> \t\t to create a controller\n";
+    }
+}
+
 function createController($argv, $name)
 {
     if ($argv == 'create:controller') {
