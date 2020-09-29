@@ -178,3 +178,49 @@ use App\Request;
 
 $request = new Request();
 ```
+
+This class is used to capture data, either through a form or in the URL.
+
+```html
+<form action="auth/login" method="POST">
+    <input type="email" name="email">
+    <input type="password" name="password">
+    <button type="submit" name="submit">Login</button>
+</form>
+```
+
+```php
+<?php
+
+$login = $request->request('auth/login', 'submit');
+
+if ($login) {
+    $email = $request->post('email');
+    $password = $request->post('password');
+
+    echo $email;
+    echo $password;
+}
+```
+
+To check if a parameter exists in the URL:
+
+```php
+<?php
+
+$get = $request->get('profile', 1);
+
+if ($get) {
+    # this check returns true or false
+}
+```
+
+To get the last parameter:
+
+```php
+<?php
+
+$param = $request->param('profile/1');
+
+echo $param;
+```
