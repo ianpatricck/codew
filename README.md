@@ -224,3 +224,41 @@ $param = $request->param('profile/1');
 
 echo $param;
 ```
+
+### __Input__
+
+The Input class validates only form data.
+
+```php
+<?php
+
+use App\Input;
+
+$name = Input::text($request->post('name'));
+
+echo $name;
+```
+
+Some validation methods:
+
+```php
+<?php
+
+Input::text('text');
+Input::email('myemail@mail.com');
+Input::int(10);
+Input::float(10000);
+```
+
+It is possible to upload files using the ```upload()``` method.
+
+```php
+<?php
+
+$upload = Input::upload($inputName, $destiny, $minBytes, ['txt']);
+```
+
+The maximum number of extension characters supported is three.
+
+Such as: ```txt```, ```png```, ```jpg```, ```pdf```
+
