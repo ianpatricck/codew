@@ -1,12 +1,14 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__ . '/build/cli.php';
+require_once __DIR__ . '/build/before.php';
+
+import('build/cli/', 'glob');
 
 @ $argv1 = $argv[1];
 @ $argv2 = $argv[2];
 
-noArgv($argv1);
+noInput($argv1);
 start($argv1);
 help($argv1);
 
