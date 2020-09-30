@@ -1,7 +1,7 @@
 {
     "name": "codew/codew",
     "description": "The way to speed up my PHP development",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
