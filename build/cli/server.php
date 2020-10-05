@@ -24,6 +24,8 @@ function help($argv)
         
         echo "$ php run server \t\t\t\t to start server\n\n";
         echo "$ php run createController <name> \t\t to create a controller\n";
-        echo "$ php run removeController <name> \t\t to remove a controller\n";
+        echo "$ php run removeController <name> \t\t to remove a controller\n\n";
+        echo "$ php run securityEnable \t\t\t To not allow access to restricted areas\n";
+        echo "$ php run securityDisabled \t\t\t To remove .htaccess from directories\n";
     }
 }
