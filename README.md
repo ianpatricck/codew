@@ -1,4 +1,7 @@
 # @ Codew
+
+![GitHub repo size](https://img.shields.io/github/repo-size/ianpatricck/codew) ![Packagist Version](https://img.shields.io/packagist/v/codew/codew) ![GitHub](https://img.shields.io/github/license/ianpatricck/codew)
+
 ### The way to speed up my PHP development
 
 ---
