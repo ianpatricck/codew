@@ -10,6 +10,7 @@
 
 ```
 $ composer create-project codew/codew myapp
+$ composer update
 ```
 
 ---
