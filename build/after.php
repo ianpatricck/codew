@@ -3,9 +3,9 @@
 function view($page, $var = [])
 {
     if ($_SERVER['REQUEST_URI'] == '/') {
-        require_once __DIR__ . '/../view/' . INDEX_PAGE . '.view.php';
+        require_once __DIR__ . '/../views/' . INDEX_PAGE . '.view.php';
     } else if ($_SERVER['REQUEST_URI'] == '/' . $page) {
-        require_once __DIR__ . '/../view/' . $page . '.view.php';
+        require_once __DIR__ . '/../views/' . $page . '.view.php';
     }
 }
 
@@ -21,7 +21,7 @@ function push($view, $param, $var = '')
         foreach ($array_URL as $key => $value) {}
 
         if (in_array($param, $array_URL)) {
-            require_once __DIR__ . '/../view/' . $view . '.view.php';
+            require_once __DIR__ . '/../views/' . $view . '.view.php';
         }
     }
 }
