@@ -5,7 +5,7 @@ require __DIR__ . '/build/before.php';
 
 $codew = [
 
-    'config' => ['define'],
+    'config' => ['config'],
     
     'app' => [
         'DB', 

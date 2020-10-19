@@ -25,7 +25,7 @@ With this feature, the developer can perform tasks quickly and with better use a
 
 ## _#_ Config
 
-The configuration file for the constants can be found in ```config/define.php``` where you can make changes to the database and application settings in general.
+The configuration file for the constants can be found in ```config/config.php``` where you can make changes to the database and application settings in general.
 
 ```php
 <?php
