@@ -6,11 +6,12 @@ require __DIR__ . '/build/before.php';
 $codew = [
 
     'config' => ['config'],
-    
+
     'app' => [
-        'DB', 
-        'Input', 
-        'Request'
+        'DB',
+        'Input',
+        'Request',
+        'Route'
     ],
 
     'build' => ['after']
