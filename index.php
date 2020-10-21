@@ -2,7 +2,7 @@
 
 require __DIR__ . '/codew.php';
 
-use App\Router;
+use Classes\Router;
 
 Router::get('/', function () {
     return view('home');

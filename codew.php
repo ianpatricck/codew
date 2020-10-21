@@ -7,7 +7,7 @@ $codew = [
 
     'config' => ['config'],
 
-    'app' => [
+    'classes' => [
         'DB',
         'Input',
         'Request',

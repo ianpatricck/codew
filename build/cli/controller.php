@@ -7,7 +7,7 @@ function createController($argv, $name)
             echo "\n[-] Failed to create controller\n";
         } else {
 
-            $content = "<?php\n\nnamespace Controllers;\n\nclass $name\n{\n\t// ..\n}";
+            $content = "<?php\n\nnamespace Controllers;\n\nuse DB;\n\nuse Router;\n\nclass $name\n{\n\t// ..\n}";
         
             $file_controller = fopen('controllers/'. $name .'.php', 'w');
         
