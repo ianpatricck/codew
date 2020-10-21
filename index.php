@@ -2,6 +2,8 @@
 
 require __DIR__ . '/codew.php';
 
-use Controllers\WelcomeController;
+use App\Router;
 
-WelcomeController::viewer();
+Router::get('/', function () {
+    return view('home');
+});

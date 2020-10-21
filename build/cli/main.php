@@ -12,7 +12,7 @@ function noInput($argv)
 function start($argv, $port = PORT)
 {
     if ($argv == 'server') {
-        echo "Starting codew PHP server ...\n";
+        echo "Starting Codew PHP server ...\n";
         echo exec('php -S localhost:' . $port);
     }
 }

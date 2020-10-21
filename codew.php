@@ -11,10 +11,10 @@ $codew = [
         'DB',
         'Input',
         'Request',
-        'Route'
+        'Router'
     ],
 
-    'build' => ['after']
+    'build' => ['fs']
 
 ];
 

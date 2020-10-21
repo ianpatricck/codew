@@ -2,13 +2,10 @@
 
 namespace Controllers;
 
+use DB;
+use Router;
+
 class WelcomeController
 {
-    public static function viewer()
-    {
-        $msg = 'Welcome to Codew';
-
-        view('/', ['welcome' => $msg]);
-        view('page');
-    }
+    // code ..
 }

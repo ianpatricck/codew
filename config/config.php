@@ -4,8 +4,6 @@
 
 define('PORT', 80);
 
-define('INDEX_PAGE', 'home');
-
 // => Database config
 
 define('HOST', '127.0.0.1');
