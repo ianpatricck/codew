@@ -9,7 +9,7 @@ function noInput($argv)
     }
 }
 
-function start($argv, $port = PORT)
+function start($argv, $port = SERVER_PORT)
 {
     if ($argv == 'server') {
         echo "Starting Codew PHP server ...\n";
