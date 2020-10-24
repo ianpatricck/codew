@@ -1,13 +1,17 @@
 <?php 
 
+/*
+ * Requirements for the application to work.
+ *
+ */
+
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/build/before.php';
+require __DIR__ . '/config/config.php';
 
-import('config/config');
-import('classes/DB');
-import('classes/Input');
-import('classes/Request');
-import('classes/Router');
-import('config/calls');
-import('build/fs');
-import('controllers', 'glob');
+import('classes');
+
+require __DIR__ . '/config/calls.php';
+require __DIR__ . '/build/fs.php';
+
+import('controllers');
