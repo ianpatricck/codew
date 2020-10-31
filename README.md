@@ -9,8 +9,7 @@
 ## _#_ Install
 
 ```
-$ composer create-project codew/codew myapp
-$ composer update
+$ composer require codew/codew
 ```
 
 ---
