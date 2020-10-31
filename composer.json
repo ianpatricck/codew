@@ -1,7 +1,7 @@
 {
     "name": "codew/codew",
     "description": "The way to speed up my PHP development",
-    "type": "project",
+    "type": "component",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Classes\\": "classes/"
+            "Codew\\": "src/classes/"
         }
     }
 }
