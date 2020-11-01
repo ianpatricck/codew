@@ -1,6 +1,6 @@
 <?php
 
-namespace Classes;
+namespace Codew;
 
 use PDO;
 use PDOException;
