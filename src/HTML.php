@@ -4,8 +4,13 @@ namespace Codew;
 
 class HTML
 {
-    public static function view($page, $var = [])
+    public static function static($folder)
     {
-        require_once __DIR__ . '/../../../../views/' . $page . '.view.php';
+        // ..
+    }
+
+    public static function asset($path)
+    {
+        // ..
     }
 }
