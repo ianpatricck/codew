@@ -22,10 +22,16 @@ This is a component created by me to supply my time in language development with
 
 With this feature, the developer can perform tasks quickly and with better use at the source code, being free to create all your business rules your way and set your own standards. 
 
+---
+
+Create a file in your project with the following content:
+
 ```php
 #!/usr/bin/env php
 
 <?php
+
+// run file
 
 require_once __DIR__ . '/vendor/autoload.php';
 
