@@ -21,3 +21,19 @@ Codew is a component in constant development to help organize and write code.
 This is a component created by me to supply my time in language development with clean and light code, feel free to report errors in the application and errors in code writing.
 
 With this feature, the developer can perform tasks quickly and with better use at the source code, being free to create all your business rules your way and set your own standards. 
+
+```php
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Codew\Run;
+
+Run::docs(80);
+```
+
+```
+$ php run
+```
