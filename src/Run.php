@@ -4,8 +4,8 @@ namespace Codew;
 
 class Run
 {
-    public function docs()
+    public static function docs($port)
     {
-        // ..
+        echo exec('cd vendor/codew/codew/src/resources/ && php -S localhost:' . $port);
     }
 }
