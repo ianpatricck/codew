@@ -33,7 +33,7 @@ Create a file in your project with the following content:
 
 // run file
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . "/vendor/autoload.php";
 
 use Codew\Run;
 
