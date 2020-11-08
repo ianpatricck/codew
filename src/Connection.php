@@ -1,6 +1,6 @@
 <?php
 
-namespace Codew;
+namespace Native;
 
 use PDO;
 use PDOException;
