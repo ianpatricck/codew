@@ -6,6 +6,6 @@ class Run
 {
     public static function docs($port)
     {
-        exec("cd vendor/codew/codew/src/resources/ && php -S localhost:" . $port);
+        exec("php -S localhost:" . $port . " -t vendor/codew/codew/src/resources/");
     }
 }
