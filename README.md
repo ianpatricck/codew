@@ -35,7 +35,7 @@ Create a file in your project with the following content:
 
 require_once __DIR__ . "/vendor/autoload.php";
 
-use Codew\Run;
+use Native\Run;
 
 Run::docs(80);
 ```
