@@ -4,15 +4,15 @@ namespace Native;
 
 class View extends \League\Plates\Engine
 {
-    public $instance;
+    private $instance;
 
-    public static function set($view_folder)
+    public function __construct($path)
     {
-        self::$instance = new League\Plates\Engine($view_folder);
+        $this->instance = new League\Plates\Engine($path);
     }
 
-    public static function render($view, $parameters = [])
+    public function render($view, $parameters = [])
     {
-        echo self::$instance->render($view, $parameters);
+        echo $this->instance->render($view, $parameters);
     }
 }
