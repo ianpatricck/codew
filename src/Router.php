@@ -2,7 +2,7 @@
 
 namespace Native;
 
-abstract class Router extends \Bramus\Router\Router
+class Router extends \Bramus\Router\Router
 {
     // ..
 }
