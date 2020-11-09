@@ -13,7 +13,6 @@
     "require": {
         "php": "^7.4.0",
         "league/plates": "^3.3",
-        "coffeecode/router": "^1.0",
         "bramus/router": "^1.5"
     },
     "autoload": {
