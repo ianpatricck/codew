@@ -13,8 +13,7 @@
     "require": {
         "php": "^7.4.0",
         "league/plates": "^3.3",
-        "bramus/router": "^1.5",
-        "erusev/parsedown": "^1.7"
+        "bramus/router": "^1.5"
     },
     "autoload": {
         "psr-4": {
