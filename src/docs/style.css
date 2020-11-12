@@ -6,9 +6,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
+    list-style: none;
 }
 
 h2 {font-family: 'Noto Sans JP', sans-serif;}
+
+hr {
+    border: none;
+    border-bottom: 0.01rem solid rgb(194, 194, 194);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(64, 106, 221);
+}
+
+a:hover {
+    color: rgb(41, 86, 211);
+    text-decoration: underline;
+}
+
+li {
+    margin-bottom: 5px;
+    font-size: 13pt;
+}
 
 .all {
     display: flex;
@@ -58,3 +79,4 @@ h2 {font-family: 'Noto Sans JP', sans-serif;}
 }
 
 .primary {color:#525891;}
+.light {color: rgb(70, 69, 69);}
