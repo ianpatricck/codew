@@ -1,6 +1,6 @@
 <?php
 
-namespace Native;
+namespace Codew;
 
 class View extends \League\Plates\Engine
 {
