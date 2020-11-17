@@ -2,7 +2,7 @@
 
 namespace Codew;
 
-class View extends \League\Plates\Engine
+class HTML extends \League\Plates\Engine
 {
     public static function view($file, $data = [])
     {
