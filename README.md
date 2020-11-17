@@ -41,4 +41,8 @@ $router->get("/", function () {
 $router->run();
 ```
 
-The above code that is in an index.php runs the page that displays home.php within the viewing directory ```views```. It is necessary to have the ```views``` directory in your project.
+The above code that is in an ```index.php``` runs the page that displays ```home.php``` within the viewing directory ```views```. It is necessary to have the ```views``` directory in your project.
+
+```
+$ php -S 127.0.0.1:80
+```
