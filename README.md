@@ -30,12 +30,12 @@ With this feature, the developer can perform tasks quickly and with better use a
 require __DIR__ . "/vendor/autoload.php";
 
 use Codew\Router;
-use Codew\HTML;
+use Codew\Render;
 
 $router = new Router();
 
 $router->get("/", function () {
-    HTML::view("home");
+    Render::view("home");
 });
 
 $router->run();

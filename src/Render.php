@@ -2,7 +2,7 @@
 
 namespace Codew;
 
-class HTML
+class Render
 {
     public static function view($file, $data = [])
     {
