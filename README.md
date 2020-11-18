@@ -6,6 +6,9 @@
 
 ---
 
+- [bramus/router](https://packagist.org/packages/bramus/router)
+- [league/plates](https://packagist.org/packages/league/plates)
+
 ## Install
 
 ```
