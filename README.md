@@ -49,3 +49,29 @@ The above code that is in an ```index.php``` runs the page that displays ```home
 ```
 $ php -S 127.0.0.1:80
 ```
+
+To view static files, you can use the ```path``` function in your index file.
+
+```php
+Render::path();
+
+$router->get('/', function () {
+    Render::view('home');
+});
+```
+
+In this way, it will be possible to access the files of the entire project.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="<?= path('public/style.css'); ?>">
+</head>
+<body>
+    <!-- content -->
+</body>
+</html>
+```
