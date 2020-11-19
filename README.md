@@ -62,7 +62,7 @@ $router->get('/', function () {
 
 In this way, it will be possible to access the files of the entire project.
 
-```html php
+```html
 <!DOCTYPE html>
 <html>
 <head>
