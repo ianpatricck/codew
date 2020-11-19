@@ -9,4 +9,9 @@ class Render
         $view = new \League\Plates\Engine('views');
         echo $view->render($file, $data);
     }
+
+    public static function path()
+    {
+        require __DIR__ . '/static/template.php';
+    }
 }
