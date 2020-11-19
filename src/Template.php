@@ -1,6 +1,11 @@
 <?php
 
-function path($path)
+namespace Codew;
+
+class Template
 {
-    echo $path;
+    public static function path($path)
+    {
+        echo $path;
+    }
 }
