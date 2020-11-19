@@ -1,6 +1,6 @@
 <?php
 
-namespace Codew\Template;
+namespace Template;
 
 function path($path)
 {

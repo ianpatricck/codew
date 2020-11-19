@@ -17,8 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Codew\\": "src/",
-            "Codew\\Native": "src/Native"
+            "Codew\\": "src/"
         }
     }
 }
