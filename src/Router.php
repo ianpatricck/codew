@@ -2,7 +2,45 @@
 
 namespace Codew;
 
-class Router extends \Bramus\Router\Router
+class Router
 {
-    // ..
+    public static function get($route, $callback)
+    {
+        $router = new \Bramus\Router\Router();
+
+        $router->get($route, $callback);
+        $router->run();
+    }
+
+    public static function post($route, $callback)
+    {
+        $router = new \Bramus\Router\Router();
+
+        $router->post($route, $callback);
+        $router->run();
+    }
+
+    public static function put($route, $callback)
+    {
+        $router = new \Bramus\Router\Router();
+
+        $router->put($route, $callback);
+        $router->run();
+    }
+
+    public static function patch($route, $callback)
+    {
+        $router = new \Bramus\Router\Router();
+
+        $router->patch($route, $callback);
+        $router->run();
+    }
+
+    public static function delete($route, $callback)
+    {
+        $router = new \Bramus\Router\Router();
+
+        $router->delete($route, $callback);
+        $router->run();
+    }
 }

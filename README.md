@@ -35,13 +35,9 @@ require __DIR__ . '/vendor/autoload.php';
 use Codew\Router;
 use Codew\Render;
 
-$router = new Router();
-
-$router->get('/', function () {
+Router::get('/', function () {
     Render::view('home');
 });
-
-$router->run();
 ```
 
 The above code that is in an ```index.php``` runs the page that displays ```home.php``` within the viewing directory ```views```. It is necessary to have the ```views``` directory in your project.
@@ -55,7 +51,7 @@ To view static files, you can use the ```path``` function in your index file.
 ```php
 Render::path();
 
-$router->get('/', function () {
+Router::get('/', function () {
     Render::view('home');
 });
 ```
@@ -76,15 +72,14 @@ In this way, it will be possible to access the files of the entire project.
 </html>
 ```
 
-Supports ```GET```, ```POST```, ```PUT```, ```DELETE```, ```OPTIONS```, ```PATCH``` and ```HEAD``` request methods.
+Supports ```GET```, ```POST```, ```PUT```, ```PATCH``` and ```DELETE``` request methods.
 
 ```php
-$router->get('pattern', function() { /**/ });
-$router->post('pattern', function() { /**/ });
-$router->put('pattern', function() { /**/ });
-$router->delete('pattern', function() { /**/ });
-$router->options('pattern', function() { /**/ });
-$router->patch('pattern', function() { /**/ });
+Router::get('pattern', function() { /**/ });
+Router::post('pattern', function() { /**/ });
+Router::put('pattern', function() { /**/ });
+Router::patch('pattern', function() { /**/ });
+Router::delete('pattern', function() { /**/ });
 ```
 
 Visit [bramus/router](https://packagist.org/packages/bramus/router) for more information on routes.
