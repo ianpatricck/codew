@@ -88,7 +88,7 @@ For the rendering of data coming from the routes we use the [plates](http://plat
 
 
 ```php
-$router->get('/', function () {
+Router::get('/', function () {
     Render::view('home', ['msg' => 'Hello World']);
 });
 ```
