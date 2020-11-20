@@ -68,10 +68,45 @@ In this way, it will be possible to access the files of the entire project.
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="<?= path('public/style.css'); ?>">
+    <link rel="stylesheet" href="<?= path('public/style.css') ?>">
 </head>
 <body>
     <!-- content -->
+</body>
+</html>
+```
+
+Supports ```GET```, ```POST```, ```PUT```, ```DELETE```, ```OPTIONS```, ```PATCH``` and ```HEAD``` request methods.
+
+```php
+$router->get('pattern', function() { /**/ });
+$router->post('pattern', function() { /**/ });
+$router->put('pattern', function() { /**/ });
+$router->delete('pattern', function() { /**/ });
+$router->options('pattern', function() { /**/ });
+$router->patch('pattern', function() { /**/ });
+```
+
+Visit [bramus/router](https://packagist.org/packages/bramus/router) for more information on routes.
+
+For the rendering of data coming from the routes we use the [plates](http://platesphp.com/) syntax (native PHP templates).
+
+
+```php
+$router->get('/', function () {
+    Render::view('home', ['msg' => 'Hello World']);
+});
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1><?= $msg ?></h1>
 </body>
 </html>
 ```
