@@ -9,12 +9,12 @@ abstract class Connection
 {
     private $connection;
 
-    public static function __set($connection, $data)
+    public function __set($connection, $data)
     {
         self::$connection = $data;
     }
 
-    public static function __get($connection)
+    public function __get($connection)
     {
         return self::$connection;
     }
