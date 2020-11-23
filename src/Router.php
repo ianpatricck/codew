@@ -8,14 +8,8 @@ class Router
     {
         $router = new \Bramus\Router\Router();
 
-        if (gettype($callback) == 'object') {
-            $router->get($route, $callback);
-            $router->run();
-        } else if (gettype($callback) == 'array') {
-            foreach ($callback as $value) {
-                echo $value . '<br>';
-            }
-        }
+        $router->get($route, $callback);
+        $router->run();
     }
 
     public static function post($route, $callback)

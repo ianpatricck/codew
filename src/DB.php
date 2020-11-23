@@ -7,9 +7,9 @@ use PDOException;
 
 class DB extends Connection
 {
-    public static function query($query, $value = [])
+    public function query($query, $value = [])
     {
-        $stmt = self::$connection->prepare($query);
+        $stmt = $this->connection->prepare($query);
         
         if ($value) {
             $stmt->execute($value);
@@ -17,7 +17,7 @@ class DB extends Connection
             $stmt->execute();
         }
 
-        // return $stmt->fetch();
+        return $stmt->fetch();
         // return $stmt->fetchAll();
     }
 }

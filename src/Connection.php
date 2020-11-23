@@ -5,40 +5,39 @@ namespace Codew;
 use PDO;
 use PDOException;
 
-abstract class Connection
+class Connection
 {
-    private $connection;
+    protected  $connection;
 
     public function __set($connection, $data)
     {
-        self::$connection = $data;
+        $this->connection = $data;
     }
 
     public function __get($connection)
     {
-        return self::$connection;
+        return $this->connection;
     }
 
-    public static function connect($database, $params = [])
+    public function __construct($database, $params = [])
     {
         if ($database == 'mysql') {
             try {
-                self::$connection = new PDO(
+                $this->connection = new PDO(
                     'mysql:host='.$params['host'].';dbname='.$params['dbname'], $params['username'], $params['password'], 
                     array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8')
                 );
                 
-                self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                self::$connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-
+                $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
             } catch (PDOException $error) {
                 throw new PDOException($error);
             }
         } else if ($database == 'pgsql') {
             try {
-                self::$connection = new PDO('pgsql:host='.$params['host'].';dbname='.$params['dbname'], $params['username'], $params['password']);
-                self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                self::$connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+                $this->connection = new PDO('pgsql:host='.$params['host'].';dbname='.$params['dbname'], $params['username'], $params['password']);
+                $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
             } catch (PDOException $error) {
                 throw new PDOException($error);
             }
