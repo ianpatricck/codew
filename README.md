@@ -38,6 +38,10 @@ use Codew\Render;
 Router::get('/', function () {
     Render::view('home');
 });
+
+// or
+
+Router::get('/', fn() => Render::view('home'));
 ```
 
 The above code that is in an ```index.php``` runs the page that displays ```home.php``` within the viewing directory ```views```. It is necessary to have the ```views``` directory in your project.
@@ -136,8 +140,5 @@ Return data
 
 ```php
 $stmt = $database->fetch(/* Query */);
-```
-
-```php
 $stmt = $database->fetchAll(/* Query */);
 ```

@@ -7,5 +7,10 @@ function path($path)
 
 function import($path)
 {
-    require_once $path . '.php';
+    echo $path . '.php <br>';
+
+    function from($from)
+    {
+        echo $from;
+    }
 }
