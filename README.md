@@ -125,3 +125,13 @@ $database = new DB('mysql', [
 ```
 
 The project supports MySQL and PostgreSQL databases.
+
+SQL query methods:
+
+```php
+$database->excute("INSERT INTO users(column) VALUES (:value)", [':value' => $value]);
+
+$user = $database->fetch("SELECT * FROM users WHERE id = :id", [':id' => $id]);
+
+$users = $database->fetchAll("SELECT * FROM users);
+```
