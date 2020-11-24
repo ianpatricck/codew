@@ -7,7 +7,18 @@ use PDOException;
 
 class DB extends Connection
 {
-    public function query($query, $value = [])
+    public function execute($query, $value = [])
+    {
+        $stmt = $this->connection->prepare($query);
+        
+        if ($value) {
+            $stmt->execute($value);
+        } else {
+            $stmt->execute();
+        }
+    }
+
+    public function fetch($query, $value = [])
     {
         $stmt = $this->connection->prepare($query);
         
@@ -18,6 +29,18 @@ class DB extends Connection
         }
 
         return $stmt->fetch();
-        // return $stmt->fetchAll();
+    }
+
+    public function fetchAll($query, $value = [])
+    {
+        $stmt = $this->connection->prepare($query);
+        
+        if ($value) {
+            $stmt->execute($value);
+        } else {
+            $stmt->execute();
+        }
+
+        return $stmt->fetchAll();
     }
 }

@@ -105,3 +105,23 @@ Router::get('/', function () {
 </body>
 </html>
 ```
+---
+
+Configuring the database:
+
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Codew\DB;
+
+$database = new DB('mysql', [
+    'host' => 'localhost',
+    'dbname' => 'codew',
+    'username' => 'root',
+    'password' => ''
+]);
+```
+
+The project supports MySQL and PostgreSQL databases.
