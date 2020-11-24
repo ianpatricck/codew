@@ -107,7 +107,7 @@ Router::get('/', function () {
 ```
 ---
 
-Configuring the database:
+__Configuring the database:__
 
 ```php
 <?php
@@ -126,12 +126,18 @@ $database = new DB('mysql', [
 
 The project supports MySQL and PostgreSQL databases.
 
-SQL query methods:
+__SQL query methods:__
 
 ```php
 $database->excute("INSERT INTO users(column) VALUES (:value)", [':value' => $value]);
+```
 
-$user = $database->fetch("SELECT * FROM users WHERE id = :id", [':id' => $id]);
+Return data
 
-$users = $database->fetchAll("SELECT * FROM users);
+```php
+$stmt = $database->fetch(/* Query */);
+```
+
+```php
+$stmt = $database->fetchAll(/* Query */);
 ```
