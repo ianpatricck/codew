@@ -12,6 +12,6 @@ class Render
 
     public static function path()
     {
-        require __DIR__ . '/static/template.php';
+        require __DIR__ . '/template/template.php';
     }
 }
