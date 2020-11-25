@@ -8,8 +8,6 @@
 
 ## Knowing the Codew
 
-Codew is a component in constant development to help organize and write code.
+This is a method created by me to supply my time in the development of languages with clean and light code, feel free to report errors in the application and errors in writing the code.
 
-This is a component created by me to supply my time in language development with clean and light code, feel free to report errors in the application and errors in code writing.
-
-With this feature, the developer can perform tasks quickly and with better use at the source code, being free to create all your business rules your way and set your own standards. 
+With this resource, the developer can perform tasks quickly and with better use of the source code, being free to create all his business rules in his own way and define his own standards. 
