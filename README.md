@@ -6,6 +6,10 @@
 
 ---
 
+```
+$ composer require codew\codew
+```
+
 ## Knowing the Codew
 
 This is a method created by me to supply my time in the development of languages with clean and light code, feel free to report errors in the application and errors in writing the code.
