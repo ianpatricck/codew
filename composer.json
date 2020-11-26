@@ -1,0 +1,16 @@
+{
+    "name": "codew/codew",
+    "description": "The way to speed up my PHP development",
+    "type": "component",
+    "license": "MIT",
+    "authors": [{
+        "name": "Ian Patrick",
+        "email": "contatoianpatrick@gmail.com"
+    }],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Codew\\": "src/"
+        }
+    }
+}
