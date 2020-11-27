@@ -12,5 +12,8 @@
         "psr-4": {
             "Codew\\": "src/"
         }
+    },
+    "require": {
+        "league/climate": "3.6"
     }
 }
