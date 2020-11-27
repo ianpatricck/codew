@@ -2,7 +2,7 @@
 
 namespace Codew;
 
-class Scripting
+class Codew
 {
     public function run($args)
     {       
