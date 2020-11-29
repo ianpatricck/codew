@@ -14,4 +14,20 @@ $ composer require codew\codew
 
 This is a method created by me to supply my time in the development of languages with clean and light code, feel free to report errors in the application and errors in writing the code.
 
-With this resource, the developer can perform tasks quickly and with better use of the source code, being free to create all his business rules in his own way and define his own standards. 
+With this resource, the developer can perform tasks quickly and with better use of the source code, being free to create all his business rules in his own way and define his own standards.
+
+```php
+#!/usr/bin/env php
+<?php
+
+// codew file
+
+require __DIR__ . '/vendor/autoload.php';
+
+$codew = new \Codew\Codew();
+$codew->run($argv);
+```
+
+```
+$ php codew file.pcp -c file.php
+```
