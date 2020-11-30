@@ -2,14 +2,28 @@
 
 function compile($from, $to)
 {
-    $file = fopen($from, 'r');
+    $fpcp = fopen($from, 'r');
+    $fphp = fopen($to, 'wb');
 
-    while (!feof($file)) {
-        $line = fgets($file);
-        if (preg_match('/echo/', $line)) {
-            echo true;
-        }
+    fwrite($fphp, "<?php\n\n");
+
+    while (!feof($fpcp)) {
+        $line = fgets($fpcp);
+
+        fwrite($fphp, $line);
     }
 
-    fclose($file);
+    fclose($fpcp);
+    fclose($fphp);
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+    $fphp = fopen($to, 'r');
+
+    while (!feof($fphp)) {
+        $line = fgets($fphp);
+        echo $line;
+    }
+
+    fclose($fphp);
 }
