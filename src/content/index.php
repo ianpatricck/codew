@@ -3,27 +3,18 @@
 function compile($from, $to)
 {
     $fpcp = fopen($from, 'r');
-    $fphp = fopen($to, 'wb');
+    // $fphp = fopen($to, 'wb');
 
-    fwrite($fphp, "<?php\n\n");
+    // fwrite($fphp, "<?php\n\n");
 
     while (!feof($fpcp)) {
         $line = fgets($fpcp);
 
-        fwrite($fphp, $line);
+        $chars = explode(' ', $line);
+        var_dump($chars);
+        // fwrite($fphp, $line);
     }
 
     fclose($fpcp);
-    fclose($fphp);
-
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-    $fphp = fopen($to, 'r');
-
-    while (!feof($fphp)) {
-        $line = fgets($fphp);
-        echo $line;
-    }
-
-    fclose($fphp);
+    // fclose($fphp);
 }
