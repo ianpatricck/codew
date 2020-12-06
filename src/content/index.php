@@ -8,10 +8,19 @@ function compile($from, $to)
     // fwrite($fphp, "<?php\n\n");
 
     while (!feof($fpcp)) {
-        $line = fgets($fpcp);
+        $lines = fgets($fpcp);
 
-        $chars = explode(' ', $line);
-        var_dump($chars);
+        $lines = str_replace(' ', '-', $lines);
+        echo $lines;
+
+        $lines = explode('-', $lines);
+
+        foreach ($lines as $key => $line) {
+            if (in_array('echo', $lines)) {
+                // echo $line;
+            }
+        }
+
         // fwrite($fphp, $line);
     }
 
