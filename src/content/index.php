@@ -10,14 +10,13 @@ function compile($from, $to)
     while (!feof($fpcp)) {
         $lines = fgets($fpcp);
 
-        $lines = str_replace(' ', '-', $lines);
-        echo $lines;
+        $lines = str_replace(' ', ' -', $lines);
+        $lines_array = explode('-', $lines);
 
-        $lines = explode('-', $lines);
+        foreach ($lines_array as $key => $line) {
+            if (in_array('echo ', $lines_array)) {
+                echo $line;
 
-        foreach ($lines as $key => $line) {
-            if (in_array('echo', $lines)) {
-                // echo $line;
             }
         }
 
