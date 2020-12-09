@@ -15,8 +15,12 @@ function compile($from, $to)
 
         foreach ($lines_array as $key => $line) {
             if (in_array('echo ', $lines_array)) {
-                echo $line;
+                $arr = str_split($line);
+                array_push($arr, ';');
 
+                foreach ($arr as $key => $value) {
+                    echo $value;
+                }
             }
         }
 
