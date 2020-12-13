@@ -3,30 +3,29 @@
 function compile($from, $to)
 {
     $fpcp = fopen($from, 'r');
-    // $fphp = fopen($to, 'wb');
+    $fphp = fopen($to, 'wb');
 
-    // fwrite($fphp, "<?php\n\n");
+    fwrite($fphp, "<?php\n\n");
 
     while (!feof($fpcp)) {
         $lines = fgets($fpcp);
+        $arr = [];
 
-        $lines = str_replace(' ', ' -', $lines);
-        $lines_array = explode('-', $lines);
-
-        foreach ($lines_array as $key => $line) {
-            if (in_array('echo ', $lines_array)) {
-                $arr = str_split($line);
-                array_push($arr, ';');
-
-                foreach ($arr as $key => $value) {
-                    echo $value;
-                }
+        $echo = '/echo/';
+    
+        if (preg_match($echo, $lines)) {
+            $explode = explode("\n", rtrim($lines));
+            
+            foreach ($explode as $key => $value) {
+                array_push($arr, $value . ";\n");
             }
+    
+            $lines = str_replace($lines, implode($arr), $lines);
         }
 
-        // fwrite($fphp, $line);
+        fwrite($fphp, $lines);
     }
 
     fclose($fpcp);
-    // fclose($fphp);
+    fclose($fphp);
 }
