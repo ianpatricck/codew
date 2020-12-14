@@ -8,22 +8,20 @@ function compile($from, $to)
     fwrite($fphp, "<?php\n\n");
 
     while (!feof($fpcp)) {
-        $lines = fgets($fpcp);
-        $arr = [];
-
-        $echo = '/echo/';
+        $content = fgets($fpcp);
+        $newContent = [];
     
-        if (preg_match($echo, $lines)) {
-            $explode = explode("\n", rtrim($lines));
+        if (preg_match('/echo/', $content)) {
+            $explode = explode("\n", rtrim($content));
             
             foreach ($explode as $key => $value) {
-                array_push($arr, $value . ";\n");
+                array_push($newContent, $value . ";\n");
             }
     
-            $lines = str_replace($lines, implode($arr), $lines);
+            $content = str_replace($content, implode($newContent), $content);
         }
-
-        fwrite($fphp, $lines);
+    
+        fwrite($fphp, $content);
     }
 
     fclose($fpcp);
