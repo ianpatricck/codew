@@ -2,7 +2,7 @@
 
 namespace Codew;
 
-require_once __DIR__ . '/content/index.php';
+require_once __DIR__ . '/content/compiler.php';
 
 class Codew
 {

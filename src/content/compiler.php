@@ -11,7 +11,7 @@ function compile($from, $to)
         $content = fgets($fpcp);
         $newContent = [];
 
-        if (preg_match('/echo/', $content) || preg_match('/\$/', $content)) {
+        if (preg_match('/echo/', $content) || preg_match('/\$/', $content) && !preg_match('/\{/', $content)) {
             $explode = explode("\n", rtrim($content));
 
             foreach ($explode as $key => $value) {
@@ -23,11 +23,17 @@ function compile($from, $to)
             $content = str_replace($content, implode($newContent), $content);
         }
 
-        /*
-        if (!preg_match('/function/', $content) && preg_match('/()/', $content)) {
-            echo $content;
+        if (!preg_match('/function/', $content) && preg_match('/\(\)/', $content) && !preg_match('/\{/', $content)) {
+            $explode = explode("\n", rtrim($content));
+
+            foreach ($explode as $key => $value) {
+                if (!preg_match('/;/', $value)) {
+                    array_push($newContent, $value . ";\n");
+                }
+            }
+
+            $content = str_replace($content, implode($newContent), $content);
         }
-        */
 
         fwrite($fphp, $content);
     }
