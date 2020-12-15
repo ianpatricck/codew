@@ -35,6 +35,10 @@ function compile($from, $to)
             $content = str_replace($content, implode($newContent), $content);
         }
 
+        if (preg_match('/import/', $content)) {
+            // ..
+        }
+
         fwrite($fphp, $content);
     }
 
