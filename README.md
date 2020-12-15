@@ -31,3 +31,21 @@ $codew->run($argv);
 ```
 $ php codew file.pcp -c file.php
 ```
+
+## Syntax rules
+
+- Do not start the file with ```<?php``` tag
+- Do not write the code using a semicolon ```echo 'hello world';```
+
+---
+
+### Codew file (.pcp)
+
+```php
+function showMessage()
+{
+    echo 'Hello World'
+}
+
+showMessage()
+```
