@@ -23,6 +23,10 @@ function compile($from, $to)
             $content = str_replace($content, implode($newContent), $content);
         }
 
+        if (preg_match('/}/', $content)) {
+            $content = str_replace($content, implode($newContent), rtrim($content) . ";\n");
+        }
+
         if (!preg_match('/function/', $content) && preg_match('/\(\)/', $content) && !preg_match('/\{/', $content)) {
             $explode = explode("\n", rtrim($content));
 
