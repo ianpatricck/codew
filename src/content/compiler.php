@@ -36,7 +36,8 @@ function compile($from, $to)
         }
 
         if (preg_match('/import/', $content)) {
-            // ..
+            $explode = explode(' ', $content);
+            $content = str_replace($content, implode($newContent), 'require __DIR__ . ' . rtrim($explode[1]).";\n");
         }
 
         fwrite($fphp, $content);
