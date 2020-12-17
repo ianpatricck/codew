@@ -21,8 +21,6 @@ With this resource, the developer can perform tasks quickly and with better use 
 #!/usr/bin/env php
 <?php
 
-// codew file
-
 require __DIR__ . '/vendor/autoload.php';
 
 $codew = new \Codew\Codew();
