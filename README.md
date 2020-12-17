@@ -40,7 +40,7 @@ $ php codew file.pcp -c file.php
 
 ---
 
-### Codew file (.pcp)
+#### Codew file (.pcp)
 
 ```php
 function showMessage()
@@ -49,4 +49,13 @@ function showMessage()
 }
 
 showMessage()
+```
+
+## New methods added
+<br>
+
+__#__ This replaces ```require __DIR__ ```
+
+```php
+import '/vendor/autoload.php'
 ```
