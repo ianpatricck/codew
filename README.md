@@ -35,6 +35,7 @@ $ php codew file.pcp -c file.php
 
 - Do not start the file with ```<?php``` tag
 - Do not write the code using a semicolon when displaying a message on the screen or declaring a variable
+- Always declare arrays with semicolons
 
 ---
 
@@ -46,7 +47,7 @@ function showMessage()
     echo 'Hello World'
 }
 
-showMessage();
+showMessage()
 ```
 
 ## New methods added
