@@ -14,8 +14,9 @@ function compile($from, $to)
         $newContent = [];
 
         if (
-            preg_match('/echo/', $content) || 
-            preg_match('/\$/', $content) && 
+            preg_match('/echo/', $content) ||
+            preg_match('/print/', $content) ||
+            preg_match('/\$/', $content) &&
             !preg_match('/\{/', $content)
         ) {
             $explode = explode("\n", rtrim($content));
@@ -34,54 +35,8 @@ function compile($from, $to)
             $content = str_replace($content, implode($newContent), 'require __DIR__ . ' . rtrim($explode[1]). ";\n");
         }
 
-        if (
-            preg_match('/\(/', $content) && 
-            preg_match('/\)/', $content) && 
-            !preg_match('/function/', $content)
-        ) {
-            $content = !preg_match('/;/', $content) ? rtrim($content) . ";\n" : rtrim($content) . "\n";
-        }
-
-        if (
-            preg_match('/function/', $content) && 
-            preg_match('/\(/', $content) && 
-            preg_match('/\)/', $content)
-        ) {
-            $content = preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : rtrim($content) . "\n";
-        }
-
-        if (
-            preg_match('/\(/', $content) && 
-            preg_match('/\)/', $content) && 
-            preg_match('/{/', $content) || 
-            preg_match('/\[/', $content)
-        ) {
-            $content = preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
-        }
-
-        if (
-            !preg_match('/\[/', $content) && 
-            preg_match('/]/', $content)
-        ) {
-            $content = preg_match('/;/', $content) ? $content : rtrim($content) . ";\n";
-        } 
-        
-        if (
-            preg_match('/\[/', $content) &&
-            preg_match('/]/', $content)
-        ) {
-            echo $content;
-            $content = !preg_match('/;/', $content) ? rtrim($content) . ";\n": $content;
-        }
-
-        if (
-            preg_match('/\[/', $content) &&
-            preg_match('/]/', $content) &&
-            preg_match('/=>/', $content) ||
-            preg_match('/,/', $content)
-        ) {
-            $content = preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
-        }
+        // $content = !preg_match('/;/', $content) ? rtrim($content) . ";\n": $content;
+        // $content = preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
 
         fwrite($fphp, $content);
     }

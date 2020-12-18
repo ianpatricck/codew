@@ -34,8 +34,7 @@ $ php codew file.pcp -c file.php
 ## Syntax rules
 
 - Do not start the file with ```<?php``` tag
-- Do not write the code using a semicolon ```echo 'hello world';```
-- Associative arrays must always have a comma at the end ```['examples' => ['name' => 'Ian Patrick'],]```
+- Do not write the code using a semicolon when displaying a message on the screen or declaring a variable
 
 ---
 
@@ -47,7 +46,7 @@ function showMessage()
     echo 'Hello World'
 }
 
-showMessage()
+showMessage();
 ```
 
 ## New methods added
