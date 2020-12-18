@@ -35,6 +35,7 @@ $ php codew file.pcp -c file.php
 
 - Do not start the file with ```<?php``` tag
 - Do not write the code using a semicolon ```echo 'hello world';```
+- Associative arrays must always have a comma at the end ```['examples' => ['name' => 'Ian Patrick'],]```
 
 ---
 
