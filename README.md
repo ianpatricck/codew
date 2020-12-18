@@ -51,10 +51,9 @@ showMessage()
 ```
 
 ## New methods added
-<br>
-
-__#__ This replaces ```require __DIR__ ```
 
 ```php
 import '/vendor/autoload.php'
 ```
+
+This replaces ```require __DIR__ ```
