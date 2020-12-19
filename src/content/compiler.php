@@ -27,11 +27,11 @@ function compile($from, $to)
             preg_match('/\(/', $content) &&
             preg_match('/\)/', $content)
         ) {
-            $content = !preg_match('/;/', $content) ? rtrim($content) . ";\n" : $content;
+            $content = addSemicolon($content);
         }
 
         if (preg_match('/function/', $content)) {
-            $content = preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
+            $content = removeSemicolon($content);
         }
 
         fwrite($fphp, $content);
@@ -41,4 +41,14 @@ function compile($from, $to)
     fclose($fphp);
 
     $climate->green('File compiled successfully');
+}
+
+function addSemicolon($content)
+{
+    return !preg_match('/;/', $content) ? rtrim($content) . ";\n" : $content;
+}
+
+function removeSemicolon($content)
+{
+    return preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
 }
