@@ -19,6 +19,18 @@ function compile($from, $to)
         }
 
         if (
+            preg_match('/\$/', $content) &&
+            preg_match('/=/', $content) &&
+            preg_match('/\(/', $content) &&
+            preg_match('/\)/', $content) &&
+            preg_match('/\{/', $content) &&
+            !preg_match('/function/', $content)
+        ) {
+            $explode = explode(' ', $content);
+            $content = str_replace($content, implode($newContent), $explode[0] . ' = function ' . $explode[2]. " {\n");
+        }
+
+        if (
             preg_match('/echo/', $content) ||
             preg_match('/print/', $content) ||
             preg_match('/\$/', $content) &&
@@ -30,7 +42,10 @@ function compile($from, $to)
             $content = addSemicolon($content);
         }
 
-        if (preg_match('/function/', $content)) {
+        if (
+            preg_match('/function/', $content) ||
+            preg_match('/for/', $content)
+        ) {
             $content = removeSemicolon($content);
         }
 
