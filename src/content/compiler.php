@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/expressions.php';
+
 function compile($from, $to)
 {
     $climate = new \League\CLImate\CLImate;
@@ -13,40 +15,22 @@ function compile($from, $to)
         $content = fgets($fpcp);
         $newContent = [];
 
-        if (preg_match('/import/', $content)) {
+        if (import($content)) {
             $explode = explode(' ', $content);
             $content = str_replace($content, implode($newContent), 'require __DIR__ . ' . rtrim($explode[1]). ";\n");
         }
 
-        if (
-            preg_match('/\$/', $content) &&
-            preg_match('/=/', $content) &&
-            preg_match('/\(/', $content) &&
-            preg_match('/\)/', $content) &&
-            preg_match('/\{/', $content) &&
-            !preg_match('/function/', $content)
-        ) {
+        if (closures($content)) {
             $explode = explode(' ', $content);
             $content = str_replace($content, implode($newContent), $explode[0] . ' = function ' . $explode[2]. " {\n");
         }
 
-        if (
-            preg_match('/echo/', $content) ||
-            preg_match('/print/', $content) ||
-            preg_match('/\$/', $content) &&
-            !preg_match('/\{/', $content) &&
-            !preg_match('/\[/', $content) ||
-            preg_match('/\(/', $content) &&
-            preg_match('/\)/', $content)
-        ) {
-            $content = addSemicolon($content);
+        if (semicolons('add', $content)) {
+            $content = !preg_match('/;/', $content) ? rtrim($content) . ";\n" : $content;
         }
 
-        if (
-            preg_match('/function/', $content) ||
-            preg_match('/for/', $content)
-        ) {
-            $content = removeSemicolon($content);
+        if (semicolons('remove', $content)) {
+            $content = preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
         }
 
         fwrite($fphp, $content);
@@ -56,14 +40,4 @@ function compile($from, $to)
     fclose($fphp);
 
     $climate->green('File compiled successfully');
-}
-
-function addSemicolon($content)
-{
-    return !preg_match('/;/', $content) ? rtrim($content) . ";\n" : $content;
-}
-
-function removeSemicolon($content)
-{
-    return preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
 }
