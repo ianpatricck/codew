@@ -57,3 +57,11 @@ import '/vendor/autoload.php'
 ```
 
 This replaces ```require __DIR__ ```
+
+```php
+for $item in $array {
+    echo $item
+}
+```
+
+This functionality is an alternative to the traditional PHP function ```foreach``` for arrays
