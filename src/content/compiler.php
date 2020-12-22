@@ -35,7 +35,12 @@ function compile($from, $to)
 
         if (forIn($content)) {
             $explode = explode(' ', $content);
-            $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] .' as ' . $explode[1] . ") {\n");
+            $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
+        }
+
+        if (arrow($content)) {
+            $explode = explode('((', $content);
+            $content = str_replace($content, implode($newContent), $explode[0] . '(function (' . $explode[1]);
         }
 
         fwrite($fphp, $content);

@@ -11,13 +11,18 @@ function semicolons($option, $content)
         !preg_match('/\{/', $content) &&
         !preg_match('/\[/', $content) ||
         preg_match('/\(/', $content) &&
-        preg_match('/\)/', $content);
+        preg_match('/\)/', $content) ||
+        preg_match('/}\)/', $content);
 
     } else if($option == 'remove') {
         return
 
         preg_match('/function/', $content) ||
-        preg_match('/for/', $content);
+        preg_match('/for/', $content) ||
+        !preg_match('/function/', $content) &&
+        preg_match('/\(\(/', $content) &&
+        preg_match('/{/', $content) &&
+        preg_match('/\)/', $content);
     }
 }
 
@@ -48,4 +53,13 @@ function forIn($content)
 
     preg_match('/for/', $content) &&
     preg_match('/in/', $content);
+}
+
+function arrow($content)
+{
+    return
+
+    preg_match('/\(\(/', $content) &&
+    preg_match('/\)/', $content) &&
+    preg_match('/{/', $content);
 }

@@ -65,3 +65,18 @@ for $item in $array {
 ```
 
 This functionality is an alternative to the traditional PHP function ```foreach``` for arrays
+
+```php
+function myFunction($callback)
+{
+    $callback()
+}
+
+myFunction(() {
+    echo 'Hello World'
+})
+```
+
+A new way to write anonymous functions
+
+
