@@ -31,36 +31,19 @@ $codew->run($argv);
 $ php codew file.pcp -c file.php
 ```
 
-## Syntax rules
-
-- Do not start the file with ```<?php``` tag
-- Do not write the code using a semicolon when displaying a message on the screen or declaring a variable
-- Always declare arrays and closures with semicolons
-
 ---
-
-#### Example (.pcp)
-
-```php
-function showMessage()
-{
-    echo 'Hello World'
-}
-
-showMessage()
-```
 
 ## + New methods added
 
 ```php
-import '/vendor/autoload.php'
+import '/vendor/autoload.php';
 ```
 
 This replaces ```require __DIR__ ```
 
 ```php
 for $item in $array {
-    echo $item
+    echo $item;
 }
 ```
 
@@ -69,12 +52,12 @@ This functionality is an alternative to the traditional PHP function ```foreach`
 ```php
 function myFunction($callback)
 {
-    $callback()
+    $callback();
 }
 
 myFunction(() {
-    echo 'Hello World'
-})
+    echo 'Hello World';
+});
 ```
 
 A new way to write anonymous functions

@@ -25,14 +25,6 @@ function compile($from, $to)
             $content = str_replace($content, implode($newContent), $explode[0] . ' = function ' . $explode[2]. " {\n");
         }
 
-        if (semicolons('add', $content)) {
-            $content = !preg_match('/;/', $content) ? rtrim($content) . ";\n" : $content;
-        }
-
-        if (semicolons('remove', $content)) {
-            $content = preg_match('/;/', $content) ? substr(rtrim($content), 0, -1) . "\n" : $content;
-        }
-
         if (forIn($content)) {
             $explode = explode(' ', $content);
             $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
