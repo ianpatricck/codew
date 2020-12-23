@@ -42,6 +42,12 @@ import '/vendor/autoload.php';
 This replaces ```require __DIR__ ```
 
 ```php
+import * from 'folder';
+```
+
+This simple expression will import all PHP files in a directory
+
+```php
 for $item in $array {
     echo $item;
 }

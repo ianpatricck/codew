@@ -17,7 +17,13 @@ function compile($from, $to)
 
         if (import($content)) {
             $explode = explode(' ', $content);
-            $content = str_replace($content, implode($newContent), 'require __DIR__ . ' . rtrim($explode[1]). ";\n");
+            $content = str_replace($content, implode($newContent), 'require __DIR__ . ' . rtrim($explode[1]). "\n");
+        } 
+        
+        if (importAll($content)) {
+            $explode = explode(' ', $content);
+            $code = 'foreach (glob(' . substr(rtrim($explode[3]), 0 , -2) . "/*php') as \$file) {\n\trequire_once __DIR__ . '/' . \$file;\n}\n";
+            $content = str_replace($content, implode($newContent), $code);
         }
 
         if (closures($content)) {

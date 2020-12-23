@@ -5,8 +5,17 @@ function import($content)
     return
 
     preg_match('/import/', $content) &&
-    !preg_match('/"import"/', $content) &&
-    !preg_match("/'import'/", $content);
+    !preg_match('/\*/', $content) &&
+    !preg_match('/from/', $content);
+}
+
+function importAll($content)
+{
+    return
+
+    preg_match('/import/', $content) &&
+    preg_match('/\*/', $content) &&
+    preg_match('/from/', $content);
 }
 
 function closures($content)
