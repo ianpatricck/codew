@@ -31,6 +31,8 @@ $codew->run($argv);
 $ php codew file.pcp -c file.php
 ```
 
+__Note__: Do not use any codew reserved words inside strings, this can cause errors in these first versions
+
 ---
 
 ## + New methods added

@@ -7,9 +7,9 @@ function compile($from, $to)
     $climate = new \League\CLImate\CLImate;
 
     $fpcp = fopen($from, 'r');
-    // $fphp = fopen($to, 'wb');
+    $fphp = fopen($to, 'wb');
 
-    // fwrite($fphp, "<?php\n\n");
+    fwrite($fphp, "<?php\n\n");
 
     while (!feof($fpcp)) {
         $content = fgets($fpcp);
@@ -41,13 +41,11 @@ function compile($from, $to)
             $content = str_replace($content, implode($newContent), $explode[0] . '(function (' . $explode[1]);
         }
 
-        echo $content;
-
-        // fwrite($fphp, $content);
+        fwrite($fphp, $content);
     }
 
     fclose($fpcp);
-    // fclose($fphp);
+    fclose($fphp);
 
-    // $climate->green('File compiled successfully');
+    $climate->green('File compiled successfully');
 }

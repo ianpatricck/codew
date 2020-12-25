@@ -5,8 +5,6 @@ function import($content)
     return
 
     preg_match('/import/', $content) &&
-    !preg_match_all('/"(import.*?)"/', $content) &&
-    !preg_match_all("/'(import.*?)'/", $content) &&
     !preg_match('/\*/', $content) &&
     !preg_match('/from/', $content);
 }
