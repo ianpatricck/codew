@@ -24,8 +24,6 @@ function compile($from, $to)
             $explode = explode(' ', $content);
             $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
         }
-
-        // echo $content;
         
         fwrite($fphp, $content);
     }
