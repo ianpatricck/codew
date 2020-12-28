@@ -22,7 +22,26 @@ function compile($from, $to)
 
         if (for_in($content)) {
             $explode = explode(' ', $content);
-            $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
+
+            if ($explode[0] == "") {
+                $tabs = [];
+
+                foreach($explode as $key => $val) {
+                    if ($val == "") {
+                        array_push($tabs, "$val ");
+                    }
+                }
+
+                $explode = array_merge(array_filter($explode), []);
+                $content = str_replace($content, implode($newContent), implode($tabs) . 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
+            } else {
+                $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
+            }
+
+        }
+
+        if (arrows($content)) {
+            //
         }
         
         fwrite($fphp, $content);
