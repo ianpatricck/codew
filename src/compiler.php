@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/rules.php';
+require_once __DIR__ . '/repeat.php';
 
 function compile($from, $to)
 {
@@ -37,11 +38,6 @@ function compile($from, $to)
             } else {
                 $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
             }
-
-        }
-
-        if (arrows($content)) {
-            //
         }
         
         fwrite($fphp, $content);
