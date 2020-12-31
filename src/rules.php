@@ -2,7 +2,7 @@
 
 function import($content)
 {
-    return preg_match('/^import <<|^\timport << /', $content);
+    return preg_match('/^(import|\s+import) <</', $content);
 }
 
 function for_in($content)

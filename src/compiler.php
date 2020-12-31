@@ -24,7 +24,6 @@ function compile($from, $to)
                 $content = str_replace($content, implode($newContent), implode(tabs($explode)) . 'require __DIR__ . ' . trim($explodeFinal[2]) . "\n");
             } else {
                 $content = str_replace($content, implode($newContent), 'require __DIR__ . ' . trim($explode[2]) . "\n");
-                echo $content;
             }
         }
 
