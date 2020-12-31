@@ -31,6 +31,7 @@ $codew->run($argv);
 $ php codew file.pcp -c file.php
 ```
 
+__Tip:__ Don't start the code with ```<?php``` :D
 
 ## + New methods added
 
