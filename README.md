@@ -48,3 +48,13 @@ for $item in $array {
 ```
 
 This functionality is an alternative to the traditional PHP function ```foreach``` for arrays
+
+## Database
+
+New ways of handling database functions have been created, native methods still work
+
+```php
+$connection = MYSQL_PDO('localhost', 'codew', 'root', '');
+```
+
+When adding this function and compiling the code, the MySQL connection call with PHP's native PDO will be reflected with the pre-configured UTF-8 attribute
