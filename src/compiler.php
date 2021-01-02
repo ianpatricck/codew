@@ -37,6 +37,23 @@ function compile($from, $to)
                 $content = str_replace($content, implode($newContent), 'foreach (' . $explode[3] . ' as ' . $explode[1] . ") {\n");
             }
         }
+
+        if (mysql_pdo($content)) {
+            $explodeInitial = explode(' = ', $content);
+            $explodeMiddle = explode('MYSQL_PDO(', $explodeInitial[1]);
+            $explodeFinal = explode(');', $explodeMiddle[1]);
+            $explode = explode(', ', $explodeFinal[0]);
+            
+            $host = str_replace(array('\'', '"'), '', $explode[0]);
+            $dbname = str_replace(array('\'', '"'), '', $explode[1]);
+            $username = $explode[2];
+            $password = $explode[3];
+
+            $content = str_replace(
+                $content, 
+                implode($newContent), 
+                $explodeInitial[0] . " = new PDO(\"mysql:host=$host;dbname=$dbname\", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));");
+        }
         
         fwrite($fphp, $content);
     }
