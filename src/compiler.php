@@ -52,9 +52,9 @@ function compile($from, $to)
             $content = str_replace(
                 $content, 
                 implode($newContent), 
-                $explodeInitial[0] . " = new PDO(\"mysql:host=$host;dbname=$dbname\", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));");
+                $explodeInitial[0] . " = new PDO(\"mysql:host=$host;dbname=$dbname\", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));\n");
         }
-        
+
         fwrite($fphp, $content);
     }
 

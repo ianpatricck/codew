@@ -16,5 +16,8 @@ function for_in($content)
 
 function mysql_pdo($content)
 {
-    return preg_match('/= MYSQL_PDO\(/',  $content);
+    return 
+
+    preg_match('/^(\$)|^(\s+\$)/',  $content) &&
+    preg_match('/ = MYSQL_PDO/',  $content);
 }
