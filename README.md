@@ -58,3 +58,9 @@ $connection = MYSQL_PDO('localhost', 'codew', 'root', '');
 ```
 
 When adding this function and compiling the code, the MySQL connection call with PHP's native PDO will be reflected with the pre-configured UTF-8 attribute
+
+```php
+$connection = PGSQL_PDO('localhost', 'codew', 'root', '');
+```
+
+The same case occurs with PostgreSQL

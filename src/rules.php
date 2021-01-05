@@ -21,3 +21,11 @@ function mysql_pdo($content)
     preg_match('/^(\$)|^(\s+\$)/',  $content) &&
     preg_match('/ = MYSQL_PDO/',  $content);
 }
+
+function pgsql_pdo($content)
+{
+    return 
+
+    preg_match('/^(\$)|^(\s+\$)/',  $content) &&
+    preg_match('/ = PGSQL_PDO/',  $content);
+}

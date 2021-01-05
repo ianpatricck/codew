@@ -59,6 +59,27 @@ function compile($from, $to)
             );
         }
 
+        if (pgsql_pdo($content)) {
+            $explodeInitial = explode(' = ', $content);
+            $explodeMiddle = explode('PGSQL_PDO(', $explodeInitial[1]);
+            $explodeFinal = explode(');', $explodeMiddle[1]);
+            $explode = explode(', ', $explodeFinal[0]);
+            
+            $host = str_replace(array('\'', '"'), '', $explode[0]);
+            $dbname = str_replace(array('\'', '"'), '', $explode[1]);
+            $username = $explode[2];
+            $password = $explode[3];
+
+            $content = str_replace(
+                $content, 
+                implode($newContent), 
+
+                $explodeInitial[0] . " = new PDO(\"pgsql:host=$host;dbname=$dbname\", $username, $password);\n" .
+                rtrim($explodeInitial[0]) . "->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n" .
+                rtrim($explodeInitial[0]) . "->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);\n"
+            );
+        }
+
         fwrite($fphp, $content);
     }
 
