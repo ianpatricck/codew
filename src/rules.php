@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file describes all the rules 
+ * of the new methods that must be valid with regular expressions.
+ * 
+ */
+
 function import($content)
 {
     return preg_match('/^(import|\s+import) <</', $content);

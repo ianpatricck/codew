@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Complementary file to compile code, repeat functions 
+ * or similar syntax.
+ * 
+ */
+
 function tabs($explode)
 {
     $tabs = [];

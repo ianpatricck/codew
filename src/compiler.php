@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Main archive, where all the magic of interpretation takes place.
+ * 
+ */
+
 require_once __DIR__ . '/rules.php';
 require_once __DIR__ . '/repeat.php';
 
