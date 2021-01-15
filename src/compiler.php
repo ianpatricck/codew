@@ -93,3 +93,13 @@ function compile($from, $to)
 
     $climate->green('File compiled successfully');
 }
+
+function build($from, $to)
+{
+    foreach(glob("$from/*.pcp") as $content) {
+        $fphp = str_replace('.pcp', '.php', $content);
+        compile($content, $fphp);
+
+        echo "$content\n";
+    }
+}
