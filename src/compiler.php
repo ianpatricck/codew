@@ -8,10 +8,8 @@
 require_once __DIR__ . '/rules.php';
 require_once __DIR__ . '/repeat.php';
 
-function compile($from, $to)
+function compileFile($from, $to)
 {
-    $climate = new \League\CLImate\CLImate;
-
     $fpcp = fopen($from, 'r');
     $fphp = fopen($to, 'wb');
 
@@ -90,16 +88,18 @@ function compile($from, $to)
 
     fclose($fpcp);
     fclose($fphp);
-
-    $climate->green('File compiled successfully');
 }
 
-function build($from, $to)
+function compileDirectory($directory)
 {
-    foreach(glob("$from/*.pcp") as $content) {
-        $fphp = str_replace('.pcp', '.php', $content);
-        compile($content, $fphp);
+    $structure = new RecursiveTreeIterator(new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS));
+    
+    foreach($structure as $path) {
+        $path = ltrim($path, '\|- ');
 
-        echo "$content\n";
+        if (substr($path, -4) == '.pcp') {
+            $fphp = str_replace('.pcp', '.php', $path);
+            compileFile($path, $fphp);
+        }
     }
 }

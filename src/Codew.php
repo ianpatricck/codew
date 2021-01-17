@@ -11,13 +11,13 @@ class Codew
         $climate = new \League\CLImate\CLImate;
 
         if (in_array('-c', $args) && substr($args[1], -4) == '.pcp' && substr($args[3], -4) == '.php') {
-            compile($args[1], $args[3]);
-        } else if (in_array('-b', $args) && $args[2] == '-b') {
-            build($args[1], $args[3]);
+            compileFile($args[1], $args[3]);
+        } else if (in_array('-c', $args) && $args[1] == '-c') {
+            compileDirectory($args[2]);
         } else {
-            $climate->red('Failed to compile file');
+            $climate->red('Failed to compile');
         }
 
-        // php codew src/ -b dist/
+        $climate->green('Compiled successfully');
     }
 }
