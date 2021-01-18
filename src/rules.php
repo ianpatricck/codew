@@ -35,3 +35,8 @@ function pgsql_pdo($content)
     preg_match('/^(\$)|^(\s+\$)/',  $content) &&
     preg_match('/ = PGSQL_PDO/',  $content);
 }
+
+function arrow_functions($content)
+{
+    return 0;
+}
