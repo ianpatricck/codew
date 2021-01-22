@@ -83,10 +83,6 @@ function compileFile($from, $to)
             );
         }
 
-        if (arrow_functions($content)) {
-            // ..
-        }
-
         fwrite($fphp, $content);
     }
 
