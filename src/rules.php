@@ -11,6 +11,11 @@ function import($content)
     return preg_match('/^(import|\s+import) <</', $content);
 }
 
+function importFromDirectory($content)
+{
+    return 0;
+}
+
 function for_in($content)
 {
     return

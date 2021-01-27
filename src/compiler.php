@@ -30,6 +30,10 @@ function compileFile($from, $to)
             }
         }
 
+        if (importFromDirectory($content)) {
+            echo $content;
+        }
+
         if (for_in($content)) {
             $explode = explode(' ', $content);
 
