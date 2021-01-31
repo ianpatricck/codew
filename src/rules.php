@@ -13,7 +13,7 @@ function import($content)
 
 function importFromDirectory($content)
 {
-    return 0;
+    return preg_match('/^(import|\s+import) */', $content);
 }
 
 function for_in($content)

@@ -31,7 +31,20 @@ function compileFile($from, $to)
         }
 
         if (importFromDirectory($content)) {
-            echo $content;
+            $explode = explode(' ', $content);
+
+            if ($explode[0] == "") {
+                $explodeFinal = array_merge(array_filter($explode), []);
+                $content = str_replace($content, implode($newContent), implode(tabs($explode)) . "foreach (glob(" . rtrim(rtrim($explodeFinal[2]), '\';') ."/*.php') { require __DIR__ . '\$value'; }");
+            } else {
+                $content = str_replace($content, implode($newContent), "foreach (glob(" . rtrim(rtrim($explode[2]), '\';') ."/*.php') as \$value) { require __DIR__ . \"/\$value\"; } \n");
+
+                /*
+                foreach (glob('src/database/*.php') as $value) {
+                    echo "{$value}\n";
+                }
+                */
+            }
         }
 
         if (for_in($content)) {
