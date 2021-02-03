@@ -100,6 +100,10 @@ function compileFile($from, $to)
             );
         }
 
+        if (inline_filter($content)) {
+            echo $content;
+        }
+        
         fwrite($fphp, $content);
     }
 
