@@ -41,9 +41,7 @@ function pgsql_pdo($content)
     preg_match('/ = PGSQL_PDO/',  $content);
 }
 
-// $name, $password = filter_var($some, FILTER_SANITIZE_SPECIAL_CHARS);
-
-function inline_filter($content)
+function inline_attr($content)
 {
     return 0;
 }

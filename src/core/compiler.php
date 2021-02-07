@@ -100,7 +100,7 @@ function compileFile($from, $to)
             );
         }
 
-        if (inline_filter($content)) {
+        if (inline_attr($content)) {
             echo $content;
         }
         
