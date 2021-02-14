@@ -103,3 +103,8 @@ function compileDirectory($directory)
         }
     }
 }
+
+function compileToDirectory($directory)
+{
+    // ..
+}
