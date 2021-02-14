@@ -27,19 +27,29 @@ $codew = new \Codew\Codew();
 $codew->run($argv);
 ```
 
-Compile only one PCP file
-
 ```
 $ php codew file.pcp -c file.php
 ```
 
-Compile an entire directory of PCP files
+Compile only one PCP file
 
 ```
 $ php codew -c [dir]
 ```
 
+Compile an entire directory of PCP files
+
 __Tip:__ Don't start the code with ```<?php``` :D
+
+```php
+# CODEW FILE (.pcp)
+
+import * from 'src/core';
+
+for $value in $stmt {
+    echo "{$value}\n";
+}
+```
 
 ## Methods added
 
