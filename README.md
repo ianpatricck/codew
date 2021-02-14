@@ -41,13 +41,7 @@ $ php codew -c [dir]
 
 __Tip:__ Don't start the code with ```<?php``` :D
 
-## + New methods added
-
-```php
-import << '/vendor/autoload.php';
-```
-
-This replaces ```require __DIR__ ```
+## Methods added
 
 ```php
 import * 'directory';

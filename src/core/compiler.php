@@ -5,8 +5,8 @@
  * 
  */
 
-require_once __DIR__ . '/rules.php';
-require_once __DIR__ . '/repeat.php';
+require_once __DIR__ . '/compiler/sintax.php';
+require_once __DIR__ . '/compiler/repeat.php';
 
 function compileFile($from, $to)
 {
@@ -19,17 +19,6 @@ function compileFile($from, $to)
         $content = fgets($fpcp);
         $newContent = [];
 
-        if (import($content)) {
-            $explode = explode(' ', $content);
-
-            if ($explode[0] == "") {
-                $explodeFinal = array_merge(array_filter($explode), []);
-                $content = str_replace($content, implode($newContent), implode(tabs($explode)) . 'require __DIR__ . ' . trim($explodeFinal[2]) . "\n");
-            } else {
-                $content = str_replace($content, implode($newContent), 'require __DIR__ . ' . trim($explode[2]) . "\n");
-            }
-        }
-
         if (importFromDirectory($content)) {
             $explode = explode(' ', $content);
 
@@ -38,12 +27,6 @@ function compileFile($from, $to)
                 $content = str_replace($content, implode($newContent), implode(tabs($explode)) . "foreach (glob(" . rtrim(rtrim($explodeFinal[2]), '\';') ."/*.php') { require __DIR__ . '\$value'; }");
             } else {
                 $content = str_replace($content, implode($newContent), "foreach (glob(" . rtrim(rtrim($explode[2]), '\';') ."/*.php') as \$value) { require __DIR__ . \"/\$value\"; } \n");
-
-                /*
-                foreach (glob('src/database/*.php') as $value) {
-                    echo "{$value}\n";
-                }
-                */
             }
         }
 
@@ -98,10 +81,6 @@ function compileFile($from, $to)
                 rtrim($explodeInitial[0]) . "->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n" .
                 rtrim($explodeInitial[0]) . "->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);\n"
             );
-        }
-
-        if (inline_attr($content)) {
-            echo $content;
         }
         
         fwrite($fphp, $content);

@@ -6,11 +6,6 @@
  * 
  */
 
-function import($content)
-{
-    return preg_match('/^(import|\s+import) <</', $content);
-}
-
 function importFromDirectory($content)
 {
     return preg_match('/^(import|\s+import) */', $content);
@@ -39,9 +34,4 @@ function pgsql_pdo($content)
 
     preg_match('/^(\$)|^(\s+\$)/',  $content) &&
     preg_match('/ = PGSQL_PDO/',  $content);
-}
-
-function inline_attr($content)
-{
-    return 0;
 }
