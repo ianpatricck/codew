@@ -33,13 +33,13 @@ $codew->run($argv);
 
 This file will be used to manipulate the functionalities that involve the project: Compile, identify errors, pending issues and etc ...
 
-### Compile only one PCP file
+#### Compile only one PCP file
 
 ```
 $ php codew file.pcp -c file.php
 ```
 
-### Compile an entire directory of PCP files
+#### Compile an entire directory of PCP files
 
 ```
 $ php codew -c [dir]
