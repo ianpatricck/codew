@@ -13,9 +13,11 @@ $ composer require codew\codew
 
 ## Knowing the Codew
 
-This is a method I created to provide my development time with little code writing, feel free to report errors in the application and errors when writing the project code.
+This is a method I created to optimize my PHP development time with little code writing, feel free to report errors in the project.
 
-With this feature, the developer can perform tasks quickly without worrying about writing a block of native code for any purpose.
+With this feature, the developer can perform tasks quickly without worrying about writing a giant block of native code for that purpose.
+
+All code written in ```.pcp``` is compiled in ```.php``` for production, in the end, all code will be converted to PHP. However, all the work that can take hours to write a specific class and functions can be done in a short time using the new Codew syntax and methods.
 
 ```php
 #!/usr/bin/env php
