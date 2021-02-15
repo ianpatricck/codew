@@ -5,8 +5,8 @@
  * 
  */
 
-require_once __DIR__ . '/compiler/sintax.php';
-require_once __DIR__ . '/compiler/repeat.php';
+require_once __DIR__ . '/code/sintax.php';
+require_once __DIR__ . '/code/repeat.php';
 
 function compileFile($from, $to)
 {

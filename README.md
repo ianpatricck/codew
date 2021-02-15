@@ -27,19 +27,22 @@ $codew = new \Codew\Codew();
 $codew->run($argv);
 ```
 
+### Compile only one PCP file
+
 ```
 $ php codew file.pcp -c file.php
 ```
 
-Compile only one PCP file
+
+### Compile an entire directory of PCP files
 
 ```
 $ php codew -c [dir]
 ```
 
-Compile an entire directory of PCP files
+---
 
-__Tip:__ Don't start the code with ```<?php``` :D
+__Tip:__ Don't start the code with ```<?php```
 
 ```php
 # CODEW FILE (.pcp)
