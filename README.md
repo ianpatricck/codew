@@ -19,6 +19,8 @@ With this feature, the developer can perform tasks quickly without worrying abou
 
 All code written in ```.pcp``` is compiled in ```.php``` for production, in the end, all code will be converted to PHP. However, all the work that can take hours to write a specific class and functions can be done in a short time using the new Codew syntax and methods.
 
+When starting a project, you must create a file called _codew_ with the following content:
+
 ```php
 #!/usr/bin/env php
 <?php
@@ -29,12 +31,13 @@ $codew = new \Codew\Codew();
 $codew->run($argv);
 ```
 
+This file will be used to manipulate the functionalities that involve the project: Compile, identify errors, pending issues and etc ...
+
 ### Compile only one PCP file
 
 ```
 $ php codew file.pcp -c file.php
 ```
-
 
 ### Compile an entire directory of PCP files
 
