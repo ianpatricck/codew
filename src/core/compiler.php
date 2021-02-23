@@ -7,11 +7,16 @@
 
 namespace Codew;
 
-require_once __DIR__ . '/code/sintax.php';
-require_once __DIR__ . '/code/repeat.php';
+require_once __DIR__ . '/CompileFile.php';
 
 class Compiler
 {
+    /**
+     * Method to compile only one file
+     * @param string $from
+     * @param string $to
+     */
+    
     public function compileFile($from, $to)
     {
         $fpcp = fopen($from, 'r');
@@ -94,6 +99,11 @@ class Compiler
         fclose($fphp);
     }
     
+    /**
+     * Method to compile a directory
+     * @param string $directory
+     */
+
     public function compileDirectory($directory)
     {
         $structure = new RecursiveTreeIterator(new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS));
@@ -107,6 +117,11 @@ class Compiler
             }
         }
     }
+
+    /**
+     * Method to compile a directory and create a folder with compiled files
+     * @param string $directory
+     */
     
     public function compileToDirectory($directory)
     {
