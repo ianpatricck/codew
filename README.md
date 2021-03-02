@@ -49,32 +49,6 @@ $ php codew -c [dir]
 
 __Tip:__ Don't start the code with ```<?php```
 
-```php
-# CODEW FILE (.pcp)
-
-import * from 'src/core';
-
-for $value in $stmt {
-    echo "{$value}\n";
-}
-```
-
-## Methods added
-
-```php
-import * 'directory';
-```
-
-This function will import all PHP files from the directory
-
-```php
-for $item in $array {
-    echo $item;
-}
-```
-
-This functionality is an alternative to the traditional PHP function ```foreach``` for arrays
-
 ## Database
 
 New ways of handling database functions have been created, native methods still work

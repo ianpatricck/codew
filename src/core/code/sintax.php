@@ -6,32 +6,5 @@
  * 
  */
 
-function importFromDirectory($content)
-{
-    return preg_match('/^(import|\s+import) */', $content);
-}
-
-function for_in($content)
-{
-    return
-    
-    preg_match('/(^for\b)||(^\tfor\b)/',  $content) &&
-    preg_match('/in/',  $content) &&
-    preg_match('/\{/',  $content);
-}
-
-function mysql_pdo($content)
-{
-    return 
-
-    preg_match('/^(\$)|^(\s+\$)/',  $content) &&
-    preg_match('/ = MYSQL_PDO/',  $content);
-}
-
-function pgsql_pdo($content)
-{
-    return 
-
-    preg_match('/^(\$)|^(\s+\$)/',  $content) &&
-    preg_match('/ = PGSQL_PDO/',  $content);
-}
+const MYSQL_PDO = ['/^(\$)|^(\s+\$)/', '/ = MYSQL_PDO/'];
+const PGSQL_PDO = ['/^(\$)|^(\s+\$)/', '/ = PGSQL_PDO/'];

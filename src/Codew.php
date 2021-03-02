@@ -14,9 +14,9 @@ class Codew
         $compiler = new \Codew\Compiler;
 
         if (in_array('-c', $args) && substr($args[1], -4) == '.pcp' && substr($args[3], -4) == '.php') {
-            $compiler->compileFile($args[1], $args[3]);
+            $compiler->file($args[1], $args[3]);
         } else if (in_array('-c', $args) && $args[1] == '-c') {
-            $compiler->compileDirectory($args[2]);
+            $compiler->directory($args[2]);
         } else {
             $climate->red('Failed to compile');
         }
