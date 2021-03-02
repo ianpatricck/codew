@@ -13,54 +13,6 @@ $ composer require codew\codew
 
 ## Knowing the Codew
 
-This is a method I created to optimize my PHP development time with little code writing, feel free to report errors in the project.
+This is a method I created to optimize my PHP development time, feel free to report errors in the project.
 
-With this feature, the developer can perform tasks quickly without worrying about writing a giant block of native code for that purpose.
-
-All code written in ```.pcp``` is compiled in ```.php``` for production, in the end, all code will be converted to PHP. However, all the work that can take hours to write a specific class and functions can be done in a short time using the new Codew syntax and methods.
-
-When starting a project, you must create a file called _codew_ with the following content:
-
-```php
-#!/usr/bin/env php
-<?php
-
-require __DIR__ . '/vendor/autoload.php';
-
-$codew = new \Codew\Codew();
-$codew->run($argv);
-```
-
-This file will be used to manipulate the functionalities that involve the project: Compile, identify errors, pending issues and etc ...
-
-#### Compile only one PCP file
-
-```
-$ php codew file.pcp -c file.php
-```
-
-#### Compile an entire directory of PCP files
-
-```
-$ php codew -c [dir]
-```
-
----
-
-__Tip:__ Don't start the code with ```<?php```
-
-## Database
-
-New ways of handling database functions have been created, native methods still work
-
-When adding this function and compiling the code, the MySQL connection call with PHP's native PDO will be reflected with the pre-configured UTF-8 attribute
-
-```php
-$connection = MYSQL_PDO('localhost', 'codew', 'root', '');
-```
-
-The same case occurs with PostgreSQL
-
-```php
-$connection = PGSQL_PDO('localhost', 'codew', 'root', '');
-```
+With this feature, the developer can quickly perform tasks by separating all client and server parts.
