@@ -13,6 +13,8 @@ $ composer require codew\codew
 
 ## Knowing the Codew
 
-This is a method I created to optimize my PHP development time, feel free to report errors in the project.
+This is a method I created to separate my development from the front-end so that it is possible to easily manage between teams that work on the client side and also on the server side, working with organization and productivity through API Rest.
 
-With this feature, the developer can quickly perform tasks by separating all client and server parts.
+### Packages
+
+- [bramus/router](https://github.com/bramus/router)
