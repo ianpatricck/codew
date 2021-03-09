@@ -18,3 +18,17 @@ This is a method I created to separate my development from the front-end so that
 ### Packages
 
 - [bramus/router](https://github.com/bramus/router)
+
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+$app = new Codew\Codew();
+
+$app->router('GET', '/', function() {
+    echo 'Hello World';
+});
+
+$app->run();
+```

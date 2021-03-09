@@ -52,4 +52,14 @@ class Codew
     {
         $this->router->run();
     }
+
+    /**
+     * CORS (for initialize API's communication)
+     * 
+     */
+
+    public function cors()
+    {
+        echo "Test cors";
+    }
 }
