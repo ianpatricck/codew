@@ -26,8 +26,11 @@ require __DIR__ . '/vendor/autoload.php';
 
 $app = new Codew\Codew();
 
+$app->cors();
+$app->json();
+
 $app->router('GET', '/', function() {
-    echo 'Hello World';
+    Codew\API::response(['message' => 'Hello World']);
 });
 
 $app->run();
