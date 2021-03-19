@@ -58,8 +58,22 @@ class Codew
      * 
      */
 
-    public function cors()
+    public function cors($option = "*")
     {
-        echo "Test cors";
+        if ($option) {
+            header("Access-Control-Allow-Origin: {$option}");
+        } else {
+            header("Access-Control-Allow-Origin: *");
+        }
+    }
+
+    /**
+     * JSON (to change content-type for json)
+     * 
+     */
+
+    public function json()
+    {
+        header("Content-type: application/json");
     }
 }
