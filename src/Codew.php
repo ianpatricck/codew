@@ -76,4 +76,22 @@ class Codew
     {
         header("Content-type: application/json");
     }
+
+    /**
+     * Method used to load environment variables
+     * @param string
+     */
+
+    public function env($dir)
+    {
+        if (!file_exists($dir . '/.env')) {
+            return false;
+        }
+
+        $lines = file($dir . '/.env');
+
+        foreach ($lines as $line) {
+            putenv(trim($line));
+        }
+    }
 }
