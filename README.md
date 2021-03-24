@@ -35,3 +35,13 @@ $app->router('GET', '/', function() {
 
 $app->run();
 ```
+
+You can define environment variables with the env function
+
+```php
+$app->env(__DIR__);
+
+$app->router('GET', '/', function() {
+    echo getenv('ENV_VAR');
+});
+```
