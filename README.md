@@ -45,3 +45,25 @@ $app->router('GET', '/', function() {
     echo getenv('ENV_VAR');
 });
 ```
+
+---
+
+## API
+
+You can use the API class to make requests within the routes
+
+```php
+use Codew\Codew;
+use Codew\API;
+
+$app = new Codew();
+
+$app->cors();
+$app->json();
+
+$app->router('GET', '/get', function() {
+    $users = API::get("https://jsonplaceholder.typicode.com/users");
+
+    echo $users[0]->name;
+});
+```
