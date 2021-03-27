@@ -16,6 +16,7 @@ class Codew
      * Router [GET, POST, PUT, PATCH, DELETE]
      * 
      * @return $this
+     * 
      */
 
     public function router($method, $route, $callback)
@@ -80,6 +81,7 @@ class Codew
     /**
      * Method used to load environment variables
      * @param string
+     * 
      */
 
     public function env($dir)

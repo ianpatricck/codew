@@ -9,6 +9,7 @@ class API
      * 
      * @param array
      * @return
+     * 
      */
 
     public static function response($arr)
@@ -16,7 +17,15 @@ class API
         echo json_encode($arr);
     }
 
-    public static function get($url, $callback = null)
+    /**
+     * Request GET method (JSON)
+     * 
+     * @param string
+     * @return array
+     * 
+     */
+
+    public static function get($url)
     {   
         $curl = curl_init();
 
@@ -25,13 +34,10 @@ class API
             CURLOPT_URL => $url
         ]);
 
-        if ($callback) {
-            $response = curl_exec($curl);
-            $callback($response);
-        } else {
-            return curl_exec($curl);
-        }
+        $output = curl_exec($curl);
 
         curl_close($curl);
+
+        return json_decode($output);
     }
 }
