@@ -64,6 +64,6 @@ $app->json();
 $app->router('GET', '/get', function() {
     $users = API::get("https://jsonplaceholder.typicode.com/users");
 
-    echo $users[0]->name;
+    API::response($users);
 });
 ```
