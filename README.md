@@ -67,3 +67,26 @@ $app->router('GET', '/get', function() {
     API::response($users);
 });
 ```
+
+### POST Request
+
+```php
+use Codew\Codew;
+use Codew\API;
+
+$app = new Codew();
+
+$app->cors();
+$app->json();
+
+$app->router('GET', '/post', function() {
+    $post = API::post("https://jsonplaceholder.typicode.com/posts", [
+        "userId" => 11,
+        "id" => 102,
+        "title" => "Hello World",
+        "body" => "This my POST request"
+    ]);
+
+    API::response($post);
+});
+```
