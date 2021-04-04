@@ -14,6 +14,7 @@
         }
     },
     "require": {
-        "bramus/router": "^1.5"
+        "bramus/router": "^1.5",
+        "twig/twig": "^3.3"
     }
 }
