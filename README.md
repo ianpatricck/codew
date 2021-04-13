@@ -133,3 +133,14 @@ $user = $db
 
 echo $user->name;
 ```
+
+You can also use the DB ```query``` method to make clean queries.
+The 'all' en ```fetch``` parameter means that the query will return all data
+
+```php
+$users = $db->query('SELECT * FROM users')->fetch('all');
+
+foreach ($users as $user) {
+    echo "{$user->name}<br>";
+}
+```
