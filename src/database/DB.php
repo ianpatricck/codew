@@ -9,9 +9,16 @@ class DB extends Connection
     private $stmt;
     private array $query;
 
-    public function query($query)
+    public function query($query, $bindings = [])
     {
-        // ..
+        $this->query = [];
+
+        array_push($this->query, $query);
+
+        $this->stmt = $this->connection->prepare(implode(' ', $this->query));
+        $this->stmt->execute();
+        
+        return $this;
     }
 
     public function select($condition = [])
