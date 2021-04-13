@@ -50,7 +50,7 @@ $app->router('GET', '/', function() {
 
 ## API
 
-You can use the API class to make requests within the routes
+You can use the API class to make requests on routes
 
 ```php
 use Codew\Codew;
@@ -89,4 +89,47 @@ $app->router('GET', '/post', function() {
 
     API::response($post);
 });
+```
+
+---
+
+## Database
+
+You can choose to use the database connection configuration in two namespaces
+
+### Connection namespace
+
+```php
+$connection = new Codew\Database\Connection([
+    'connection' => 'mysql',
+    'host' => 'localhost',
+    'dbname' => 'codew',
+    'user' => 'root',
+    'password' => ''
+]);
+```
+
+### DB namespace
+
+```php
+$db = new Codew\Database\DB([
+    'connection' => 'mysql',
+    'host' => 'localhost',
+    'dbname' => 'codew',
+    'user' => 'root',
+    'password' => ''
+]);
+```
+
+The difference between using one or the other is that in the database namespace you can use an integrated query builder
+
+```php
+$user = $db
+    
+->select(['*' => 'users'])
+->where(['id' => 1])
+->execute()
+->fetch();
+
+echo $user->name;
 ```
