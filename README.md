@@ -144,3 +144,5 @@ foreach ($users as $user) {
     echo "{$user->name}<br>";
 }
 ```
+
+See more information about the ```DB namespace``` in [database documentation](doc/database.md)
