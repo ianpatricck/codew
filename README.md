@@ -128,8 +128,7 @@ $user = $db
     
 ->select(['*' => 'users'])
 ->where(['id' => 1])
-->execute()
-->fetch();
+->fetch('all');
 
 echo $user->name;
 ```
