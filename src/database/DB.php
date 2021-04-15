@@ -21,6 +21,25 @@ class DB extends Connection
         return $this;
     }
 
+    public function insert($table, $query)
+    {
+        $table_values = [];
+        $values = [];
+
+        foreach($query as $key => $value) {
+            array_push($table_values, $key);
+        }
+
+        foreach($query as $value) {
+            array_push($values, "\"$value\"");
+        }
+
+        $query = ["INSERT INTO {$table}(" . implode(', ', $table_values) . ") VALUES (" . implode(', ', $values) . ");"];        
+
+        $this->stmt = $this->connection->prepare(implode($query));
+        $this->stmt->execute();
+    }
+
     public function select($condition = [])
     {
         foreach ($condition as $key => $table);
@@ -42,21 +61,6 @@ class DB extends Connection
     }
 
     /**
-     * Execute query
-     * 
-     * @return array
-     * 
-     */
-
-    public function execute()
-    {
-        $this->stmt = $this->connection->prepare(implode(' ', $this->query));
-        $this->stmt->execute();
-
-        return $this;
-    }
-
-    /**
      * Return data
      * 
      * @param string
@@ -66,6 +70,11 @@ class DB extends Connection
 
     public function fetch($all = null)
     {
+        if (!$this->stmt) {
+            $this->stmt = $this->connection->prepare(implode(' ', $this->query));
+            $this->stmt->execute();
+        }
+
         if ($all == 'all') {
             return $this->stmt->fetchAll();
         }
