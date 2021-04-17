@@ -121,19 +121,7 @@ $db = new Codew\Database\DB([
 ]);
 ```
 
-The difference between using one or the other is that in the database namespace you can use an integrated query builder
-
-```php
-$user = $db
-    
-->select(['*' => 'users'])
-->where(['id' => 1])
-->fetch('all');
-
-echo $user->name;
-```
-
-You can also use the DB ```query``` method to make clean queries.
+You can use the DB ```query``` method to make clean queries.
 The 'all' en ```fetch``` parameter means that the query will return all data
 
 ```php

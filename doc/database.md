@@ -1,6 +1,6 @@
 # Database
 
-### \# Namespace
+### Namespace
 
 ```php
 use Codew\Database\DB;
