@@ -1,5 +1,8 @@
 # Database
 
+- MySQL
+- PostgreSQL
+
 ### Namespace
 
 ```php
@@ -20,8 +23,20 @@ $db = new DB([
 
 After that we can carry out your queries in the bank with the methods that the class provides us
 
+
+```fetch```
 ```php
 $user = $db->query('SELECT name FROM users WHERE id = 1')->fetch();
 
 echo $user->name;
 ```
+
+Select all data from users
+
+```php
+$users = $db->query('SELECT * FROM users WHERE id = 1')->fetch('all');
+
+var_dump($users);
+```
+
+From this simple method, we can define several queries to execute with the help of these secondary functions
