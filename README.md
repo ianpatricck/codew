@@ -36,8 +36,18 @@ $app->router('GET', '/', function() {
 $app->run();
 ```
 
+```router```
+```php
+$app->router('GET', '/', function() {/*...*/}
+$app->router('POST', '/', function() {/*...*/}
+$app->router('PUT', '/', function() {/*...*/}
+$app->router('PUTCH', '/', function() {/*...*/}
+$app->router('DELETE', '/', function() {/*...*/}
+```
+
 You can define environment variables with the env function
 
+```env```
 ```php
 $app->env(__DIR__);
 
