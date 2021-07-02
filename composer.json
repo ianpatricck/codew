@@ -15,5 +15,8 @@
     },
     "require": {
         "bramus/router": "^1.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }
